@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name ws2812_button)(type Eagle)(uri "$(KIPRJMOD)\\lib_fp.pretty\\ws2812_button.lbr")(options "")(descr ""))
+)
