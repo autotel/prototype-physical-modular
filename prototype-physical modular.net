@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "C:/Users/joaquin/repositories/music devices/prototype-physical modular/prototype-physical modular.sch")
-    (date "22-06-2017 16:41:12")
+    (date "22-06-2017 16:47:09")
     (tool "Eeschema 4.0.4-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
