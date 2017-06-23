@@ -285,20 +285,20 @@
     (component "SeeedOPL-Capacitor:C0402"
       (place C1 74750 -20000 back 270 (PN 100n))
       (place C3 71750 -22250 back 90 (PN 1u))
-      (place C4 7500 -16287.7 back 180 (PN 100nF))
-      (place C5 6500 -16287.7 back 180 (PN 100nF))
-      (place C6 5500 -16287.7 back 180 (PN 100nF))
+      (place C4 5000 -22787.7 back 180 (PN 100nF))
+      (place C5 4000 -22787.7 back 180 (PN 100nF))
+      (place C6 3000 -22787.7 back 180 (PN 100nF))
       (place C7 82250 -19500 back 90 (PN 22pF))
       (place C8 31962.3 -6000 back 90 (PN 22pF))
       (place C9 32000 -7500 back 90 (PN 22pF))
-      (place C10 6037.72 -11250 back 90 (PN 100nF))
+      (place C10 3537.72 -17750 back 90 (PN 100nF))
       (place C_LEDS1 53037.7 -60500 front 270 (PN "1uF-10V"))
     )
     (component "SeeedOPL-LED:LED-0805"
       (place D2 70000 -29361 back 270 (PN LED))
     )
     (component "SeeedOPL-IC:TQFP100-0.5-14X14MM"
-      (place IC1 16250 -22250 back 45 (PN "ATMEGA2560-A"))
+      (place IC1 18000 -24500 back 135 (PN "ATMEGA2560-A"))
     )
     (component "SeeedOPL-Connector:AUDIO8P-SMD-3.5-14.5X6.1X4.0MM"
       (place J1 93473.4 1102.38 back 90 (PN MIDI_IN))
@@ -413,7 +413,7 @@
       (place P18 53340 -14200 back 90 (PN 3VI2C))
     )
     (component Pin_Headers:Pin_Header_Straight_2x03_Pitch2.54mm_SMD
-      (place P3 93730 -58000 back 180 (PN SPI))
+      (place P3 6250 -10250 back 180 (PN SPI))
     )
     (component Pin_Headers:Pin_Header_Straight_1x10_Pitch2.54mm_SMD_Pin1Left
       (place P17 78000 -151270 back 0 (PN SD_PINS))
@@ -453,9 +453,9 @@
       (place D27 70977 -147500 back 180 (PN D))
       (place D28 95977 -147500 back 180 (PN D))
       (place D29 4210.38 -152500 back 180 (PN D))
-      (place D30 29977 -152500 front 0 (PN D))
-      (place D31 54977 -152500 front 0 (PN D))
-      (place D32 95977 -152500 front 0 (PN D))
+      (place D30 29977 -152500 back 180 (PN D))
+      (place D31 54977 -152500 back 180 (PN D))
+      (place D32 95977 -152500 back 180 (PN D))
     )
   )
   (library
@@ -2053,19 +2053,18 @@
         WSB24-1 P1-2 P3-2 P2-3)
     )
     (net GND
-      (pins DS1-1 DS1-5 DS1-16 SW2-C C2-- 3v3regu1-2 C1-2 C3-2 C4-2 C5-2 C6-2 C7-2
-        C8-2 C9-2 C10-2 C_LEDS1-2 D2-- IC1-11 IC1-32 IC1-81 IC1-99 P4-4 P5-4 R3-1
-        R5-1 RV1-3 U1-1 CON1-GND CON2-3 CON2-6 CON2-G1 CON2-G2 CON2-G3 CON2-G4 U2-8
-        WSB1-3 WSB2-3 WSB3-3 WSB4-3 WSB5-3 WSB6-3 WSB7-3 WSB8-3 WSB25-3 WSB26-3 WSB27-3
-        WSB28-3 SW1-1 WSB9-3 WSB10-3 WSB11-3 WSB12-3 WSB13-3 WSB14-3 WSB15-3 WSB16-3
-        WSB17-3 WSB18-3 WSB19-3 WSB20-3 WSB21-3 WSB22-3 WSB23-3 WSB24-3 P1-1 P3-6
-        P17-4 P2-1 P2-2 P19-5 P19-10)
+      (pins DS1-1 DS1-5 DS1-16 3v3regu1-2 C1-2 C3-2 C4-2 C5-2 C6-2 C7-2 C8-2 C9-2
+        C10-2 C_LEDS1-2 IC1-11 IC1-32 IC1-81 IC1-99 P4-4 P5-4 R3-1 R5-1 RV1-3 U1-1
+        CON2-3 CON2-6 U2-8 WSB1-3 WSB2-3 WSB3-3 WSB4-3 WSB5-3 WSB6-3 WSB7-3 WSB8-3
+        WSB25-3 WSB26-3 WSB27-3 WSB28-3 SW1-1 WSB9-3 WSB10-3 WSB11-3 WSB12-3 WSB13-3
+        WSB14-3 WSB15-3 WSB16-3 WSB17-3 WSB18-3 WSB19-3 WSB20-3 WSB21-3 WSB22-3 WSB23-3
+        WSB24-3 P1-1 P3-6 P17-4 P2-1 P2-2 P19-5 P19-10)
     )
     (net +3V3
       (pins 3v3regu1-5 C3-1 Q3-1 Q4-1 Q5-1 Q6-1 R16-1 R18-1 R20-1 R22-1 CON2-4 P17-5)
     )
     (net "Net-(C1-Pad1)"
-      (pins C2-+ C1-1 U1-3 D1--)
+      (pins C1-1 U1-3)
     )
     (net "Net-(C7-Pad1)"
       (pins C7-1 IC1-30 R7-2 SW1-2)
@@ -2095,25 +2094,25 @@
       (pins CON2-9 P17-10)
     )
     (net /MUXBX0
-      (pins IC1-89 D4-+ D5-+ D6-+ D7-+ D8-+)
+      (pins IC1-89)
     )
     (net /MUXBX1
-      (pins IC1-88 D9-+ D10-+ D11-+ D12-+)
+      (pins IC1-88)
     )
     (net /MUXBX2
-      (pins IC1-87 D13-+ D14-+ D15-+ D16-+)
+      (pins IC1-87)
     )
     (net /MUXBX3
-      (pins IC1-86 D17-+ D18-+ D19-+ D20-+)
+      (pins IC1-86)
     )
     (net /MUXBX4
-      (pins IC1-85 D21-+ D22-+ D23-+ D24-+)
+      (pins IC1-85)
     )
     (net /MUXBX5
-      (pins IC1-84 D25-+ D26-+ D27-+ D28-+)
+      (pins IC1-84)
     )
     (net /MUXBX6
-      (pins IC1-83 D29-+ D30-+ D31-+ D32-+)
+      (pins IC1-83)
     )
     (net "Net-(DS1-Pad3)"
       (pins DS1-3 RV1-2)
@@ -2165,12 +2164,6 @@
     )
     (net "Net-(IC1-Pad9)"
       (pins IC1-9)
-    )
-    (net /RX2
-      (pins IC1-12 IC1-63)
-    )
-    (net /TX2
-      (pins IC1-13 IC1-64)
     )
     (net "Net-(IC1-Pad14)"
       (pins IC1-14)
@@ -2233,7 +2226,7 @@
       (pins IC1-49)
     )
     (net /POWER_IS
-      (pins IC1-50 CON1-GNDB)
+      (pins IC1-50)
     )
     (net "Net-(IC1-Pad51)"
       (pins IC1-51)
@@ -2243,9 +2236,6 @@
     )
     (net /5VSD_CS
       (pins IC1-53 Q6-3 R21-1)
-    )
-    (net /MUXA_COMMON
-      (pins IC1-60)
     )
     (net "Net-(IC1-Pad65)"
       (pins IC1-65)
@@ -2315,9 +2305,6 @@
     )
     (net "Net-(IC1-Pad96)"
       (pins IC1-96)
-    )
-    (net /MUXB_COMMON
-      (pins IC1-97)
     )
     (net "Net-(J1-Pad2)"
       (pins J1-2 R4-1)
@@ -2458,16 +2445,7 @@
       (pins JP1-2 P5-3)
     )
     (net /MUXAX4
-      (pins SW2-D IC1-27)
-    )
-    (net /ENCA
-      (pins SW2-A)
-    )
-    (net /ENCC
-      (pins SW2-B)
-    )
-    (net "Net-(D2-Pad+)"
-      (pins D2-+ R1-2)
+      (pins IC1-27)
     )
     (net "Net-(IC1-Pad54)"
       (pins IC1-54)
@@ -2487,146 +2465,47 @@
     (net "Net-(IC1-Pad59)"
       (pins IC1-59)
     )
-    (net "Net-(CON1-PadPWR)"
-      (pins CON1-PWR D1-+)
+    (net "Net-(IC1-Pad60)"
+      (pins IC1-60)
     )
-    (net "Net-(D3-Pad+)"
-      (pins J1-3 U2-2 D3-+)
+    (net /RX3
+      (pins IC1-63)
     )
-    (net "Net-(D3-Pad-)"
-      (pins R4-2 U2-3 D3--)
+    (net /TX3
+      (pins IC1-64)
     )
-    (net "Net-(D4-Pad-)"
-      (pins SW3-1 D4--)
-    )
-    (net "Net-(D5-Pad-)"
-      (pins SW4-1 D5--)
-    )
-    (net "Net-(D6-Pad-)"
-      (pins SW5-1 D6--)
-    )
-    (net "Net-(D7-Pad-)"
-      (pins SW6-1 D7--)
-    )
-    (net "Net-(D8-Pad-)"
-      (pins SW2-E D8--)
-    )
-    (net "Net-(D9-Pad-)"
-      (pins SW7-1 D9--)
-    )
-    (net "Net-(D10-Pad-)"
-      (pins SW8-1 D10--)
-    )
-    (net "Net-(D11-Pad-)"
-      (pins SW9-1 D11--)
-    )
-    (net "Net-(D12-Pad-)"
-      (pins SW10-1 D12--)
-    )
-    (net "Net-(D13-Pad-)"
-      (pins WSB9-5 D13--)
-    )
-    (net "Net-(D14-Pad-)"
-      (pins WSB10-5 D14--)
-    )
-    (net "Net-(D15-Pad-)"
-      (pins WSB11-5 D15--)
-    )
-    (net "Net-(D16-Pad-)"
-      (pins WSB12-5 D16--)
-    )
-    (net "Net-(D17-Pad-)"
-      (pins WSB13-5 D17--)
-    )
-    (net "Net-(D18-Pad-)"
-      (pins WSB14-5 D18--)
-    )
-    (net "Net-(D19-Pad-)"
-      (pins WSB15-5 D19--)
-    )
-    (net "Net-(D20-Pad-)"
-      (pins WSB16-5 D20--)
-    )
-    (net "Net-(D21-Pad-)"
-      (pins WSB17-5 D21--)
-    )
-    (net "Net-(D22-Pad-)"
-      (pins WSB18-5 D22--)
-    )
-    (net "Net-(D23-Pad-)"
-      (pins WSB19-5 D23--)
-    )
-    (net "Net-(D24-Pad-)"
-      (pins WSB20-5 D24--)
-    )
-    (net "Net-(D25-Pad-)"
-      (pins WSB21-5 D25--)
-    )
-    (net "Net-(D26-Pad-)"
-      (pins WSB22-5 D26--)
-    )
-    (net "Net-(D27-Pad-)"
-      (pins WSB23-5 D27--)
-    )
-    (net "Net-(D28-Pad-)"
-      (pins WSB24-5 D28--)
-    )
-    (net "Net-(D29-Pad-)"
-      (pins SW11-1 D29--)
-    )
-    (net "Net-(D30-Pad-)"
-      (pins SW12-1 D30--)
-    )
-    (net "Net-(D31-Pad-)"
-      (pins SW13-1 D31--)
-    )
-    (net "Net-(D32-Pad-)"
-      (pins SW14-1 D32--)
+    (net "Net-(IC1-Pad97)"
+      (pins IC1-97)
     )
     (class kicad_default "" +3V3 +5V /3VSD_CS /3vRX0 /3vSPI_MISO /3vSPI_MOSI
       /3vSPI_SCK /3vTX0 /5VSD_CLK /5VSD_CS /5VSD_MISO /5VSD_MOSI /BUS_COM
-      /BUS_TI /BUS_TO /ENCA /ENCC /LCD0 /LCD1 /LCD2 /LCD3 /LCD4 /LCD5 /MIDI_OUT_TX
-      /MIDI_RX /MUXAADDR0 /MUXAADDR1 /MUXAADDR2 /MUXAX0 /MUXAX1 /MUXAX2 /MUXAX3
-      /MUXAX4 /MUXAX5 /MUXAX6 /MUXAX7 /MUXA_COMMON /MUXBADDR0 /MUXBADDR1 /MUXBADDR2
-      /MUXBX0 /MUXBX1 /MUXBX2 /MUXBX3 /MUXBX4 /MUXBX5 /MUXBX6 /MUXBX7 /MUXB_COMMON
-      /PI_3V3 /PI_5V /PI_GPCLK0 /PI_SCL /PI_SDA /POWER_IS /RESET /RX0 /RX1
-      /RX2 /SCL /SDA /SD_CD /SD_DAT1 /SD_DAT2 /SD_WP /SERIAL_LED_PIN /SERIAL_LED_TOROW_1
-      /SERIAL_LED_TOROW_2 /SERIAL_LED_TOROW_3 /SERIAL_LED_TOROW_4 /SERIAL_LED_TOROW_5
-      /SERIAL_LED_TOROW_6 /TX0 /TX1 /TX2 GND "Net-(C1-Pad1)" "Net-(C10-Pad1)"
-      "Net-(C7-Pad1)" "Net-(C8-Pad1)" "Net-(C9-Pad1)" "Net-(CON1-PadPWR)"
-      "Net-(D10-Pad-)" "Net-(D11-Pad-)" "Net-(D12-Pad-)" "Net-(D13-Pad-)"
-      "Net-(D14-Pad-)" "Net-(D15-Pad-)" "Net-(D16-Pad-)" "Net-(D17-Pad-)"
-      "Net-(D18-Pad-)" "Net-(D19-Pad-)" "Net-(D2-Pad+)" "Net-(D20-Pad-)" "Net-(D21-Pad-)"
-      "Net-(D22-Pad-)" "Net-(D23-Pad-)" "Net-(D24-Pad-)" "Net-(D25-Pad-)"
-      "Net-(D26-Pad-)" "Net-(D27-Pad-)" "Net-(D28-Pad-)" "Net-(D29-Pad-)"
-      "Net-(D3-Pad+)" "Net-(D3-Pad-)" "Net-(D30-Pad-)" "Net-(D31-Pad-)" "Net-(D32-Pad-)"
-      "Net-(D4-Pad-)" "Net-(D5-Pad-)" "Net-(D6-Pad-)" "Net-(D7-Pad-)" "Net-(D8-Pad-)"
-      "Net-(D9-Pad-)" "Net-(DS1-Pad10)" "Net-(DS1-Pad15)" "Net-(DS1-Pad3)"
-      "Net-(DS1-Pad7)" "Net-(DS1-Pad8)" "Net-(DS1-Pad9)" "Net-(IC1-Pad1)"
+      /LCD0 /LCD1 /LCD2 /LCD3 /LCD4 /LCD5 /MIDI_RX /MUXAX0 /MUXAX1 /MUXAX2
+      /MUXAX3 /MUXAX4 /MUXBX0 /MUXBX1 /MUXBX2 /MUXBX3 /MUXBX4 /MUXBX5 /MUXBX6
+      /PI_3V3 /PI_5V /PI_SCL /PI_SDA /POWER_IS /RESET /RX0 /RX1 /RX3 /SCL
+      /SDA /SD_DAT1 /SD_DAT2 /SERIAL_LED_TOROW_1 /SERIAL_LED_TOROW_2 /SERIAL_LED_TOROW_3
+      /SERIAL_LED_TOROW_4 /SERIAL_LED_TOROW_5 /SERIAL_LED_TOROW_6 /TX0 /TX1
+      /TX3 GND "Net-(C1-Pad1)" "Net-(C10-Pad1)" "Net-(C7-Pad1)" "Net-(C8-Pad1)"
+      "Net-(C9-Pad1)" "Net-(DS1-Pad15)" "Net-(DS1-Pad3)" "Net-(IC1-Pad1)"
       "Net-(IC1-Pad14)" "Net-(IC1-Pad19)" "Net-(IC1-Pad23)" "Net-(IC1-Pad24)"
       "Net-(IC1-Pad25)" "Net-(IC1-Pad26)" "Net-(IC1-Pad28)" "Net-(IC1-Pad29)"
       "Net-(IC1-Pad4)" "Net-(IC1-Pad41)" "Net-(IC1-Pad42)" "Net-(IC1-Pad47)"
       "Net-(IC1-Pad48)" "Net-(IC1-Pad49)" "Net-(IC1-Pad5)" "Net-(IC1-Pad51)"
       "Net-(IC1-Pad52)" "Net-(IC1-Pad54)" "Net-(IC1-Pad55)" "Net-(IC1-Pad56)"
       "Net-(IC1-Pad57)" "Net-(IC1-Pad58)" "Net-(IC1-Pad59)" "Net-(IC1-Pad6)"
-      "Net-(IC1-Pad65)" "Net-(IC1-Pad66)" "Net-(IC1-Pad67)" "Net-(IC1-Pad68)"
-      "Net-(IC1-Pad69)" "Net-(IC1-Pad7)" "Net-(IC1-Pad70)" "Net-(IC1-Pad71)"
-      "Net-(IC1-Pad72)" "Net-(IC1-Pad73)" "Net-(IC1-Pad74)" "Net-(IC1-Pad75)"
-      "Net-(IC1-Pad76)" "Net-(IC1-Pad77)" "Net-(IC1-Pad78)" "Net-(IC1-Pad79)"
-      "Net-(IC1-Pad8)" "Net-(IC1-Pad82)" "Net-(IC1-Pad9)" "Net-(IC1-Pad90)"
-      "Net-(IC1-Pad91)" "Net-(IC1-Pad92)" "Net-(IC1-Pad93)" "Net-(IC1-Pad94)"
-      "Net-(IC1-Pad95)" "Net-(IC1-Pad96)" "Net-(J1-Pad1)" "Net-(J1-Pad2)"
-      "Net-(J1-Pad4)" "Net-(J1-Pad5)" "Net-(J1-Pad6)" "Net-(J2-Pad1)" "Net-(J2-Pad2)"
-      "Net-(J2-Pad4)" "Net-(J2-Pad5)" "Net-(J2-Pad6)" "Net-(JP1-Pad2)" "Net-(R5-Pad2)"
+      "Net-(IC1-Pad60)" "Net-(IC1-Pad65)" "Net-(IC1-Pad66)" "Net-(IC1-Pad67)"
+      "Net-(IC1-Pad68)" "Net-(IC1-Pad69)" "Net-(IC1-Pad7)" "Net-(IC1-Pad70)"
+      "Net-(IC1-Pad71)" "Net-(IC1-Pad72)" "Net-(IC1-Pad73)" "Net-(IC1-Pad74)"
+      "Net-(IC1-Pad75)" "Net-(IC1-Pad76)" "Net-(IC1-Pad77)" "Net-(IC1-Pad78)"
+      "Net-(IC1-Pad79)" "Net-(IC1-Pad8)" "Net-(IC1-Pad82)" "Net-(IC1-Pad9)"
+      "Net-(IC1-Pad90)" "Net-(IC1-Pad91)" "Net-(IC1-Pad92)" "Net-(IC1-Pad93)"
+      "Net-(IC1-Pad94)" "Net-(IC1-Pad95)" "Net-(IC1-Pad96)" "Net-(IC1-Pad97)"
+      "Net-(J1-Pad2)" "Net-(J2-Pad1)" "Net-(J2-Pad2)" "Net-(JP1-Pad2)" "Net-(R5-Pad2)"
       "Net-(WSB1-Pad2)" "Net-(WSB10-Pad2)" "Net-(WSB10-Pad4)" "Net-(WSB11-Pad2)"
       "Net-(WSB13-Pad2)" "Net-(WSB14-Pad2)" "Net-(WSB15-Pad2)" "Net-(WSB17-Pad2)"
       "Net-(WSB18-Pad2)" "Net-(WSB19-Pad2)" "Net-(WSB2-Pad2)" "Net-(WSB21-Pad2)"
       "Net-(WSB22-Pad2)" "Net-(WSB23-Pad2)" "Net-(WSB25-Pad2)" "Net-(WSB26-Pad2)"
-      "Net-(WSB27-Pad2)" "Net-(WSB28-Pad2)" "Net-(WSB3-Pad2)" "Net-(WSB5-Pad2)"
-      "Net-(WSB6-Pad2)" "Net-(WSB7-Pad2)" "Net-(uP1-Pad10)" "Net-(uP1-Pad19)"
-      "Net-(uP1-Pad20)" "Net-(uP1-Pad21)" "Net-(uP1-Pad22)" "Net-(uP1-Pad31)"
-      "Net-(uP1-Pad32)" "Net-(uP1-Pad34)" "Net-(uP1-Pad7)" "Net-(uP1-Pad8)"
-      "Net-(uP1-Pad9)" VDD VSS
+      "Net-(WSB27-Pad2)" "Net-(WSB3-Pad2)" "Net-(WSB5-Pad2)" "Net-(WSB6-Pad2)"
+      "Net-(WSB7-Pad2)"
       (circuit
         (use_via Via[0-1]_600:400_um)
       )
