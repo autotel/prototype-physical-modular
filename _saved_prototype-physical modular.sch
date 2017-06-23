@@ -28,6 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:_saved_prototype-physical modular-cache
 EELAYER 25 0
 EELAYER END
 $Descr A1 33110 23386
@@ -1200,9 +1201,9 @@ RX2
 Text Label 6000 8350 2    60   ~ 0
 TX2
 Text Label 6000 7350 2    60   ~ 0
-RX2
+RX3
 Text Label 6000 7450 2    60   ~ 0
-TX2
+TX3
 Text Notes 9150 5650 0    60   ~ 0
 PB1-52
 Text Notes 9150 5750 0    60   ~ 0
@@ -4948,9 +4949,9 @@ Wire Wire Line
 Text Label 6000 8950 2    60   ~ 0
 MXX4
 Text Label 5050 8950 0    60   ~ 0
-RX2
+RX3
 Text Label 5050 9050 0    60   ~ 0
-TX2
+TX3
 Wire Wire Line
 	6000 9150 5050 9150
 Wire Wire Line
