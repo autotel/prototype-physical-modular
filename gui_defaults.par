@@ -4,13 +4,13 @@
     (board_frame
       visible
       (bounds
-        -8 -8 1616 854
+        -1688 -420 1696 1066
       )
     )
     (color_manager
       not_visible
       (bounds
-        0 600 1126 142
+        10 520 1126 142
       )
     )
     (layer_visibility
@@ -22,13 +22,13 @@
     (object_visibility
       not_visible
       (bounds
-        0 550 383 406
+        35 107 383 406
       )
     )
     (display_miscellanious
       not_visible
       (bounds
-        0 350 236 354
+        19 83 236 354
       )
     )
     (snapshots
@@ -38,7 +38,7 @@
       )
     )
     (select_parameter
-      visible
+      not_visible
       (bounds
         0 0 208 494
       )
@@ -227,7 +227,7 @@
       on
     )
     (automatic_layer_dimming 
-      0.7
+      0.31
     )
     (deselected_snapshot_attributes 
     )
