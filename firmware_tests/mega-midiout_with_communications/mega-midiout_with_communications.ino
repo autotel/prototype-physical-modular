@@ -2,9 +2,15 @@
 // include the library code:
 #include <LiquidCrystal.h>
 
-#include <Wire.h>
-
 #include "WS2812.h"
+//TBN
+#include "TBN.h"
+
+TBN network;
+
+char test=0;
+unsigned char testByte=0;
+
 #define LEDS 16
 WS2812 LED(LEDS);
 cRGB value;
@@ -22,9 +28,14 @@ unsigned long lastStepMicroStep = 0;
 unsigned long currentMicroStep = 0;
 int mpi = 0;
 
-#define INTERVAL 120
+#define INTERVAL 24
 unsigned char currentStep = 0;
+unsigned char microStepSource=0xff;
+
 void setup() {
+  //TBN
+  network.start();
+  network.onData(onMessage);
   //arrays are not empty by default. !?
   for (unsigned char a = 0; a < LEN; a++) {
     for (unsigned char b = 0; b < POLI; b++) {
@@ -37,12 +48,15 @@ void setup() {
   lcd.begin(16, 2);
   // Print a message to the LCD.
   lcd.print("hello, world!");
-  Wire.begin(8);                // join i2c bus with address #8
-  Wire.onReceive(receiveEvent); // register event
-  Serial.begin(9600);           // start serial for output
+
 }
 
 void loop() {
+  //TBN
+  unsigned char testSignal [] = {testByte,testByte+1,testByte+2,testByte+3,testByte+4,testByte+5};
+  network.write(testSignal,5);//test message. it doesn't write,  but makes it available for next token reception
+  network.loop();//there should be an ISR timer rather than monitorization
+
   if (currentMicroStep  > INTERVAL) {
     currentMicroStep = 0;
     for (unsigned char layer = 0; layer < POLI; layer++) {
@@ -93,7 +107,7 @@ void loop() {
   lcd.print(impracticalString);
   lcd.setCursor(0, 1);
   lcd.print(String(mpi,HEX));
-  
+
 }
 
 void noteOn(char chan, char pitch, char velocity) {
@@ -119,31 +133,21 @@ void noteOn(char chan, char pitch, char velocity) {
   }
 }
 
-// function that executes whenever data is received from master
-// this function is registered as an event, see setup()
-unsigned char currentHeader = 0;
-void receiveEvent(int howMany) {
-  int count = 0;
-  char currentHeader = Wire.read();
-  count++;
-  while (Wire.available()) {
-    char c = Wire.read();
-    if (count == 0) {
-      currentHeader = c;
-    }
-    /*
-    if (currentHeader == 'i') {
-      if (count == howMany) {
-        mpi++;
-      } else {
-        impracticalString[count % 15] = c;
-      }
-    }*/
-    count++;
+
+//TBN
+void onMessage(unsigned char origin,unsigned char header,unsigned char * data, unsigned char len){
+  if(microStepSource==0xff){
+    microStepSource=origin;
   }
-  //if (currentHeader == 0x87) {
-    mpi=0;
+  if(origin==microStepSource){
     currentMicroStep++;
-  //}
+  }
+  testByte=(data[0]+1);
+  lcd.print(" I:");
+  lcd.print(network.ownID);
+  lcd.print(" s:");
+  lcd.print(String(microStepSource,HEX));
+  lcd.print(" ms:");
+  lcd.print(String(currentMicroStep,HEX));
 
 }

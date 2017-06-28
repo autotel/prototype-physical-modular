@@ -16,9 +16,55 @@ long lastMessageAt=0;
 int  incom[]=new int[32];
 NodeVis nodes[]=new NodeVis[32];
 int truncateTimeout=10;
+
+import static javax.swing.JOptionPane.*;
+ 
+ 
+final boolean debug = true;
+
 void setup() 
 {
-  size(500,500);
+  
+  String COMx, COMlist = "";
+/*
+  Other setup code goes here - I put this at
+  the end because of the try/catch structure.
+*/
+  try {
+    if(debug) printArray(Serial.list());
+    int i = Serial.list().length;
+    if (i != 0) {
+      if (i >= 2) {
+        // need to check which port the inst uses -
+        // for now we'll just let the user decide
+        for (int j = 0; j < i;) {
+          COMlist += char(j+'a') + " = " + Serial.list()[j];
+          if (++j < i) COMlist += ",  ";
+        }
+        COMx = showInputDialog("Which COM port is correct? (a,b,..):\n"+COMlist);
+        if (COMx == null) exit();
+        if (COMx.isEmpty()) exit();
+        i = int(COMx.toLowerCase().charAt(0) - 'a') + 1;
+      }
+      String portName = Serial.list()[i-1];
+      if(debug) println(portName);
+      myPort = new Serial(this, portName, 19200); // change baud rate to your liking
+      //myPort.bufferUntil('\n'); // buffer until CR/LF appears, but not required..
+    }
+    else {
+      showMessageDialog(frame,"Device is not connected to the PC");
+      exit();
+    }
+  }
+  catch (Exception e)
+  { //Print the type of error
+    showMessageDialog(frame,"COM port is not available (may\nbe in use by another program)");
+    println("Error:", e);
+    exit();
+
+  }
+  
+  size(500, 500);
   for (int a=0; a<nodes.length; a++) {
     nodes[a]=new NodeVis(a);
   }
@@ -29,15 +75,15 @@ void setup()
   for (int a=0; a<Serial.list().length; a++) {
     println(Serial.list()[a]);
   }
-  String portName = Serial.list()[1];
-  myPort = new Serial(this, portName, 9600);
+  //String portName = Serial.list()[1];
+ // myPort = new Serial(this, portName, 9600);
 }
 int BN_ORIGIN=0;
 int BN_HEADER=1;
 void draw()
 {
   background(0);
-  
+
   for (int a=0; a<nodes.length; a++) {
     nodes[a].dr();
   }
@@ -46,7 +92,7 @@ void draw()
     int incomCount=0;
     int expectedLen=0;
     long lastByteStarted=millis();
-    print("\nrx:");
+    //print("\nrx:");
     int currentOrigin=-1;
     while ((incomCount<expectedLen)||expectedLen==0) {
       if (myPort.available()>0) {
@@ -62,15 +108,15 @@ void draw()
             expectedLen=(i&0xf)+2;//+2 for the two header bytes
           }
           if (expectedLen==0 & incomCount>BN_HEADER) {
-            print("string?");
+            //print("string?");
           }
         }
-        print(i);
-        print('\t');
+        //print(i);
+        //print('\t');
         incomCount++;
       }
       if (millis()>lastByteStarted+truncateTimeout) {
-        print("truncated");
+        //print("truncated");
       }
     }
     applyMessage();
@@ -101,13 +147,14 @@ void applyMessage() {
   int msglen=(incom[BN_HEADER]&0xf);
   String newData="\nlen: "+(msglen-2)+"";
   for (int b=2; b<msglen; b++) {
-    newData+="\n"+incom[msglen];
+    newData+="\n"+hex(incom[msglen], 4);
   }
   nodes[setNode].updateData(newData);
 }
 int cols=8;
 int space=2;
 class NodeVis { 
+  float updatedAgo=0;
   int index; 
   int represents;
   String myData="";
@@ -121,18 +168,22 @@ class NodeVis {
   }
   void updateData(String newData) {
     myData=newData;
+    updatedAgo=300;
   }
   void dr() {
     float w=(width/cols);
     if (active) {
       pushMatrix();
-      translate(w*(index%cols)+space,0);
-      fill(0);
+      translate(w*(index%cols)+space, floor(index/cols)*w*2);
+      fill(updatedAgo/2);
       stroke(124);
       rect(space, space, w-space, 32-space);
       fill(230);
       text(represents+'\n'+myData, 8, 16);
       popMatrix();
+      if (updatedAgo>0) {
+        updatedAgo-=0.2;
+      }
     }
   }
 } 
