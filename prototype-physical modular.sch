@@ -702,7 +702,7 @@ U 1 1 5951067A
 P 7100 21650
 F 0 "RV1" H 7100 21570 50  0000 C CNN
 F 1 "10k" H 7100 21650 50  0000 C CNN
-F 2 "SeeedOPL-Resistor:ADJR3-7.0X7.0X5.0MM" H 7100 21650 50  0001 C CNN
+F 2 "lib_fp:trimpot" H 7100 21650 50  0001 C CNN
 F 3 "" H 7100 21650 50  0000 C CNN
 F 4 "--" H 7100 21650 60  0001 C CNN "Sku"
 F 5 "--" H 7100 21650 60  0001 C CNN "MPN"
@@ -1224,11 +1224,11 @@ P 5250 -5750
 F 0 "3v3regu1" H 5000 -5550 50  0000 C CNN
 F 1 "TLV70233DBV" H 5350 -5550 50  0000 C CNN
 F 2 "TO_SOT_Packages_SMD:SOT-23-5" H 5250 -5650 50  0000 C CIN
-F 3 "" H 5250 -5750 50  0000 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lp2985.pdf" H 5250 -5750 50  0001 C CNN
 F 4 "--" H 5250 -5750 60  0001 C CNN "Sku"
-F 5 "--" H 5250 -5750 60  0001 C CNN "MPN"
-F 6 "--" H 5250 -5750 60  0001 C CNN "provider link 1"
-F 7 "--" H 5250 -5750 60  0001 C CNN "provider link 2"
+F 5 "LP3985-33DBVR" H 5250 -5750 60  0001 C CNN "MPN"
+F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/310030033.pdf" H 5250 -5750 60  0001 C CNN "provider link 1"
+F 7 "https://www.digikey.com/product-detail/en/texas-instruments/LP2985-33DBVR/296-18476-1-ND/809911" H 5250 -5750 60  0001 C CNN "provider link 2"
 	1    5250 -5750
 	1    0    0    -1  
 $EndComp
