@@ -58,7 +58,6 @@ F 5 "ATMEGA2560-16AU" H 7300 7250 60  0001 C CNN "MPN"
 F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/310010006.pdf" H 7300 7250 60  0001 C CNN "provider link 1"
 F 7 "--" H 7300 7250 60  0001 C CNN "provider link 2"
 F 8 "Value" H 7300 7250 60  0001 C CNN "Fieldname"
-F 9 "310010006" H 7300 7250 60  0001 C CNN "sku"
 	1    7300 7250
 	1    0    0    -1  
 $EndComp
@@ -104,7 +103,6 @@ F 4 "301010006" H 4400 -8650 60  0001 C CNN "Sku"
 F 5 "RC0402JR-071KL" H 4400 -8650 60  0001 C CNN "MPN"
 F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/301010006.pdf" H 4400 -8650 60  0001 C CNN "provider link 1"
 F 7 "--" H 4400 -8650 60  0001 C CNN "provider link 2"
-F 8 "RC0402JR-071KL" V 4400 -8650 60  0001 C CNN "sku"
 	1    4400 -8650
 	1    0    0    -1  
 $EndComp
@@ -120,7 +118,6 @@ F 4 "304090039" H 4400 -8250 60  0001 C CNN "Sku"
 F 5 "17-215UYC/S530-A3/TR8" H 4400 -8250 60  0001 C CNN "MPN"
 F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/304090039.pdf" H 4400 -8250 60  0001 C CNN "provider link 1"
 F 7 "--" H 4400 -8250 60  0001 C CNN "provider link 2"
-F 8 "17-215UYC/S530-A3/TR8" H 4400 -8250 60  0001 C CNN "sku"
 	1    4400 -8250
 	0    -1   -1   0   
 $EndComp
@@ -238,7 +235,6 @@ F 4 "302010024" H 6050 3950 60  0001 C CNN "Sku"
 F 5 "CC0402KRX7R8BB104" H 6050 3950 60  0001 C CNN "MPN"
 F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/302010024.pdf" H 6050 3950 60  0001 C CNN "provider link 1"
 F 7 "--" H 6050 3950 60  0001 C CNN "provider link 2"
-F 8 "CC0402KRX7R8BB104" H 6050 3950 60  0001 C CNN "sku"
 	1    6050 3950
 	1    0    0    -1  
 $EndComp
@@ -333,7 +329,6 @@ F 4 "310030026" H 3100 -8950 60  0001 C CNN "Sku"
 F 5 "CJ;CJU1117-5.0" H 3100 -8950 60  0001 C CNN "MPN"
 F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/1310190P1.pdf" H 3100 -8950 60  0001 C CNN "provider link 1"
 F 7 "--" H 3100 -8950 60  0001 C CNN "provider link 2"
-F 8 "CJ;CJU1117-5.0" H 3100 -8950 60  0001 C CNN "sku1"
 	1    3100 -8950
 	1    0    0    -1  
 $EndComp
@@ -384,7 +379,10 @@ F 0 "C1" H 2510 -8580 50  0000 L CNN
 F 1 "100n" H 2510 -8730 50  0000 L CNN
 F 2 "SeeedOPL-Capacitor:C0402" H 2500 -8650 50  0001 C CNN
 F 3 "" H 2500 -8650 50  0000 C CNN
-F 4 "CC0402KRX7R8BB104" H 2500 -8650 60  0001 C CNN "seed sku"
+F 4 "302010024" H 2500 -8650 60  0001 C CNN "Sku"
+F 5 "CC0402KRX7R8BB104" H 2500 -8650 60  0001 C CNN "MPN"
+F 6 "--" H 2500 -8650 60  0001 C CNN "provider link 1"
+F 7 "--" H 2500 -8650 60  0001 C CNN "provider link 2"
 	1    2500 -8650
 	1    0    0    -1  
 $EndComp
@@ -703,9 +701,13 @@ L POT RV1
 U 1 1 5951067A
 P 7100 21650
 F 0 "RV1" H 7100 21570 50  0000 C CNN
-F 1 "POT" H 7100 21650 50  0000 C CNN
+F 1 "10k" H 7100 21650 50  0000 C CNN
 F 2 "SeeedOPL-Resistor:ADJR3-7.0X7.0X5.0MM" H 7100 21650 50  0001 C CNN
 F 3 "" H 7100 21650 50  0000 C CNN
+F 4 "--" H 7100 21650 60  0001 C CNN "Sku"
+F 5 "--" H 7100 21650 60  0001 C CNN "MPN"
+F 6 "--" H 7100 21650 60  0001 C CNN "provider link 1"
+F 7 "--" H 7100 21650 60  0001 C CNN "provider link 2"
 	1    7100 21650
 	1    0    0    -1  
 $EndComp
@@ -805,7 +807,10 @@ F 0 "CON1" H 1700 -8600 50  0000 C CNN
 F 1 "BARREL_JACK" H 1700 -9050 50  0000 C CNN
 F 2 "SparkFun-Connectors:POWER_JACK_PTH_LOCK" H 1700 -8850 50  0001 C CNN
 F 3 "" H 1700 -8850 50  0000 C CNN
-F 4 "321050033" H 1700 -8850 60  0001 C CNN "sku"
+F 4 "--" H 1700 -8850 60  0001 C CNN "Sku"
+F 5 "--" H 1700 -8850 60  0001 C CNN "MPN"
+F 6 "--" H 1700 -8850 60  0001 C CNN "provider link 1"
+F 7 "--" H 1700 -8850 60  0001 C CNN "provider link 2"
 	1    1700 -8850
 	1    0    0    -1  
 $EndComp
@@ -1224,7 +1229,6 @@ F 4 "--" H 5250 -5750 60  0001 C CNN "Sku"
 F 5 "--" H 5250 -5750 60  0001 C CNN "MPN"
 F 6 "--" H 5250 -5750 60  0001 C CNN "provider link 1"
 F 7 "--" H 5250 -5750 60  0001 C CNN "provider link 2"
-F 8 "!!" H 5250 -5250 60  0000 C CNN "pendant"
 	1    5250 -5750
 	1    0    0    -1  
 $EndComp
@@ -2684,7 +2688,6 @@ F 4 "311020017" H 4950 4000 60  0001 C CNN "Sku"
 F 5 "SKQGADE010" H 4950 4000 60  0001 C CNN "MPN"
 F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf" H 4950 4000 60  0001 C CNN "provider link 1"
 F 7 "--" H 4950 4000 60  0001 C CNN "provider link 2"
-F 8 "With stem" H 4950 4000 60  0001 C CNN "stem"
 	1    4950 4000
 	1    0    0    -1  
 $EndComp
@@ -2700,7 +2703,6 @@ F 4 "302010024" H 6350 3950 60  0001 C CNN "Sku"
 F 5 "CC0402KRX7R8BB104" H 6350 3950 60  0001 C CNN "MPN"
 F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/302010024.pdf" H 6350 3950 60  0001 C CNN "provider link 1"
 F 7 "--" H 6350 3950 60  0001 C CNN "provider link 2"
-F 8 "CC0402KRX7R8BB104" H 6350 3950 60  0001 C CNN "sku"
 	1    6350 3950
 	1    0    0    -1  
 $EndComp
@@ -2716,7 +2718,6 @@ F 4 "302010024" H 6650 3950 60  0001 C CNN "Sku"
 F 5 "CC0402KRX7R8BB104" H 6650 3950 60  0001 C CNN "MPN"
 F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/302010024.pdf" H 6650 3950 60  0001 C CNN "provider link 1"
 F 7 "--" H 6650 3950 60  0001 C CNN "provider link 2"
-F 8 "CC0402KRX7R8BB104" H 6650 3950 60  0001 C CNN "sku"
 	1    6650 3950
 	1    0    0    -1  
 $EndComp
@@ -2732,12 +2733,9 @@ F 4 "302010024" H 5700 10050 60  0001 C CNN "Sku"
 F 5 "CC0402KRX7R8BB104" H 5700 10050 60  0001 C CNN "MPN"
 F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/302010024.pdf" H 5700 10050 60  0001 C CNN "provider link 1"
 F 7 "--" H 5700 10050 60  0001 C CNN "provider link 2"
-F 8 "CC0402KRX7R8BB104" H 5700 10050 60  0001 C CNN "sku"
 	1    5700 10050
 	1    0    0    -1  
 $EndComp
-Text Notes 5350 -6250 0    60   ~ 0
-pendant footprint
 $Comp
 L JACK_TRS_8PINS J2
 U 1 1 5965B060
@@ -3778,7 +3776,6 @@ F 4 "311020017" H 7450 29250 60  0001 C CNN "Sku"
 F 5 "SKQGADE010" H 7450 29250 60  0001 C CNN "MPN"
 F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf" H 7450 29250 60  0001 C CNN "provider link 1"
 F 7 "--" H 7450 29250 60  0001 C CNN "provider link 2"
-F 8 "With stem" H 7450 29250 60  0001 C CNN "stem"
 	1    7450 29250
 	1    0    0    -1  
 $EndComp
@@ -3794,7 +3791,6 @@ F 4 "311020017" H 8850 29250 60  0001 C CNN "Sku"
 F 5 "SKQGADE010" H 8850 29250 60  0001 C CNN "MPN"
 F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf" H 8850 29250 60  0001 C CNN "provider link 1"
 F 7 "--" H 8850 29250 60  0001 C CNN "provider link 2"
-F 8 "With stem" H 8850 29250 60  0001 C CNN "stem"
 	1    8850 29250
 	1    0    0    -1  
 $EndComp
@@ -3810,7 +3806,6 @@ F 4 "311020017" H 10250 29250 60  0001 C CNN "Sku"
 F 5 "SKQGADE010" H 10250 29250 60  0001 C CNN "MPN"
 F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf" H 10250 29250 60  0001 C CNN "provider link 1"
 F 7 "--" H 10250 29250 60  0001 C CNN "provider link 2"
-F 8 "With stem" H 10250 29250 60  0001 C CNN "stem"
 	1    10250 29250
 	1    0    0    -1  
 $EndComp
@@ -3826,7 +3821,6 @@ F 4 "311020017" H 11650 29250 60  0001 C CNN "Sku"
 F 5 "SKQGADE010" H 11650 29250 60  0001 C CNN "MPN"
 F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf" H 11650 29250 60  0001 C CNN "provider link 1"
 F 7 "--" H 11650 29250 60  0001 C CNN "provider link 2"
-F 8 "With stem" H 11650 29250 60  0001 C CNN "stem"
 	1    11650 29250
 	1    0    0    -1  
 $EndComp
@@ -3842,7 +3836,6 @@ F 4 "311020017" H 7450 36650 60  0001 C CNN "Sku"
 F 5 "SKQGADE010" H 7450 36650 60  0001 C CNN "MPN"
 F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf" H 7450 36650 60  0001 C CNN "provider link 1"
 F 7 "--" H 7450 36650 60  0001 C CNN "provider link 2"
-F 8 "With stem" H 7450 36650 60  0001 C CNN "stem"
 	1    7450 36650
 	1    0    0    -1  
 $EndComp
@@ -3858,7 +3851,6 @@ F 4 "311020017" H 8850 36650 60  0001 C CNN "Sku"
 F 5 "SKQGADE010" H 8850 36650 60  0001 C CNN "MPN"
 F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf" H 8850 36650 60  0001 C CNN "provider link 1"
 F 7 "--" H 8850 36650 60  0001 C CNN "provider link 2"
-F 8 "With stem" H 8850 36650 60  0001 C CNN "stem"
 	1    8850 36650
 	1    0    0    -1  
 $EndComp
@@ -3874,7 +3866,6 @@ F 4 "311020017" H 10250 36650 60  0001 C CNN "Sku"
 F 5 "SKQGADE010" H 10250 36650 60  0001 C CNN "MPN"
 F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf" H 10250 36650 60  0001 C CNN "provider link 1"
 F 7 "--" H 10250 36650 60  0001 C CNN "provider link 2"
-F 8 "With stem" H 10250 36650 60  0001 C CNN "stem"
 	1    10250 36650
 	1    0    0    -1  
 $EndComp
@@ -3890,7 +3881,6 @@ F 4 "311020017" H 11650 36650 60  0001 C CNN "Sku"
 F 5 "SKQGADE010" H 11650 36650 60  0001 C CNN "MPN"
 F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf" H 11650 36650 60  0001 C CNN "provider link 1"
 F 7 "--" H 11650 36650 60  0001 C CNN "provider link 2"
-F 8 "With stem" H 11650 36650 60  0001 C CNN "stem"
 	1    11650 36650
 	1    0    0    -1  
 $EndComp
@@ -3906,7 +3896,6 @@ F 4 "311020017" H 7450 27850 60  0001 C CNN "Sku"
 F 5 "SKQGADE010" H 7450 27850 60  0001 C CNN "MPN"
 F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf" H 7450 27850 60  0001 C CNN "provider link 1"
 F 7 "--" H 7450 27850 60  0001 C CNN "provider link 2"
-F 8 "With stem" H 7450 27850 60  0001 C CNN "stem"
 	1    7450 27850
 	1    0    0    -1  
 $EndComp
@@ -3922,7 +3911,6 @@ F 4 "311020017" H 8850 27850 60  0001 C CNN "Sku"
 F 5 "SKQGADE010" H 8850 27850 60  0001 C CNN "MPN"
 F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf" H 8850 27850 60  0001 C CNN "provider link 1"
 F 7 "--" H 8850 27850 60  0001 C CNN "provider link 2"
-F 8 "With stem" H 8850 27850 60  0001 C CNN "stem"
 	1    8850 27850
 	1    0    0    -1  
 $EndComp
@@ -3938,7 +3926,6 @@ F 4 "311020017" H 10250 27850 60  0001 C CNN "Sku"
 F 5 "SKQGADE010" H 10250 27850 60  0001 C CNN "MPN"
 F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf" H 10250 27850 60  0001 C CNN "provider link 1"
 F 7 "--" H 10250 27850 60  0001 C CNN "provider link 2"
-F 8 "With stem" H 10250 27850 60  0001 C CNN "stem"
 	1    10250 27850
 	1    0    0    -1  
 $EndComp
@@ -3954,7 +3941,6 @@ F 4 "311020017" H 11650 27850 60  0001 C CNN "Sku"
 F 5 "SKQGADE010" H 11650 27850 60  0001 C CNN "MPN"
 F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf" H 11650 27850 60  0001 C CNN "provider link 1"
 F 7 "--" H 11650 27850 60  0001 C CNN "provider link 2"
-F 8 "With stem" H 11650 27850 60  0001 C CNN "stem"
 	1    11650 27850
 	1    0    0    -1  
 $EndComp
@@ -5129,7 +5115,6 @@ F 4 "311020025" H 13350 29250 60  0001 C CNN "Sku"
 F 5 "TS-1101F" H 13350 29250 60  0001 C CNN "MPN"
 F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/311020025.pdf" H 13350 29250 60  0001 C CNN "provider link 1"
 F 7 "--" H 13350 29250 60  0001 C CNN "provider link 2"
-F 8 "With stem" H 13350 29250 60  0001 C CNN "stem"
 	1    13350 29250
 	1    0    0    -1  
 $EndComp
@@ -5170,15 +5155,14 @@ F 4 "311020025" H 13350 30750 60  0001 C CNN "Sku"
 F 5 "TS-1101F" H 13350 30750 60  0001 C CNN "MPN"
 F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/311020025.pdf" H 13350 30750 60  0001 C CNN "provider link 1"
 F 7 "--" H 13350 30750 60  0001 C CNN "provider link 2"
-F 8 "With stem" H 13350 30750 60  0001 C CNN "stem"
 	1    13350 30750
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R?
+L R R6
 U 1 1 5957A7EB
 P 5050 -1550
-F 0 "R?" V 5130 -1550 50  0000 C CNN
+F 0 "R6" V 5130 -1550 50  0000 C CNN
 F 1 "4.7K" V 5050 -1550 50  0000 C CNN
 F 2 "SeeedOPL-Resistor:R0603" V 4980 -1550 50  0001 C CNN
 F 3 "" H 5050 -1550 50  0000 C CNN
@@ -5190,10 +5174,10 @@ F 7 "--" H 5050 -1550 60  0001 C CNN "provider link 2"
 	-1   0    0    1   
 $EndComp
 $Comp
-L R R?
+L R R24
 U 1 1 595893F5
 P 5050 -1250
-F 0 "R?" V 5130 -1250 50  0000 C CNN
+F 0 "R24" V 5130 -1250 50  0000 C CNN
 F 1 "220" V 5050 -1250 50  0000 C CNN
 F 2 "SeeedOPL-Resistor:R0603" V 4980 -1250 50  0001 C CNN
 F 3 "" H 5050 -1250 50  0000 C CNN

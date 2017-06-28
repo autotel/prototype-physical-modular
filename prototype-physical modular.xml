@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>C:\Users\joaquin\repositories\music devices\prototype-physical modular\prototype-physical modular.sch</source>
-    <date>27-06-2017 11:24:19</date>
+    <source>C:/Users/joaquin/repositories/music devices/prototype-physical modular/prototype-physical modular.sch</source>
+    <date>28-06-2017 11:22:59</date>
     <tool>Eeschema 4.0.4-stable</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -28,7 +28,6 @@
         <field name="provider link 1">https://statics3.seeedstudio.com/images/opl/datasheet/310010006.pdf</field>
         <field name="provider link 2">--</field>
         <field name="Fieldname">Value</field>
-        <field name="sku">310010006</field>
       </fields>
       <libsource lib="prototype-physical modular" part="ATMEGA2560-A"/>
       <sheetpath names="/" tstamps="/"/>
@@ -68,7 +67,6 @@
         <field name="MPN">RC0402JR-071KL</field>
         <field name="provider link 1">https://statics3.seeedstudio.com/images/opl/datasheet/301010006.pdf</field>
         <field name="provider link 2">--</field>
-        <field name="sku">RC0402JR-071KL</field>
       </fields>
       <libsource lib="prototype-physical modular" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -82,7 +80,6 @@
         <field name="MPN">17-215UYC/S530-A3/TR8</field>
         <field name="provider link 1">https://statics3.seeedstudio.com/images/opl/datasheet/304090039.pdf</field>
         <field name="provider link 2">--</field>
-        <field name="sku">17-215UYC/S530-A3/TR8</field>
       </fields>
       <libsource lib="prototype-physical modular" part="LED"/>
       <sheetpath names="/" tstamps="/"/>
@@ -150,7 +147,6 @@
         <field name="MPN">CC0402KRX7R8BB104</field>
         <field name="provider link 1">https://statics3.seeedstudio.com/images/opl/datasheet/302010024.pdf</field>
         <field name="provider link 2">--</field>
-        <field name="sku">CC0402KRX7R8BB104</field>
       </fields>
       <libsource lib="prototype-physical modular" part="C"/>
       <sheetpath names="/" tstamps="/"/>
@@ -187,7 +183,10 @@
       <value>100n</value>
       <footprint>SeeedOPL-Capacitor:C0402</footprint>
       <fields>
-        <field name="seed sku">CC0402KRX7R8BB104</field>
+        <field name="Sku">302010024</field>
+        <field name="MPN">CC0402KRX7R8BB104</field>
+        <field name="provider link 1">--</field>
+        <field name="provider link 2">--</field>
       </fields>
       <libsource lib="prototype-physical modular" part="C_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -251,7 +250,10 @@
       <value>BARREL_JACK</value>
       <footprint>SparkFun-Connectors:POWER_JACK_PTH_LOCK</footprint>
       <fields>
-        <field name="sku">321050033</field>
+        <field name="Sku">--</field>
+        <field name="MPN">--</field>
+        <field name="provider link 1">--</field>
+        <field name="provider link 2">--</field>
       </fields>
       <libsource lib="prototype-physical modular" part="BARREL_JACK"/>
       <sheetpath names="/" tstamps="/"/>
@@ -356,7 +358,6 @@
         <field name="MPN">--</field>
         <field name="provider link 1">--</field>
         <field name="provider link 2">--</field>
-        <field name="pendant">!!</field>
       </fields>
       <libsource lib="prototype-physical modular" part="TLV70233DBV"/>
       <sheetpath names="/" tstamps="/"/>
@@ -585,7 +586,6 @@
         <field name="MPN">SKQGADE010</field>
         <field name="provider link 1">https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf</field>
         <field name="provider link 2">--</field>
-        <field name="stem">With stem</field>
       </fields>
       <libsource lib="prototype-physical modular" part="SW_PUSH"/>
       <sheetpath names="/" tstamps="/"/>
@@ -600,7 +600,6 @@
         <field name="MPN">CC0402KRX7R8BB104</field>
         <field name="provider link 1">https://statics3.seeedstudio.com/images/opl/datasheet/302010024.pdf</field>
         <field name="provider link 2">--</field>
-        <field name="sku">CC0402KRX7R8BB104</field>
       </fields>
       <libsource lib="prototype-physical modular" part="C"/>
       <sheetpath names="/" tstamps="/"/>
@@ -615,7 +614,6 @@
         <field name="MPN">CC0402KRX7R8BB104</field>
         <field name="provider link 1">https://statics3.seeedstudio.com/images/opl/datasheet/302010024.pdf</field>
         <field name="provider link 2">--</field>
-        <field name="sku">CC0402KRX7R8BB104</field>
       </fields>
       <libsource lib="prototype-physical modular" part="C"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1516,7 +1514,6 @@
         <field name="MPN">SKQGADE010</field>
         <field name="provider link 1">https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf</field>
         <field name="provider link 2">--</field>
-        <field name="stem">With stem</field>
       </fields>
       <libsource lib="prototype-physical modular" part="SW_PUSH"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1530,7 +1527,6 @@
         <field name="MPN">SKQGADE010</field>
         <field name="provider link 1">https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf</field>
         <field name="provider link 2">--</field>
-        <field name="stem">With stem</field>
       </fields>
       <libsource lib="prototype-physical modular" part="SW_PUSH"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1544,7 +1540,6 @@
         <field name="MPN">SKQGADE010</field>
         <field name="provider link 1">https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf</field>
         <field name="provider link 2">--</field>
-        <field name="stem">With stem</field>
       </fields>
       <libsource lib="prototype-physical modular" part="SW_PUSH"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1558,7 +1553,6 @@
         <field name="MPN">SKQGADE010</field>
         <field name="provider link 1">https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf</field>
         <field name="provider link 2">--</field>
-        <field name="stem">With stem</field>
       </fields>
       <libsource lib="prototype-physical modular" part="SW_PUSH"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1572,7 +1566,6 @@
         <field name="MPN">SKQGADE010</field>
         <field name="provider link 1">https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf</field>
         <field name="provider link 2">--</field>
-        <field name="stem">With stem</field>
       </fields>
       <libsource lib="prototype-physical modular" part="SW_PUSH"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1586,7 +1579,6 @@
         <field name="MPN">SKQGADE010</field>
         <field name="provider link 1">https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf</field>
         <field name="provider link 2">--</field>
-        <field name="stem">With stem</field>
       </fields>
       <libsource lib="prototype-physical modular" part="SW_PUSH"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1600,7 +1592,6 @@
         <field name="MPN">SKQGADE010</field>
         <field name="provider link 1">https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf</field>
         <field name="provider link 2">--</field>
-        <field name="stem">With stem</field>
       </fields>
       <libsource lib="prototype-physical modular" part="SW_PUSH"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1614,7 +1605,6 @@
         <field name="MPN">SKQGADE010</field>
         <field name="provider link 1">https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf</field>
         <field name="provider link 2">--</field>
-        <field name="stem">With stem</field>
       </fields>
       <libsource lib="prototype-physical modular" part="SW_PUSH"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1628,7 +1618,6 @@
         <field name="MPN">SKQGADE010</field>
         <field name="provider link 1">https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf</field>
         <field name="provider link 2">--</field>
-        <field name="stem">With stem</field>
       </fields>
       <libsource lib="prototype-physical modular" part="SW_PUSH"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1642,7 +1631,6 @@
         <field name="MPN">SKQGADE010</field>
         <field name="provider link 1">https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf</field>
         <field name="provider link 2">--</field>
-        <field name="stem">With stem</field>
       </fields>
       <libsource lib="prototype-physical modular" part="SW_PUSH"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1656,7 +1644,6 @@
         <field name="MPN">SKQGADE010</field>
         <field name="provider link 1">https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf</field>
         <field name="provider link 2">--</field>
-        <field name="stem">With stem</field>
       </fields>
       <libsource lib="prototype-physical modular" part="SW_PUSH"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1670,7 +1657,6 @@
         <field name="MPN">SKQGADE010</field>
         <field name="provider link 1">https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf</field>
         <field name="provider link 2">--</field>
-        <field name="stem">With stem</field>
       </fields>
       <libsource lib="prototype-physical modular" part="SW_PUSH"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1855,7 +1841,6 @@
         <field name="MPN">TS-1101F</field>
         <field name="provider link 1">https://statics3.seeedstudio.com/images/opl/datasheet/311020025.pdf</field>
         <field name="provider link 2">--</field>
-        <field name="stem">With stem</field>
       </fields>
       <libsource lib="prototype-physical modular" part="SW_PUSH"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1882,7 +1867,6 @@
         <field name="MPN">TS-1101F</field>
         <field name="provider link 1">https://statics3.seeedstudio.com/images/opl/datasheet/311020025.pdf</field>
         <field name="provider link 2">--</field>
-        <field name="stem">With stem</field>
       </fields>
       <libsource lib="prototype-physical modular" part="SW_PUSH"/>
       <sheetpath names="/" tstamps="/"/>
@@ -2614,11 +2598,11 @@
     </libpart>
   </libparts>
   <libraries>
+    <library logical="prototype-physical modular">
+      <uri>C:\Users\joaquin\repositories\music devices\prototype-physical modular\lib_sch\prototype-physical modular.lib</uri>
+    </library>
     <library logical="device">
       <uri>C:\Program Files\KiCad\share\kicad\library\device.lib</uri>
-    </library>
-    <library logical="prototype-physical modular">
-      <uri>lib_sch\prototype-physical modular.lib</uri>
     </library>
   </libraries>
   <nets>

@@ -21,7 +21,9 @@
       )
     )
     (boundary
-      (path pcb 0  0 0  0 -165000  100000 -165000  100000 0  0 0  0 0)
+      (path pcb 0  1500 -164000  0 -162500  0 -36500  1000 -35500  1000 -29500
+            0 -28500  0 0  100000 0  100000 -28500  99000 -29500  99000 -35500
+            100000 -36500  100000 -162500  98500 -164000  1500 -164000  1500 -164000)
     )
     (keepout "" (polygon F.Cu 0  11200 -70100  9450 -69700  8600 -69250  8200 -69500  7600 -69400
             7350 -69050  7300 -68650  7350 -68400  6450 -67600  5450 -66250
@@ -320,6 +322,7 @@
   )
   (placement
     (component lib_fp:MountingHole_3mm
+      (place REF28 52500 -52500 front 0 (PN MountingHole_3mm))
       (place REF00 97500 -2500 front 0 (PN MountingHole_3mm))
       (place REF01 25000 -112500 front 0 (PN MountingHole_3mm))
       (place REF02 37500 -125000 front 0 (PN MountingHole_3mm))
@@ -356,18 +359,18 @@
       (place SW2 86995 -22860 front 180 (PN ROTARY_ENCODER_SWITCH))
     )
     (component "TO_SOT_Packages_SMD:SOT-23-5"
-      (place 3v3regu1 66040 -31544 back 90 (PN TLV70233DBV))
+      (place 3v3regu1 66800 -28000 back 90 (PN TLV70233DBV))
     )
     (component "SeeedOPL-Capacitor:C0402"
-      (place C1 77500 -20000 back 270 (PN 100n))
+      (place C1 58000 -23700 back 270 (PN 100n))
       (place C3 62992 -32512 back 270 (PN 1u))
-      (place C4 14478 -28758 back 180 (PN 100nF))
-      (place C5 13533 -28758 back 180 (PN 100nF))
-      (place C6 12588 -28758 back 180 (PN 100nF))
+      (place C4 52258 -94022 back 270 (PN 100nF))
+      (place C5 52258 -94967 back 270 (PN 100nF))
+      (place C6 52258 -95912 back 270 (PN 100nF))
       (place C7 87630 -33020 back 180 (PN 22pF))
-      (place C8 11242.3 -22280 back 90 (PN 22pF))
-      (place C9 11280 -23780 back 90 (PN 22pF))
-      (place C10 13970 -18034 back 180 (PN 100nF))
+      (place C8 36242.3 -77280 back 90 (PN 22pF))
+      (place C9 36280 -78780 back 90 (PN 22pF))
+      (place C10 38970 -73034 back 180 (PN 100nF))
     )
     (component "SeeedOPL-LED:LED-0805"
       (place D2 72390 -29770 back 270 (PN LED))
@@ -385,7 +388,7 @@
       (place PJ2COM1 64770 -15240 back 0 (PN Jumper_NO_Small))
     )
     (component "SeeedOPL-Transistor:SOT-23"
-      (place Q1 54610 -28448 back 270 (PN BSS138))
+      (place Q1 37510 -102848 back 270 (PN BSS138))
       (place Q2 17145 -78359 back 0 (PN BSS138))
       (place Q3 94484 -104030 back 270 (PN BSS138))
       (place Q4 75016 -130660 back 90 (PN BSS138))
@@ -401,9 +404,9 @@
       (place R4 95330 -18790 back 0 (PN 220))
       (place R5 90932 -72644 back 90 (PN 4.7K))
       (place R7 82042 -31496 back 90 (PN 10k))
-      (place R8 9280 -23030 back 0 (PN 1M))
-      (place R11 64770 -25654 back 90 (PN 10k))
-      (place R12 51308 -28448 back 180 (PN 10k))
+      (place R8 34280 -78030 back 0 (PN 1M))
+      (place R11 41670 -103554 back 90 (PN 10k))
+      (place R12 34208 -102848 back 180 (PN 10k))
       (place R13 17145 -74295 back 180 (PN 10k))
       (place R14 17145 -83185 back 270 (PN 10k))
       (place R15 95600 -107300 back 90 (PN 10k))
@@ -416,18 +419,18 @@
       (place R22 77310 -105540 back 0 (PN 10k))
       (place R23 44196 -4826 back 270 (PN 220))
       (place R6 95250 -69500 back 90 (PN 4.7K))
-      (place R9 64770 -23876 back 270 (PN 10k))
+      (place R9 41670 -101776 back 270 (PN 10k))
       (place R10 59690 -30480 back 270 (PN 10k))
       (place R24 90932 -69850 back 270 (PN 220))
     )
     (component "SeeedOPL-Resistor:ADJR3-7.0X7.0X5.0MM"
-      (place RV1 4693.92 -10160 back 270 (PN POT))
+      (place RV1 4693.9 -10160 back 270 (PN POT))
     )
     (component "SeeedOPL-IC:TO-252"
-      (place U1 76708 -24892 back 180 (PN NCP1117ST50T3G))
+      (place U1 50000 -29200 back 180 (PN NCP1117ST50T3G))
     )
     (component "SeeedOPL-Crystal Oscillator:HC49US"
-      (place Y1 5080 -20320 back 90 (PN 16MHz))
+      (place Y1 50000 -60000 back 90 (PN 16MHz))
     )
     (component "SparkFun-Connectors:POWER_JACK_PTH_LOCK"
       (place CON1 52025.4 207 back 180 (PN BARREL_JACK))
@@ -475,16 +478,16 @@
       (place P18 52070 -43270 back 90 (PN 3VI2C))
     )
     (component Pin_Headers:Pin_Header_Straight_2x03_Pitch2.54mm_SMD
-      (place P3 43180 -10390 back 270 (PN SPI))
+      (place P3 63980 -132190 back 270 (PN SPI))
     )
     (component Pin_Headers:Pin_Header_Straight_1x10_Pitch2.54mm_SMD_Pin1Left
       (place P17 78000 -151270 back 0 (PN SD_PINS))
     )
     (component Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm_SMD_Pin1Left
-      (place P2 49770 -75000 back 270 (PN FTDI))
+      (place P2 16500 -104000 back 270 (PN FTDI))
     )
     (component "lib_fp:DO-214AC"
-      (place D1 73000 -15250 back 180 (PN D))
+      (place D1 53500 -18950 back 180 (PN D))
       (place D3 91440 -52578 back 0 (PN D))
       (place D4 7500 -40000 front 270 (PN D))
       (place D5 32155 -40190 front 90 (PN D))
@@ -511,15 +514,15 @@
       (place D26 29977 -147500 back 180 (PN D))
       (place D27 70977 -147500 back 180 (PN D))
       (place D28 91250 -147750 back 180 (PN D))
-      (place D29 19685 -153035 front -0 (PN D))
-      (place D30 41275 -153035 front -0 (PN D))
-      (place D31 66675 -153035 front -0 (PN D))
-      (place D32 95977 -153035 front -0 (PN D))
-      (place D33 5190 -32510 front 270 (PN D))
-      (place D34 92720 -32470 front 0 (PN D))
+      (place D29 19685 -153035 front 0 (PN D))
+      (place D30 41275 -153035 front 0 (PN D))
+      (place D31 66675 -153035 front 0 (PN D))
+      (place D32 95977 -153035 front 0 (PN D))
+      (place D33 31190 -87510 back 270 (PN D))
+      (place D34 91500 -33000 front 0 (PN D))
     )
     (component "lib_fp:AVX-A"
-      (place C2 76708 -17780 back 0 (PN 47u))
+      (place C2 57208 -21480 back 0 (PN 47u))
     )
     (component "lib_fp:SW4-SMD-5.2X5.2X1.5MM"
       (place SW1 87000 -22750.3 back 90 (PN SW_PUSH))
@@ -537,26 +540,26 @@
       (place SW14 95354 -157500 front 0 (PN SW_PUSH))
     )
     (component "SparkFun-DigitalIC:TQFP100"
-      (place IC1 25400 -26670 back 90 (PN "ATMEGA2560-A"))
+      (place IC1 50000 -78000 back 270 (PN "ATMEGA2560-A"))
     )
     (component "Housings_SSOP:SSOP-16_3.9x4.9mm_Pitch0.635mm"
-      (place MUXA1 25340 -79057.5 back 180 (PN 4051))
-      (place MUXB1 74990 -79057.5 back 0 (PN 4051))
+      (place MUXA1 25000 -79100 back 180 (PN 4051))
+      (place MUXB1 75000 -79100 back 0 (PN 4051))
     )
     (component Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD
-      (place P7 24130 -10390 back 90 (PN PA))
-      (place P15 13970 -10390 back 270 (PN PH))
-      (place P16 34290 -10390 back 270 (PN PF))
+      (place P7 44930 -132190 back 90 (PN PA))
+      (place P15 34770 -132190 back 270 (PN PH))
+      (place P16 55090 -132190 back 270 (PN PF))
     )
     (component ArduProMiniTKB:ArduProMini
-      (place uP1 73786 -37794 back 270 (PN ARDUPROMINI))
+      (place uP1 45630 -24840 back 270 (PN ARDUPROMINI))
     )
     (component "SeeedOPL-Capacitor:C0402_electrolitic"
-      (place C_LEDS1 49992.3 -87376 back 270 (PN "1uF-10V"))
+      (place C_LEDS1 71537.7 -94000 back 270 (PN "1uF-10V"))
     )
     (component "SeeedOPL-Switch:SW2-5.0-6.0X3.0X4.3MM"
-      (place SW_left1 2500 -32500 back 90 (PN SW_PUSH))
-      (place SW_right1 97500 -32500 back 270 (PN SW_PUSH))
+      (place SW_left1 3500 -32500 back 90 (PN SW_PUSH))
+      (place SW_right1 96500 -32500 back 270 (PN SW_PUSH))
     )
   )
   (library
@@ -11882,13 +11885,12 @@
       /3vSPI_SCK /3vTX0 /5VSD_CLK /5VSD_CS /5VSD_MISO /5VSD_MOSI /BUSTI_CONN
       /BUSTO_CONN /BUS_COM /BUS_COM_B /BUS_TI /BUS_TO /ENCA /ENCC /LCD0 /LCD1
       /LCD2 /LCD3 /LCD4 /LCD5 /MIDI_OUT_TX /MIDI_RX /MUXAADDR0 /MUXAADDR1
-      /MUXAADDR2 /MUXAX0 /MUXAX1 /MUXAX2 /MUXAX3 /MUXAX4 /MUXAX5 /MUXAX6 /MUXAX7
-      /MUXA_COMMON /MUXBADDR0 /MUXBADDR1 /MUXBADDR2 /MUXBX0 /MUXBX1 /MUXBX2
-      /MUXBX3 /MUXBX4 /MUXBX5 /MUXBX6 /MUXBX7 /MUXB_COMMON /PI_3V3 /PI_5V
-      /PI_GPCLK0 /PI_SCL /PI_SDA /POWER_IS /RESET /RX0 /RX2 /SCL /SDA /SD_CD
-      /SD_DAT1 /SD_DAT2 /SD_WP /SERIAL_LED_PIN /SERIAL_LED_TOROW_1 /SERIAL_LED_TOROW_2
-      /SERIAL_LED_TOROW_3 /SERIAL_LED_TOROW_4 /SERIAL_LED_TOROW_5 /SERIAL_LED_TOROW_6
-      /TX0 /TX2 /TX3 GND "Net-(C1-Pad1)" "Net-(C10-Pad1)" "Net-(C8-Pad1)"
+      /MUXAADDR2 /MUXAX0 /MUXAX1 /MUXAX2 /MUXAX3 /MUXAX4 /MUXA_COMMON /MUXBADDR0
+      /MUXBADDR1 /MUXBADDR2 /MUXBX0 /MUXBX1 /MUXBX2 /MUXBX3 /MUXBX4 /MUXBX5
+      /MUXBX6 /MUXB_COMMON /PI_3V3 /PI_5V /PI_SCL /PI_SDA /POWER_IS /RESET
+      /RX0 /SCL /SDA /SD_DAT1 /SD_DAT2 /SERIAL_LED_PIN /SERIAL_LED_TOROW_1
+      /SERIAL_LED_TOROW_2 /SERIAL_LED_TOROW_3 /SERIAL_LED_TOROW_4 /SERIAL_LED_TOROW_5
+      /SERIAL_LED_TOROW_6 /TX0 /TX3 GND "Net-(C1-Pad1)" "Net-(C10-Pad1)" "Net-(C8-Pad1)"
       "Net-(C9-Pad1)" "Net-(CON1-PadPWR)" "Net-(D10-Pad-)" "Net-(D11-Pad-)"
       "Net-(D12-Pad-)" "Net-(D13-Pad-)" "Net-(D14-Pad-)" "Net-(D15-Pad-)"
       "Net-(D16-Pad-)" "Net-(D17-Pad-)" "Net-(D18-Pad-)" "Net-(D19-Pad-)"
@@ -11897,8 +11899,7 @@
       "Net-(D28-Pad-)" "Net-(D29-Pad-)" "Net-(D3-Pad+)" "Net-(D3-Pad-)" "Net-(D30-Pad-)"
       "Net-(D31-Pad-)" "Net-(D32-Pad-)" "Net-(D33-Pad-)" "Net-(D34-Pad-)"
       "Net-(D4-Pad-)" "Net-(D5-Pad-)" "Net-(D6-Pad-)" "Net-(D7-Pad-)" "Net-(D8-Pad-)"
-      "Net-(D9-Pad-)" "Net-(DS1-Pad10)" "Net-(DS1-Pad15)" "Net-(DS1-Pad3)"
-      "Net-(DS1-Pad7)" "Net-(DS1-Pad8)" "Net-(DS1-Pad9)" "Net-(IC1-Pad1)"
+      "Net-(D9-Pad-)" "Net-(DS1-Pad15)" "Net-(DS1-Pad3)" "Net-(IC1-Pad1)"
       "Net-(IC1-Pad19)" "Net-(IC1-Pad23)" "Net-(IC1-Pad24)" "Net-(IC1-Pad25)"
       "Net-(IC1-Pad26)" "Net-(IC1-Pad28)" "Net-(IC1-Pad29)" "Net-(IC1-Pad4)"
       "Net-(IC1-Pad42)" "Net-(IC1-Pad47)" "Net-(IC1-Pad48)" "Net-(IC1-Pad49)"
@@ -11910,20 +11911,13 @@
       "Net-(IC1-Pad75)" "Net-(IC1-Pad76)" "Net-(IC1-Pad77)" "Net-(IC1-Pad78)"
       "Net-(IC1-Pad79)" "Net-(IC1-Pad8)" "Net-(IC1-Pad9)" "Net-(IC1-Pad90)"
       "Net-(IC1-Pad91)" "Net-(IC1-Pad92)" "Net-(IC1-Pad93)" "Net-(IC1-Pad94)"
-      "Net-(IC1-Pad95)" "Net-(IC1-Pad96)" "Net-(IC1-Pad97)" "Net-(J1-Pad1)"
-      "Net-(J1-Pad2)" "Net-(J1-Pad4)" "Net-(J1-Pad5)" "Net-(J1-Pad6)" "Net-(J1-Pad7)"
-      "Net-(J1-Pad8)" "Net-(J2-Pad1)" "Net-(J2-Pad4)" "Net-(J2-Pad5)" "Net-(J2-Pad6)"
-      "Net-(J2-Pad7)" "Net-(J2-Pad8)" "Net-(P4-Pad5)" "Net-(P4-Pad6)" "Net-(P4-Pad7)"
-      "Net-(P5-Pad5)" "Net-(P5-Pad6)" "Net-(P5-Pad7)" "Net-(R24-Pad1)" "Net-(R5-Pad2)"
-      "Net-(WSB1-Pad2)" "Net-(WSB10-Pad2)" "Net-(WSB10-Pad4)" "Net-(WSB11-Pad2)"
-      "Net-(WSB13-Pad2)" "Net-(WSB14-Pad2)" "Net-(WSB15-Pad2)" "Net-(WSB17-Pad2)"
-      "Net-(WSB18-Pad2)" "Net-(WSB19-Pad2)" "Net-(WSB2-Pad2)" "Net-(WSB21-Pad2)"
-      "Net-(WSB22-Pad2)" "Net-(WSB23-Pad2)" "Net-(WSB25-Pad2)" "Net-(WSB26-Pad2)"
-      "Net-(WSB27-Pad2)" "Net-(WSB28-Pad2)" "Net-(WSB3-Pad2)" "Net-(WSB5-Pad2)"
-      "Net-(WSB6-Pad2)" "Net-(WSB7-Pad2)" "Net-(uP1-Pad10)" "Net-(uP1-Pad19)"
-      "Net-(uP1-Pad20)" "Net-(uP1-Pad21)" "Net-(uP1-Pad22)" "Net-(uP1-Pad31)"
-      "Net-(uP1-Pad32)" "Net-(uP1-Pad34)" "Net-(uP1-Pad7)" "Net-(uP1-Pad8)"
-      "Net-(uP1-Pad9)"
+      "Net-(IC1-Pad95)" "Net-(IC1-Pad96)" "Net-(IC1-Pad97)" "Net-(J1-Pad4)"
+      "Net-(J2-Pad1)" "Net-(J2-Pad8)" "Net-(R24-Pad1)" "Net-(R5-Pad2)" "Net-(WSB1-Pad2)"
+      "Net-(WSB10-Pad2)" "Net-(WSB10-Pad4)" "Net-(WSB11-Pad2)" "Net-(WSB13-Pad2)"
+      "Net-(WSB14-Pad2)" "Net-(WSB15-Pad2)" "Net-(WSB17-Pad2)" "Net-(WSB18-Pad2)"
+      "Net-(WSB19-Pad2)" "Net-(WSB2-Pad2)" "Net-(WSB21-Pad2)" "Net-(WSB22-Pad2)"
+      "Net-(WSB23-Pad2)" "Net-(WSB25-Pad2)" "Net-(WSB26-Pad2)" "Net-(WSB27-Pad2)"
+      "Net-(WSB3-Pad2)" "Net-(WSB5-Pad2)" "Net-(WSB6-Pad2)" "Net-(WSB7-Pad2)"
       (circuit
         (use_via Via[0-1]_600:400_um)
       )
