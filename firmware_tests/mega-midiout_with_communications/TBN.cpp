@@ -2,7 +2,7 @@
 #include "SendOnlySoftwareSerial.h"
 #include "ReceiveOnlySoftwareSerial.h"
 #include "TBN.h"
-#define tokenTimeout 3
+#define tokenTimeout 5
 #define BAUDRATE 38400
 
 

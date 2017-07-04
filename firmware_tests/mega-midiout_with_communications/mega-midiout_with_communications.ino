@@ -28,9 +28,11 @@ unsigned long lastStepMicroStep = 0;
 unsigned long currentMicroStep = 0;
 int mpi = 0;
 
-#define INTERVAL 24
+#define INTERVAL 1
 unsigned char currentStep = 0;
 unsigned char microStepSource=0xff;
+#define SOURCEDEPRECATE 10000
+long lastClockReceived=0;
 
 void setup() {
   //TBN
@@ -136,12 +138,16 @@ void noteOn(char chan, char pitch, char velocity) {
 
 //TBN
 void onMessage(unsigned char origin,unsigned char header,unsigned char * data, unsigned char len){
+  if(lastClockReceived+SOURCEDEPRECATE<millis()){
+    microStepSource=0xff;
+  }
   if(microStepSource==0xff){
     microStepSource=origin;
   }
   if(origin==microStepSource){
     currentMicroStep++;
   }
+  lastClockReceived=millis();
   testByte=(data[0]+1);
   lcd.print(" I:");
   lcd.print(network.ownID);
