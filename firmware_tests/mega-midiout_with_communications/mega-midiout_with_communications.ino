@@ -8,8 +8,8 @@
 
 TBN network;
 
-char test=0;
-unsigned char testByte=0;
+char test = 0;
+unsigned char testByte = 0;
 
 #define LEDS 16
 WS2812 LED(LEDS);
@@ -17,7 +17,7 @@ cRGB value;
 String impracticalString = "----------------";
 
 // initialize the library with the numbers of the interface pins
-LiquidCrystal lcd(52, 53, 50, 51, 48, 49);
+LiquidCrystal lcd(49, 48, 47, 46, 45, 44);
 
 #define POLI 4
 #define LEN 32
@@ -28,23 +28,25 @@ unsigned long lastStepMicroStep = 0;
 unsigned long currentMicroStep = 0;
 int mpi = 0;
 
-#define INTERVAL 1
+#define INTERVAL 12
 unsigned char currentStep = 0;
-unsigned char microStepSource=0xff;
+unsigned char microStepSource = 0xff;
 #define SOURCEDEPRECATE 10000
-long lastClockReceived=0;
+long lastClockReceived = 0;
 
 void setup() {
   //TBN
   network.start();
   network.onData(onMessage);
+ // attachInterrupt(digitalPinToInterrupt(network.tipPin), netisr, RISING );
+
   //arrays are not empty by default. !?
   for (unsigned char a = 0; a < LEN; a++) {
     for (unsigned char b = 0; b < POLI; b++) {
       pat[a][b] = 0;
     }
   }
-  LED.setOutput(46);
+  LED.setOutput(43);
   Serial1.begin(31250);
   // set up the LCD's number of columns and rows:
   lcd.begin(16, 2);
@@ -53,10 +55,17 @@ void setup() {
 
 }
 
+
+//ISR that is called by the network on TIP rise.
+//TODO: I need to find a solution that allows more than one instance and that is fairly elegant.
+void netisr() {
+  network.broadcastFunction();
+}
+
 void loop() {
   //TBN
-  unsigned char testSignal [] = {testByte,testByte+1,testByte+2,testByte+3,testByte+4,testByte+5};
-  network.write(testSignal,5);//test message. it doesn't write,  but makes it available for next token reception
+  unsigned char testSignal [] = {testByte, testByte + 1, testByte + 2, testByte + 3, testByte + 4, testByte + 5};
+  network.write(testSignal, 5); //test message. it doesn't write,  but makes it available for next token reception
   network.loop();//there should be an ISR timer rather than monitorization
 
   if (currentMicroStep  > INTERVAL) {
@@ -108,7 +117,7 @@ void loop() {
   lcd.setCursor(0, 0);
   lcd.print(impracticalString);
   lcd.setCursor(0, 1);
-  lcd.print(String(mpi,HEX));
+  lcd.print(String(mpi, HEX));
 
 }
 
@@ -137,23 +146,25 @@ void noteOn(char chan, char pitch, char velocity) {
 
 
 //TBN
-void onMessage(unsigned char origin,unsigned char header,unsigned char * data, unsigned char len){
-  if(lastClockReceived+SOURCEDEPRECATE<millis()){
-    microStepSource=0xff;
+void onMessage(unsigned char origin, unsigned char header, unsigned char * data, unsigned char len) {
+  //this here is a prostheses to good programming. Tasks need to not be blocking or checkup of TIP should be ISR
+    network.loop();//there should be an ISR timer rather than monitorization
+
+  if (lastClockReceived + SOURCEDEPRECATE < millis()) {
+    microStepSource = 0xff;
   }
-  if(microStepSource==0xff){
-    microStepSource=origin;
+  if (microStepSource == 0xff) {
+    microStepSource = origin;
   }
-  if(origin==microStepSource){
+  if (origin == microStepSource) {
     currentMicroStep++;
   }
-  lastClockReceived=millis();
-  testByte=(data[0]+1);
+  lastClockReceived = millis();
+  testByte = (data[0] + 1);
   lcd.print(" I:");
   lcd.print(network.ownID);
   lcd.print(" s:");
-  lcd.print(String(microStepSource,HEX));
+  lcd.print(String(microStepSource, HEX));
   lcd.print(" ms:");
-  lcd.print(String(currentMicroStep,HEX));
-
+  lcd.print(String(currentMicroStep, HEX));
 }

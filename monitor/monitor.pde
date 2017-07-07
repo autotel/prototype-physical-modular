@@ -14,7 +14,7 @@ int val;      // Data received from the serial port
 long lastMessageAt=0;
 
 int  incom[]=new int[32];
-NodeVis nodes[]=new NodeVis[32];
+NodeVis nodes[]=new NodeVis[1024];
 int truncateTimeout=10;
 
 import static javax.swing.JOptionPane.*;
@@ -24,7 +24,7 @@ final boolean debug = true;
 
 void setup() 
 {
-  
+  frameRate(100);
   String COMx, COMlist = "";
 /*
   Other setup code goes here - I put this at
@@ -48,7 +48,7 @@ void setup()
       }
       String portName = Serial.list()[i-1];
       if(debug) println(portName);
-      myPort = new Serial(this, portName, 19200); // change baud rate to your liking
+      myPort = new Serial(this, portName, 38400); // change baud rate to your liking
       //myPort.bufferUntil('\n'); // buffer until CR/LF appears, but not required..
     }
     else {
@@ -153,7 +153,7 @@ void applyMessage() {
 }
 int cols=8;
 int space=2;
-class NodeVis { 
+class NodeVis {
   float updatedAgo=0;
   int index; 
   int represents;
@@ -168,21 +168,21 @@ class NodeVis {
   }
   void updateData(String newData) {
     myData=newData;
-    updatedAgo=300;
+    updatedAgo=0;
   }
   void dr() {
     float w=(width/cols);
     if (active) {
       pushMatrix();
       translate(w*(index%cols)+space, floor(index/cols)*w*2);
-      fill(updatedAgo/2);
+      fill(127-updatedAgo);
       stroke(124);
-      rect(space, space, w-space, 32-space);
+      rect(space, space+updatedAgo*16, w-space, 32-space);
       fill(230);
       text(represents+'\n'+myData, 8, 16);
       popMatrix();
-      if (updatedAgo>0) {
-        updatedAgo-=0.2;
+      if (updatedAgo<21039) {
+        updatedAgo+=1;
       }
     }
   }

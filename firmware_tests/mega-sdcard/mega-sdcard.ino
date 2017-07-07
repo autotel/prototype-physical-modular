@@ -14,6 +14,7 @@
  		Pin 4 used here for consistency with other Arduino examples
 
  MEGA: 50, 51, and 52 CS53
+ SPI: 50 (MISO), 51 (MOSI), 52 (SCK), 53 (SS).
  
  created  28 Mar 2011
  by Limor Fried
@@ -33,7 +34,8 @@ SdFile root;
 // Arduino Ethernet shield: pin 4
 // Adafruit SD shields and modules: pin 10
 // Sparkfun SD shield: pin 8
-const int chipSelect = 8;
+//WTF!?
+const int chipSelect = 53;
 
 void setup() {
   // Open serial communications and wait for port to open:

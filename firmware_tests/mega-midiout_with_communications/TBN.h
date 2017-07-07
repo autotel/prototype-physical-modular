@@ -16,12 +16,13 @@ class TBN
     void write(unsigned char data[], unsigned char len);
     bool listen();
     unsigned char ownID=0;
+    void broadcastFunction();
+    char tipPin=0;
   private:
     int _pin;
     unsigned char outGoBytesDue=0;
     void outputMode();
     void inputMode();
-
     void (*_onReceiveCallback)(unsigned char,unsigned char,unsigned char *,unsigned char);
 };
 
