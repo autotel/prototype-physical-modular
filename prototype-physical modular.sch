@@ -5257,4 +5257,8 @@ Text Label 8600 6150 0    60   ~ 0
 BUS_TO
 Text Label 8600 6050 0    60   ~ 0
 BUS_TI
+Text Label 6650 12550 2    60   ~ 0
+PI5vTX0
+Text Label 6650 11600 2    60   ~ 0
+PI5vRX0
 $EndSCHEMATC

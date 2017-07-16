@@ -219,8 +219,6 @@ void TBN::broadcastFunction() {
 #if SERIALDEBUG
   Serial.print("\nTX.");
 #endif
-
-
   digitalWrite(TOP, HIGH);
   lastMessageAt = millis();
 }

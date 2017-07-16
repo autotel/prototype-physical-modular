@@ -114,10 +114,14 @@ void loop() {
     LED.set_crgb_at(stp, value); // Set value at LED found at index 0
   }
   LED.sync();
-  lcd.setCursor(0, 0);
-  lcd.print(impracticalString);
-  lcd.setCursor(0, 1);
-  lcd.print(String(mpi, HEX));
+  
+  
+  lcd.print(" I:");
+  lcd.print(network.ownID);
+  lcd.print(" s:");
+  lcd.print(String(microStepSource, HEX));
+  lcd.print(" ms:");
+  lcd.print(String(currentMicroStep, HEX));
 
 }
 
@@ -147,8 +151,6 @@ void noteOn(char chan, char pitch, char velocity) {
 
 //TBN
 void onMessage(unsigned char origin, unsigned char header, unsigned char * data, unsigned char len) {
-  //this here is a prostheses to good programming. Tasks need to not be blocking or checkup of TIP should be ISR
-    network.loop();//there should be an ISR timer rather than monitorization
 
   if (lastClockReceived + SOURCEDEPRECATE < millis()) {
     microStepSource = 0xff;
@@ -161,10 +163,4 @@ void onMessage(unsigned char origin, unsigned char header, unsigned char * data,
   }
   lastClockReceived = millis();
   testByte = (data[0] + 1);
-  lcd.print(" I:");
-  lcd.print(network.ownID);
-  lcd.print(" s:");
-  lcd.print(String(microStepSource, HEX));
-  lcd.print(" ms:");
-  lcd.print(String(currentMicroStep, HEX));
 }
