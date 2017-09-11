@@ -819,21 +819,6 @@ POWER_IS
 Text Notes 2000 -8050 2    60   ~ 0
 this pin should\nbe low if is\nconnected to\npower
 $Comp
-L JACK_TRS_8PINS J1
-U 1 1 595514E3
-P 3100 -3800
-F 0 "J1" H 3100 -3400 50  0000 C CNN
-F 1 "MIDI_IN" H 3050 -4100 50  0000 C CNN
-F 2 "SeeedOPL-Connector:AUDIO8P-SMD-3.5-14.5X6.1X4.0MM" H 3200 -3950 50  0001 C CNN
-F 3 "" H 3200 -3950 50  0000 C CNN
-F 4 "320040007" H 3100 -3800 60  0001 C CNN "Sku"
-F 5 "ST-PJ-312" H 3100 -3800 60  0001 C CNN "MPN"
-F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/320040007.pdf" H 3100 -3800 60  0001 C CNN "provider link 1"
-F 7 "--" H 3100 -3800 60  0001 C CNN "provider link 2"
-	1    3100 -3800
-	0    1    1    0   
-$EndComp
-$Comp
 L 6N138 U2
 U 1 1 5955472A
 P 4100 -1500
@@ -2735,21 +2720,6 @@ F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/302010024.pdf" H 5700
 F 7 "--" H 5700 10050 60  0001 C CNN "provider link 2"
 	1    5700 10050
 	1    0    0    -1  
-$EndComp
-$Comp
-L JACK_TRS_8PINS J2
-U 1 1 5965B060
-P 3950 -3800
-F 0 "J2" H 3950 -3400 50  0000 C CNN
-F 1 "MIDI_OUT" H 3900 -4100 50  0000 C CNN
-F 2 "SeeedOPL-Connector:AUDIO8P-SMD-3.5-14.5X6.1X4.0MM" H 4050 -3950 50  0001 C CNN
-F 3 "" H 4050 -3950 50  0000 C CNN
-F 4 "320040007" H 3950 -3800 60  0001 C CNN "Sku"
-F 5 "ST-PJ-312" H 3950 -3800 60  0001 C CNN "MPN"
-F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/320040007.pdf" H 3950 -3800 60  0001 C CNN "provider link 1"
-F 7 "--" H 3950 -3800 60  0001 C CNN "provider link 2"
-	1    3950 -3800
-	0    1    1    0   
 $EndComp
 $Comp
 L R R3
@@ -5261,4 +5231,34 @@ Text Label 6650 12550 2    60   ~ 0
 PI5vTX0
 Text Label 6650 11600 2    60   ~ 0
 PI5vRX0
+$Comp
+L JACK_TRS_8PINS P6
+U 1 1 59B71F32
+P 3100 -3800
+F 0 "P6" H 3100 -3550 50  0000 C CNN
+F 1 "MIDI_IN" V 3200 -3800 50  0000 C CNN
+F 2 "SeeedOPL-Connector:AUDIO8P-SMD-3.5-14.5X6.1X4.0MM" H 3100 -3800 50  0001 C CNN
+F 3 "" H 3100 -3800 50  0000 C CNN
+F 4 "320040003" H 3100 -3800 60  0001 C CNN "Sku"
+F 5 "PJ-3536-L6S" H 3100 -3800 60  0001 C CNN "MPN"
+F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/320040003.pdf" H 3100 -3800 60  0001 C CNN "provider link 1"
+F 7 "--" H 3100 -3800 60  0001 C CNN "provider link 2"
+	1    3100 -3800
+	0    1    1    0   
+$EndComp
+$Comp
+L JACK_TRS_8PINS P5
+U 1 1 59B72147
+P 3950 -3800
+F 0 "P5" H 3950 -3550 50  0000 C CNN
+F 1 "MIDI_OUT" V 4050 -3800 50  0000 C CNN
+F 2 "SeeedOPL-Connector:AUDIO8P-SMD-3.5-14.5X6.1X4.0MM" H 3950 -3800 50  0001 C CNN
+F 3 "" H 3950 -3800 50  0000 C CNN
+F 4 "320040003" H 3950 -3800 60  0001 C CNN "Sku"
+F 5 "PJ-3536-L6S" H 3950 -3800 60  0001 C CNN "MPN"
+F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/320040003.pdf" H 3950 -3800 60  0001 C CNN "provider link 1"
+F 7 "--" H 3950 -3800 60  0001 C CNN "provider link 2"
+	1    3950 -3800
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
