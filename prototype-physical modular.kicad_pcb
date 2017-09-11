@@ -5,7 +5,7 @@
     (no_connects 0)
     (area -9.7188 -6.191901 101.927 176.783501)
     (thickness 1.6)
-    (drawings 14)
+    (drawings 15)
     (tracks 3993)
     (zones 0)
     (modules 177)
@@ -62,7 +62,7 @@
     (pad_drill 3)
     (pad_to_mask_clearance 0.2)
     (aux_axis_origin 0 0)
-    (visible_elements 7FFFCFFF)
+    (visible_elements 7FFFDFFF)
     (pcbplotparams
       (layerselection 0x011fc_80000001)
       (usegerberextensions true)
@@ -469,13 +469,13 @@
     (add_net "Net-(WSB7-Pad2)")
   )
 
-  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 595330A5) (tstamp 594B7ECA)
+  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5972C174) (tstamp 594B7ECA)
     (at 0 100)
     (path /5968BAAF)
-    (fp_text reference WSB9 (at 1.17 -19.83 90) (layer F.SilkS) hide
+    (fp_text reference WSB9 (at 2.5 -37.5 90) (layer F.SilkS)
       (effects (font (thickness 0.15)))
     )
-    (fp_text value WS2812_BUTTON (at 1.17 -8.4 90) (layer F.SilkS) hide
+    (fp_text value WS2812_BUTTON (at 2.5 -7.5 90) (layer F.SilkS) hide
       (effects (font (thickness 0.15)))
     )
     (fp_circle (center 2.5 -47.5) (end 2.5 -46) (layer F.SilkS) (width 0.15))
@@ -532,7 +532,7 @@
     (fp_line (start 5.36 -40.53) (end 7.42 -39.5) (layer F.Cu) (width 0.254))
     (fp_circle (center 12.2 -37.5) (end 19.7 -37.5) (layer F.Cu) (width 0.254))
     (fp_circle (center 12.21 -37.51) (end 16.71 -37.51) (layer F.Cu) (width 0.254))
-    (fp_text user C3 (at 19 -44) (layer F.SilkS)
+    (fp_text user C3 (at 8.9 -45.1) (layer F.SilkS) hide
       (effects (font (size 0.9652 0.9652) (thickness 0.1524)))
     )
     (fp_circle (center 12.2 -37.5) (end 18.2245 -37.5285) (layer F.Mask) (width 3))
@@ -10034,10 +10034,10 @@
     )
   )
 
-  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 59533025) (tstamp 594B7ED3)
+  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5972C194) (tstamp 594B7ED3)
     (at 25 100)
     (path /5968BAB5)
-    (fp_text reference WSB10 (at 1.17 -19.83 90) (layer F.SilkS) hide
+    (fp_text reference WSB10 (at 2.5 -37.5 90) (layer F.SilkS)
       (effects (font (thickness 0.15)))
     )
     (fp_text value WS2812_BUTTON (at 1.17 -8.4 90) (layer F.SilkS) hide
@@ -10097,7 +10097,7 @@
     (fp_line (start 5.36 -40.53) (end 7.42 -39.5) (layer F.Cu) (width 0.254))
     (fp_circle (center 12.2 -37.5) (end 19.7 -37.5) (layer F.Cu) (width 0.254))
     (fp_circle (center 12.21 -37.51) (end 16.71 -37.51) (layer F.Cu) (width 0.254))
-    (fp_text user C3 (at 19 -44) (layer F.SilkS)
+    (fp_text user C3 (at 19 -44) (layer F.SilkS) hide
       (effects (font (size 0.9652 0.9652) (thickness 0.1524)))
     )
     (fp_circle (center 12.2 -37.5) (end 18.2245 -37.5285) (layer F.Mask) (width 3))
@@ -12589,10 +12589,10 @@
     (pad 2 smd rect (at -2.577 1.6) (size 1.651 1) (layers F.Cu F.Paste F.Mask))
   )
 
-  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5951C559) (tstamp 594B7EDC)
+  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5972C19D) (tstamp 594B7EDC)
     (at 50 100)
     (path /5968BABB)
-    (fp_text reference WSB11 (at 2.023 -21 90) (layer F.SilkS) hide
+    (fp_text reference WSB11 (at 2.5 -37.5 90) (layer F.SilkS)
       (effects (font (thickness 0.15)))
     )
     (fp_text value WS2812_BUTTON (at 1.17 -8.4 90) (layer F.SilkS) hide
@@ -12652,7 +12652,7 @@
     (fp_line (start 5.36 -40.53) (end 7.42 -39.5) (layer F.Cu) (width 0.254))
     (fp_circle (center 12.2 -37.5) (end 19.7 -37.5) (layer F.Cu) (width 0.254))
     (fp_circle (center 12.21 -37.51) (end 16.71 -37.51) (layer F.Cu) (width 0.254))
-    (fp_text user C3 (at 19 -44) (layer F.SilkS)
+    (fp_text user C3 (at 19 -44) (layer F.SilkS) hide
       (effects (font (size 0.9652 0.9652) (thickness 0.1524)))
     )
     (fp_circle (center 12.2 -37.5) (end 18.2245 -37.5285) (layer F.Mask) (width 3))
@@ -12671,13 +12671,13 @@
       (net 97 "Net-(WSB10-Pad2)"))
   )
 
-  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5951C553) (tstamp 594B7EE5)
+  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5972C1D3) (tstamp 594B7EE5)
     (at 75 100)
     (path /5968BAC1)
-    (fp_text reference WSB12 (at 1.17 -2.5 90) (layer F.SilkS) hide
+    (fp_text reference WSB12 (at 2.5 -37.5 90) (layer F.SilkS)
       (effects (font (thickness 0.15)))
     )
-    (fp_text value WS2812_BUTTON (at 1.17 -8.4 90) (layer F.SilkS) hide
+    (fp_text value WS2812_BUTTON (at 5 -8.4 90) (layer F.SilkS) hide
       (effects (font (thickness 0.15)))
     )
     (fp_circle (center 2.5 -47.5) (end 2.5 -46) (layer F.SilkS) (width 0.15))
@@ -12734,7 +12734,7 @@
     (fp_line (start 5.36 -40.53) (end 7.42 -39.5) (layer F.Cu) (width 0.254))
     (fp_circle (center 12.2 -37.5) (end 19.7 -37.5) (layer F.Cu) (width 0.254))
     (fp_circle (center 12.21 -37.51) (end 16.71 -37.51) (layer F.Cu) (width 0.254))
-    (fp_text user C3 (at 19 -44) (layer F.SilkS)
+    (fp_text user C3 (at 19 -44) (layer F.SilkS) hide
       (effects (font (size 0.9652 0.9652) (thickness 0.1524)))
     )
     (fp_circle (center 12.2 -37.5) (end 18.2245 -37.5285) (layer F.Mask) (width 3))
@@ -12753,10 +12753,10 @@
       (net 98 "Net-(WSB11-Pad2)"))
   )
 
-  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5951C57F) (tstamp 594B7EEE)
+  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5972C1E2) (tstamp 594B7EEE)
     (at 0 125)
     (path /5968BB42)
-    (fp_text reference WSB13 (at 1.17 -19.83 90) (layer F.SilkS) hide
+    (fp_text reference WSB13 (at 2.5 -37.5 90) (layer F.SilkS)
       (effects (font (thickness 0.15)))
     )
     (fp_text value WS2812_BUTTON (at 1.17 -8.4 90) (layer F.SilkS) hide
@@ -12835,10 +12835,10 @@
       (net 99 /SERIAL_LED_TOROW_3))
   )
 
-  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5951C56D) (tstamp 594B7EF7)
+  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5972C1EB) (tstamp 594B7EF7)
     (at 25 125)
     (path /5968BB48)
-    (fp_text reference WSB14 (at 1.17 -19.83 90) (layer F.SilkS) hide
+    (fp_text reference WSB14 (at 2.5 -37.5 90) (layer F.SilkS)
       (effects (font (thickness 0.15)))
     )
     (fp_text value WS2812_BUTTON (at 1.17 -8.4 90) (layer F.SilkS) hide
@@ -12917,10 +12917,10 @@
       (net 100 "Net-(WSB13-Pad2)"))
   )
 
-  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5951C55F) (tstamp 594B7F00)
+  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5972C1F7) (tstamp 594B7F00)
     (at 50 125)
     (path /5968BB4E)
-    (fp_text reference WSB15 (at 1.17 -19.83 90) (layer F.SilkS) hide
+    (fp_text reference WSB15 (at 2.5 -37.5 90) (layer F.SilkS)
       (effects (font (thickness 0.15)))
     )
     (fp_text value WS2812_BUTTON (at 1.17 -8.4 90) (layer F.SilkS) hide
@@ -12999,10 +12999,10 @@
       (net 101 "Net-(WSB14-Pad2)"))
   )
 
-  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5951C54B) (tstamp 594B7F09)
+  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5972C201) (tstamp 594B7F09)
     (at 75 125)
     (path /5968BB54)
-    (fp_text reference WSB16 (at 1.17 -19.83 90) (layer F.SilkS) hide
+    (fp_text reference WSB16 (at 2.5 -37.5 90) (layer F.SilkS)
       (effects (font (thickness 0.15)))
     )
     (fp_text value WS2812_BUTTON (at 1.17 -8.4 90) (layer F.SilkS) hide
@@ -13062,7 +13062,7 @@
     (fp_line (start 5.36 -40.53) (end 7.42 -39.5) (layer F.Cu) (width 0.254))
     (fp_circle (center 12.2 -37.5) (end 19.7 -37.5) (layer F.Cu) (width 0.254))
     (fp_circle (center 12.21 -37.51) (end 16.71 -37.51) (layer F.Cu) (width 0.254))
-    (fp_text user C3 (at 19 -44) (layer F.SilkS)
+    (fp_text user C3 (at 19 -44) (layer F.SilkS) hide
       (effects (font (size 0.9652 0.9652) (thickness 0.1524)))
     )
     (fp_circle (center 12.2 -37.5) (end 18.2245 -37.5285) (layer F.Mask) (width 3))
@@ -13081,10 +13081,10 @@
       (net 102 "Net-(WSB15-Pad2)"))
   )
 
-  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5951C583) (tstamp 594B7F12)
+  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5972C207) (tstamp 594B7F12)
     (at 0 150)
     (path /5968C866)
-    (fp_text reference WSB17 (at 2.023 -17 90) (layer F.SilkS) hide
+    (fp_text reference WSB17 (at 2.5 -37.5 90) (layer F.SilkS)
       (effects (font (thickness 0.15)))
     )
     (fp_text value WS2812_BUTTON (at 1.17 -8.4 90) (layer F.SilkS) hide
@@ -13163,10 +13163,10 @@
       (net 103 /SERIAL_LED_TOROW_4))
   )
 
-  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5951C567) (tstamp 594B7F1B)
+  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5972C211) (tstamp 594B7F1B)
     (at 24.977 150)
     (path /5968C86C)
-    (fp_text reference WSB18 (at 1.17 -19.83 90) (layer F.SilkS) hide
+    (fp_text reference WSB18 (at 2.523 -37.5 90) (layer F.SilkS)
       (effects (font (thickness 0.15)))
     )
     (fp_text value WS2812_BUTTON (at 1.17 -8.4 90) (layer F.SilkS) hide
@@ -13245,10 +13245,10 @@
       (net 104 "Net-(WSB17-Pad2)"))
   )
 
-  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5951C562) (tstamp 594B7F24)
+  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5972C21D) (tstamp 594B7F24)
     (at 50 150)
     (path /5968C872)
-    (fp_text reference WSB19 (at 1.17 -19.83 90) (layer F.SilkS) hide
+    (fp_text reference WSB19 (at 2.5 -37.5 90) (layer F.SilkS)
       (effects (font (thickness 0.15)))
     )
     (fp_text value WS2812_BUTTON (at 1.17 -8.4 90) (layer F.SilkS) hide
@@ -13327,10 +13327,10 @@
       (net 105 "Net-(WSB18-Pad2)"))
   )
 
-  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5951C53D) (tstamp 594B7F2D)
+  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5972C22C) (tstamp 594B7F2D)
     (at 75 150)
     (path /5968C878)
-    (fp_text reference WSB20 (at 1.17 -19.83 90) (layer F.SilkS) hide
+    (fp_text reference WSB20 (at 2.5 -37.5 90) (layer F.SilkS)
       (effects (font (thickness 0.15)))
     )
     (fp_text value WS2812_BUTTON (at 1.17 -8.4 90) (layer F.SilkS) hide
@@ -13409,10 +13409,10 @@
       (net 106 "Net-(WSB19-Pad2)"))
   )
 
-  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5951C589) (tstamp 594B7F36)
+  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5972C233) (tstamp 594B7F36)
     (at 0 175)
     (path /5968C8F9)
-    (fp_text reference WSB21 (at 1.17 -19.83 90) (layer F.SilkS) hide
+    (fp_text reference WSB21 (at 2.5 -37.5 90) (layer F.SilkS)
       (effects (font (thickness 0.15)))
     )
     (fp_text value WS2812_BUTTON (at -8.377 -12.7 90) (layer F.SilkS) hide
@@ -13491,10 +13491,10 @@
       (net 107 /SERIAL_LED_TOROW_5))
   )
 
-  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5951C58C) (tstamp 594B7F3F)
+  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5972C238) (tstamp 594B7F3F)
     (at 25 175)
     (path /5968C8FF)
-    (fp_text reference WSB22 (at 1.17 -19.83 90) (layer F.SilkS) hide
+    (fp_text reference WSB22 (at 2.5 -37.5 90) (layer F.SilkS)
       (effects (font (thickness 0.15)))
     )
     (fp_text value WS2812_BUTTON (at 1.17 -8.4 90) (layer F.SilkS) hide
@@ -13573,10 +13573,10 @@
       (net 108 "Net-(WSB21-Pad2)"))
   )
 
-  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5951C543) (tstamp 594B7F48)
+  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5972C23F) (tstamp 594B7F48)
     (at 50 175)
     (path /5968C905)
-    (fp_text reference WSB23 (at 1.17 -19.83 90) (layer F.SilkS) hide
+    (fp_text reference WSB23 (at 2.5 -37.5 90) (layer F.SilkS)
       (effects (font (thickness 0.15)))
     )
     (fp_text value WS2812_BUTTON (at 1.17 -8.4 90) (layer F.SilkS) hide
@@ -13655,10 +13655,10 @@
       (net 109 "Net-(WSB22-Pad2)"))
   )
 
-  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5951C591) (tstamp 594B7F51)
+  (module lib_fp:ws2812_buttonPad (layer F.Cu) (tedit 5972C245) (tstamp 594B7F51)
     (at 75 175)
     (path /5968C90B)
-    (fp_text reference WSB24 (at 1.17 -19.83 90) (layer F.SilkS) hide
+    (fp_text reference WSB24 (at 2.5 -37.5 90) (layer F.SilkS)
       (effects (font (thickness 0.15)))
     )
     (fp_text value WS2812_BUTTON (at 1.17 -8.4 90) (layer F.SilkS) hide
@@ -17550,6 +17550,9 @@
     )
   )
 
+  (gr_text "add more copper to power dissipation of power regulators\n" (at 50.6 -17.7) (layer F.Cu)
+    (effects (font (size 1.5 1.5) (thickness 0.3)))
+  )
   (gr_line (start 98.5 164) (end 100 162.5) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 0 162.5) (end 1.5 164) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 100 36.5) (end 100 162.5) (layer Edge.Cuts) (width 0.15))
