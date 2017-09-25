@@ -1,0 +1,9 @@
+Arduino Uno      	Arduino	Mega2560
+
+D10 (SS)            Reset	RESET
+D11 (MOSI)          D51		PB2
+D12 (MISO)          D50		PB3
+D13 (SCK)           D52		PB1
+
+Gnd                 Gnd
++5V                 +5V

@@ -5,7 +5,7 @@
     (no_connects 0)
     (area -9.7188 -6.191901 101.927 176.783501)
     (thickness 1.6)
-    (drawings 14)
+    (drawings 15)
     (tracks 3993)
     (zones 0)
     (modules 177)
@@ -17550,6 +17550,9 @@
     )
   )
 
+  (gr_text "add more copper to power dissipation of power regulators\n" (at 50.6 -17.7) (layer F.Cu)
+    (effects (font (size 1.5 1.5) (thickness 0.3)))
+  )
   (gr_line (start 98.5 164) (end 100 162.5) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 0 162.5) (end 1.5 164) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 100 36.5) (end 100 162.5) (layer Edge.Cuts) (width 0.15))
