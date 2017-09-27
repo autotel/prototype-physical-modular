@@ -21,45 +21,43 @@ void setup() {
 void loop() {
 
 
-  rainbow(30);
-
-
-}
-
-static const uint8_t analog_pins[] = {A8,A9,A10,A11,A12,A13,A14};
-void rainbow(uint8_t wait) {
+  
   uint16_t i, j, k;
 
 
 
+  
+  //POX = pin out register n., PIN= pin in register n. 
   //H, columns
-#define XREG PORTH //bits 3-7, digital
-#define XREGMASK 0b00000111
-  DDRH = 0xFF;
+#define POX PORTH //bits 3-7, digital
+#define PIX PINH
+#define PORTXMASK 0b00000111
+  DDRH = 0x00;
   //K, rows
-#define YREG PORTK //bits 0-6, analog, receive
+#define POY PORTK //bits 0-6, analog
+#define PIY PINK
 //#define YREGMASK 0b00111111
-  DDRK = 0x00;
+  DDRK = 0x11;
   int inpinbase = 8;
-  for(k=0; k<7; k++){
-    pinMode(analog_pins[k], INPUT_PULLUP);
-  }
 
   for (k = 0; k < numLeds; k++) {
     uint16_t col = k % 4;
-    XREG &= XREGMASK;
-    //XREG=0;
-    //not 1 because starts in PH3
-    XREG = 0b1000 << col;
-    //digitalWrite(6+k,HIGH);
     uint16_t row = k / 4;
+    
+    POX &= PORTXMASK;    
+    //not 1<< because starts in PH3
+    POX = 0b1 <<row;
+    uint16_t test = 0b1000 << col;
+    
+    //digitalWrite(6+k,HIGH);
     //digitalWrite(analog_pins[k], HIGH);
     delay(3);
     
-    int an = analogRead(analog_pins[k]);
-    if (an > 10) {
+    //int an = digitalRead(analog_pins[k]);
+    char an=PIX & test;
+    if (an) {
       ledColors[k] = an;
-      strip.setPixelColor(k, strip.Color(an, an, an));
+      strip.setPixelColor(k, strip.Color(40, 40, 40));
       
       strip.show();
     } else {
