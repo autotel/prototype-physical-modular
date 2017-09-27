@@ -32,12 +32,13 @@ void loop() {
 #define POX PORTH //bits 3-7, digital
 #define PIX PINH
 #define PORTXMASK 0b00000111
-  DDRH = 0x00;
+  DDRH = 0xFF;
   //K, rows
 #define POY PORTK //bits 0-6, analog
 #define PIY PINK
 //#define YREGMASK 0b00111111
-  DDRK = 0x11;
+  DDRK = 0x00;
+  POY=0xFF;
   int inpinbase = 8;
 
   for (k = 0; k < numLeds; k++) {
@@ -46,16 +47,17 @@ void loop() {
     
     POX &= PORTXMASK;
     
-    POY = 0b1 <<row;
     //not 1<< because starts in PH3
-    uint16_t test = 0b1000 << col;
+    POX = ~(0b1000 << col);
+    uint16_t test = 0b1 << row;
     
     //digitalWrite(6+k,HIGH);
     //digitalWrite(analog_pins[k], HIGH);
-    delay(3);
+    
+    //delay(3);
     
     //int an = digitalRead(analog_pins[k]);
-    char an=PIX & test;
+    char an=PIY & test;
     if (an) {
       ledColors[k] = an;
       strip.setPixelColor(k, strip.Color(40, 40, 40));
@@ -71,7 +73,7 @@ void loop() {
     }
     //digitalWrite(analog_pins[k], LOW);
     //digitalWrite(6+k,LOW);
-    delay(3);
+   // delay(3);
   }
   /*
     //for(j=0; j<256; j++) {
