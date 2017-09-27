@@ -44,9 +44,10 @@ void loop() {
     uint16_t col = k % 4;
     uint16_t row = k / 4;
     
-    POX &= PORTXMASK;    
+    POX &= PORTXMASK;
+    
+    POY = 0b1 <<row;
     //not 1<< because starts in PH3
-    POX = 0b1 <<row;
     uint16_t test = 0b1000 << col;
     
     //digitalWrite(6+k,HIGH);
