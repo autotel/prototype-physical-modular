@@ -4120,57 +4120,57 @@ Text Label 6000 6950 2    60   ~ 0
 MXY5
 Text Label 6000 7050 2    60   ~ 0
 MXY6
-Text Label 4400 29850 0    60   ~ 0
+Text Label 4450 29150 0    60   ~ 0
 MXX0
-Text Label 4400 29100 0    60   ~ 0
+Text Label 4450 29750 0    60   ~ 0
 MXY0
 Text Label 7750 27950 0    60   ~ 0
 MXX0
-Text Label 4400 29950 0    60   ~ 0
+Text Label 4450 29250 0    60   ~ 0
 MXX1
-Text Label 4400 30050 0    60   ~ 0
+Text Label 4450 29350 0    60   ~ 0
 MXX2
-Text Label 4400 30150 0    60   ~ 0
+Text Label 4450 29450 0    60   ~ 0
 MXX3
-Text Label 4400 29200 0    60   ~ 0
+Text Label 4450 29850 0    60   ~ 0
 MXY1
-Text Label 4400 29300 0    60   ~ 0
+Text Label 4450 29950 0    60   ~ 0
 MXY2
-Text Label 4400 29400 0    60   ~ 0
+Text Label 4450 30050 0    60   ~ 0
 MXY3
-Text Label 4400 29500 0    60   ~ 0
+Text Label 4450 30150 0    60   ~ 0
 MXY4
-Text Label 4400 29600 0    60   ~ 0
+Text Label 4450 30250 0    60   ~ 0
 MXY5
-Text Label 4400 29700 0    60   ~ 0
+Text Label 4450 30350 0    60   ~ 0
 MXY6
-Text Label 4250 29400 2    60   ~ 0
+Text Label 4300 30050 2    60   ~ 0
 MUXBX3
-Text Label 4250 29300 2    60   ~ 0
+Text Label 4300 29950 2    60   ~ 0
 MUXBX2
-Text Label 4250 29200 2    60   ~ 0
+Text Label 4300 29850 2    60   ~ 0
 MUXBX1
-Text Label 4250 29100 2    60   ~ 0
+Text Label 4300 29750 2    60   ~ 0
 MUXBX0
-Text Label 4250 29700 2    60   ~ 0
+Text Label 4300 30350 2    60   ~ 0
 MUXBX6
-Text Label 4250 29600 2    60   ~ 0
+Text Label 4300 30250 2    60   ~ 0
 MUXBX5
-Text Label 4250 29500 2    60   ~ 0
+Text Label 4300 30150 2    60   ~ 0
 MUXBX4
-Text Label 4250 29850 2    60   ~ 0
+Text Label 4300 29150 2    60   ~ 0
 MUXAX0
-Text Label 4250 29950 2    60   ~ 0
+Text Label 4300 29250 2    60   ~ 0
 MUXAX1
-Text Label 4250 30050 2    60   ~ 0
+Text Label 4300 29350 2    60   ~ 0
 MUXAX2
-Text Label 4250 30150 2    60   ~ 0
+Text Label 4300 29450 2    60   ~ 0
 MUXAX3
 Text Notes 3900 28950 0    60   ~ 0
 Mega use no mux
-Text Label 4250 30250 2    60   ~ 0
+Text Label 4300 29550 2    60   ~ 0
 MUXAX4
-Text Label 4400 30250 0    60   ~ 0
+Text Label 4450 29550 0    60   ~ 0
 MXX4
 Text Label 6000 8950 2    60   ~ 0
 MXX4
@@ -4964,29 +4964,29 @@ Connection ~ 9250 19000
 Wire Wire Line
 	5500 -2550 6000 -2550
 Wire Wire Line
-	4250 29100 4400 29100
+	4300 29750 4450 29750
 Wire Wire Line
-	4250 29200 4400 29200
+	4300 29850 4450 29850
 Wire Wire Line
-	4250 29300 4400 29300
+	4300 29950 4450 29950
 Wire Wire Line
-	4250 29400 4400 29400
+	4300 30050 4450 30050
 Wire Wire Line
-	4250 29500 4400 29500
+	4300 30150 4450 30150
 Wire Wire Line
-	4250 29600 4400 29600
+	4300 30250 4450 30250
 Wire Wire Line
-	4250 29700 4400 29700
+	4300 30350 4450 30350
 Wire Wire Line
-	4250 29850 4400 29850
+	4300 29150 4450 29150
 Wire Wire Line
-	4250 29950 4400 29950
+	4300 29250 4450 29250
 Wire Wire Line
-	4250 30050 4400 30050
+	4300 29350 4450 29350
 Wire Wire Line
-	4250 30150 4400 30150
+	4300 29450 4450 29450
 Wire Wire Line
-	4250 30250 4400 30250
+	4300 29550 4450 29550
 Wire Wire Line
 	6000 9150 5050 9150
 Wire Wire Line

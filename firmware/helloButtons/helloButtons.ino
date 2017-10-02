@@ -17,9 +17,10 @@ void setup() {
   strip.setBrightness(20); // 1/6 brightness
 
 }
-
+uint16_t n=0;
 void loop() {
-
+  n++;
+  n%=256;
 
   
   uint16_t i, j, k;
@@ -58,9 +59,9 @@ void loop() {
     
     //int an = digitalRead(analog_pins[k]);
     char an=PIY & test;
-    if (an) {
+    if (!an) {
       ledColors[k] = an;
-      strip.setPixelColor(k, strip.Color(40, 40, 40));
+      strip.setPixelColor(k, Wheel(n));
       
       strip.show();
     } else {
