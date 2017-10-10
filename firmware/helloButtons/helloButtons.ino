@@ -1,110 +1,80 @@
 //https://codebender.cc/sketch:80438#Neopixel%20Rainbow.ino
 #include <Adafruit_NeoPixel.h>
-#define ANALOG false
-
-
 
 // constants won't change. They're used here to
 // set pin numbers:
 const int ledPin = 43;     // the number of the neopixel strip
 const int numLeds = 28;
 
+char ledColors [28];
 
 //Adafruit_NeoPixel pixels = Adafruit_NeoPixel(8, ledPin);
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(numLeds, ledPin, NEO_GRB + NEO_KHZ800);
 
-static const uint8_t analogButtonY[] = {A8, A9, A10, A11, A12, A13, A14, A15};
-
-
-//POX = pin out register n., PIN= pin in register n.
-//H, columns, set to output.
-#define POX PORTH //bits 3-7, digital
-#define PIX PINH
-#define PORTXMASK 0b00000111
-
-//K, rows. Set to input, pullup
-#define POY PORTK //bits 0-6, analog
-#define PIY PINK
-//#define YREGMASK 0b00111111
 
 void setup() {
-
-  //x DDR
-  DDRH = 0xFF;
-
   strip.begin();
   strip.setBrightness(20); // 1/6 brightness
-  Serial.begin(115200);
-#if ANALOG
-  for (uint8_t i = 0; i < 6; i++) {
-    pinMode(analogButtonY[i], INPUT_PULLUP);
-  }
-#else
-  DDRK = 0x00;
-  POY = 0xFF;
-#endif
+
 }
-
-
+uint16_t n=0;
 void loop() {
+  n++;
+  n%=256;
 
-
-
+  
   uint16_t i, j, k;
 
 
 
-
-
-
-
-
-
-
+  
+  //POX = pin out register n., PIN= pin in register n. 
+  //H, columns
+#define POX PORTH //bits 3-7, digital
+#define PIX PINH
+#define PORTXMASK 0b00000111
+  DDRH = 0xFF;
+  //K, rows
+#define POY PORTK //bits 0-6, analog
+#define PIY PINK
+//#define YREGMASK 0b00111111
+  DDRK = 0x00;
+  POY=0xFF;
+  int inpinbase = 8;
 
   for (k = 0; k < numLeds; k++) {
     uint16_t col = k % 4;
     uint16_t row = k / 4;
-
+    
     POX &= PORTXMASK;
-
+    
     //not 1<< because starts in PH3
-    //logic is inverse to harness the internal pullups
     POX = ~(0b1000 << col);
     uint16_t test = 0b1 << row;
-
+    
+    //digitalWrite(6+k,HIGH);
+    //digitalWrite(analog_pins[k], HIGH);
+    
     //delay(3);
-
-#if ANALOG
-    //analog, pressure sensitive option:
-    int an = 1023 - analogRead(analogButtonY[row]);
-    //an = 1024 - (sq(an + 1) / sq(1024) * 255);
-    an = max(0, an - 500) * 8;
-
-    for (i = 0; i < an; i += 32) {
-      Serial.print(".");
-    }
-    Serial.println("-");
-    if (an > 100) {
-#else
-    //digital read option
-    char an = PIY & test;
-    if (an) {
-#endif
-
-      //ledColors[k] = an;
-      strip.setPixelColor(k, strip.Color(an, an, 0));
+    
+    //int an = digitalRead(analog_pins[k]);
+    char an=PIY & test;
+    if (!an) {
+      ledColors[k] = an;
+      strip.setPixelColor(k, Wheel(n));
+      
       strip.show();
-
-
     } else {
       an = 0;
+      ledColors[k] = 0;
       strip.setPixelColor(k, strip.Color(0, 6, 12));
+      
       strip.show();
+
     }
-    //digitalWrite(analogButtonY[k], LOW);
+    //digitalWrite(analog_pins[k], LOW);
     //digitalWrite(6+k,LOW);
-    // delay(3);
+   // delay(3);
   }
   /*
     //for(j=0; j<256; j++) {
