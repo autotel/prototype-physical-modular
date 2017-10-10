@@ -5261,4 +5261,6 @@ F 7 "--" H 3950 -3800 60  0001 C CNN "provider link 2"
 	1    3950 -3800
 	0    1    1    0   
 $EndComp
+Text Notes 13900 26850 1    60   ~ 0
+ENCODER IS NOT CONNECTED TO ATMEGA2560!!!! ) :\n
 $EndSCHEMATC
