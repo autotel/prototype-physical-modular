@@ -1,10 +1,11 @@
-uint16_t pressedMatrixButtonsBitmap = 0;
+uint32_t pressedMatrixButtonsBitmap = 0;
 uint32_t pressedButtonsBitmap=0;
-
+uint32_t postPressedButtonsBitmap=0;
 
 //actions to take once any button is pressed
 void onButtonPressed(byte button) {
   pressedMatrixButtonsBitmap = pressedButtonsBitmap >> 8;
+  postPressedButtonsBitmap|=1UL<<button;
   if (button < 8) {
     onSelectorButtonPressed(button);
     //hardware.setButtonColor(button, 127, 130, 200);
@@ -17,6 +18,7 @@ void onButtonPressed(byte button) {
 }
 
 void onButtonReleased(byte button) {
+  //postPressedButtonsBitmap&=~(1UL<<button);
   pressedMatrixButtonsBitmap &= (~(1 << button))>>8;
   if (button < 8) {
     onSelectorButtonReleased(button);

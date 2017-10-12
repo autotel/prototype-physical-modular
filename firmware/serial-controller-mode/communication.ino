@@ -112,7 +112,7 @@ void checkMessages() {
 }
 
 //available queue for outgoing messages
-byte sendToBrainData [] = {0, 0, 0, 0, 0, 0, 0};
+byte sendToBrainData [] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
 void sendToBrain(byte header, int len) {
   Serial.write(header);

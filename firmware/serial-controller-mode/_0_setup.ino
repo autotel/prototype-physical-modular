@@ -19,6 +19,9 @@ void setup() {
   screenB.reserve(16);
   lastScreenA.reserve(16);
   lastScreenB.reserve(16);
+  //ugly setup encoder port
+  DDRA = 0x00; //0x3<<6;
+  PORTA = 0xFF;
 
   Serial.begin(SOFT_BAUDRATE);
   Serial.write(0x01);
@@ -46,13 +49,12 @@ long lastUpdate = 0;
 void loop() {
 
 
-  if (millis() - lastUpdate > 100) {
+  if (millis() - lastUpdate > 1000/90) {
+    screenLoop();
     lastUpdate = millis();
     refreshLeds();
   }
   hardware_loop();
-
-  checkMessages();
   if (activeAnimation) {
     animationFrame();
   }
@@ -60,6 +62,24 @@ void loop() {
   //}
   //ttest++;
 
+
+
+  checkMessages();
+
+}
+
+
+void lcdPrintA(String what) {
+  screenChanged = true;
+  screenA = what;
+}
+
+void lcdPrintB(String what) {
+  screenChanged = true;
+  screenB = what;
+}
+
+void screenLoop() {
   if (screenChanged) {
     screenChanged = false;
     if (lastScreenA != screenA) {
@@ -86,16 +106,5 @@ void loop() {
       }
     }
   }
-}
-
-
-void lcdPrintA(String what) {
-  screenChanged = true;
-  screenA = what;
-}
-
-void lcdPrintB(String what) {
-  screenChanged = true;
-  screenB = what;
 }
 
