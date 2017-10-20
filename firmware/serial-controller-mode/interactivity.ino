@@ -1,11 +1,10 @@
 uint32_t pressedMatrixButtonsBitmap = 0;
-uint32_t pressedButtonsBitmap=0;
-uint32_t postPressedButtonsBitmap=0;
+uint32_t pressedButtonsBitmap = 0;
 
 //actions to take once any button is pressed
 void onButtonPressed(byte button) {
-  pressedMatrixButtonsBitmap = pressedButtonsBitmap >> 8;
-  postPressedButtonsBitmap|=1UL<<button;
+  pressedMatrixButtonsBitmap |= 1<<(button-8);
+
   if (button < 8) {
     onSelectorButtonPressed(button);
     //hardware.setButtonColor(button, 127, 130, 200);
@@ -19,7 +18,7 @@ void onButtonPressed(byte button) {
 
 void onButtonReleased(byte button) {
   //postPressedButtonsBitmap&=~(1UL<<button);
-  pressedMatrixButtonsBitmap &= (~(1 << button))>>8;
+  pressedMatrixButtonsBitmap &= ~(1 << (button-8));
   if (button < 8) {
     onSelectorButtonReleased(button);
     //hardware.setButtonColor(button, 127, 130, 200);
@@ -42,8 +41,8 @@ void onMatrixButtonHold(byte button, byte buttonPressure) {
 void onMatrixButtonPressed(byte button) {
   sendToBrainData[0] = button;
   sendToBrainData[1] = 1;
-  sendToBrainData[2] = (byte)pressedMatrixButtonsBitmap;
-  sendToBrainData[3] = (byte)(pressedMatrixButtonsBitmap >> 8);
+  sendToBrainData[2] = (uint8_t)pressedMatrixButtonsBitmap & 0xff;
+  sendToBrainData[3] = (uint8_t)(pressedMatrixButtonsBitmap >> 8) & 0xff;
 
   //  lcdPrintA(String(button,HEX));
   // layers[0]=layers[1]=layers[2]=0x1<<button;

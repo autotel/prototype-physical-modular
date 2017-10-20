@@ -1017,17 +1017,6 @@ BUS_COM
 Text Notes 1450 -2050 0    60   ~ 0
 REMOVE
 $Comp
-L ARDUPROMINI uP1
-U 1 1 595A467A
-P 14900 6200
-F 0 "uP1" H 14700 6100 60  0000 C CNN
-F 1 "ARDUPROMINI" H 14900 6200 60  0000 C CNN
-F 2 "ArduProMiniTKB:ArduProMini" H 14900 6200 60  0001 C CNN
-F 3 "" H 14900 6200 60  0000 C CNN
-	1    14900 6200
-	1    0    0    -1  
-$EndComp
-$Comp
 L GND #PWR044
 U 1 1 595AC495
 P 2900 -6650
@@ -1104,26 +1093,6 @@ Text Label 20100 6450 2    60   ~ 0
 MUXB_COMMON
 Text Label 22700 2150 2    60   ~ 0
 MUXA_COMMON
-Text Label 13700 8200 2    60   ~ 0
-MUXBADDR2
-Text Label 13700 8100 2    60   ~ 0
-MUXBADDR1
-Text Label 13700 8000 2    60   ~ 0
-MUXBADDR0
-Text Label 13700 7900 2    60   ~ 0
-MUXAADDR2
-Text Label 13700 7800 2    60   ~ 0
-MUXAADDR1
-Text Label 13700 7700 2    60   ~ 0
-MUXAADDR0
-Text Label 13700 8300 2    60   ~ 0
-MUXA_COMMON
-Text Label 14900 7900 0    60   ~ 0
-MUXB_COMMON
-Text Label 15100 6900 0    60   ~ 0
-SDA
-Text Label 15100 6800 0    60   ~ 0
-SCL
 Text Label 8600 8050 0    60   ~ 0
 POWER_IS
 $Comp
@@ -1159,18 +1128,6 @@ LCD3
 Text Label 6000 5950 2    60   ~ 0
 LCD4
 Text Label 6000 6050 2    60   ~ 0
-LCD5
-Text Label 13700 8400 2    60   ~ 0
-LCD0
-Text Label 14900 8400 0    60   ~ 0
-LCD1
-Text Label 14900 8300 0    60   ~ 0
-LCD2
-Text Label 14900 8200 0    60   ~ 0
-LCD3
-Text Label 14900 8100 0    60   ~ 0
-LCD4
-Text Label 14900 8000 0    60   ~ 0
 LCD5
 Text Label 8600 7550 0    60   ~ 0
 RX1
@@ -3914,10 +3871,6 @@ F 7 "--" H 28200 5900 60  0001 C CNN "provider link 2"
 	1    28200 5900
 	1    0    0    -1  
 $EndComp
-Text Label 14900 7800 0    60   ~ 0
-ENCA
-Text Label 14900 7700 0    60   ~ 0
-ENCC
 $Comp
 L D D1
 U 1 1 5980D29E
@@ -5261,12 +5214,19 @@ F 7 "--" H 3950 -3800 60  0001 C CNN "provider link 2"
 	1    3950 -3800
 	0    1    1    0   
 $EndComp
-Text Notes 30450 4900 1    60   ~ 0
-ENCODER IS NOT CONNECTED TO ATMEGA2560!!!! ) :\n
-Text Notes 10050 5950 0    60   ~ 0
-*enca
-Text Notes 10050 6250 0    60   ~ 0
-*encc\n
-Text Notes 15350 7700 0    60   ~ 0
-names wrong
+$Comp
+L CONN_01X06 P?
+U 1 1 59EBC305
+P 13900 6650
+F 0 "P?" H 13900 7000 50  0000 C CNN
+F 1 "CONN_01X06" V 14000 6650 50  0000 C CNN
+F 2 "" H 13900 6650 50  0000 C CNN
+F 3 "" H 13900 6650 50  0000 C CNN
+	1    13900 6650
+	1    0    0    -1  
+$EndComp
+Text Label 8600 5950 0    60   ~ 0
+ENCA
+Text Label 8600 6250 0    60   ~ 0
+ENCC
 $EndSCHEMATC

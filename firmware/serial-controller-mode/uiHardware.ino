@@ -1,4 +1,5 @@
 #include "FastLED.h"
+#include <TimerOne.h>
 
 #define NUM_LEDS 28
 #define DATA_PIN 43
@@ -6,10 +7,10 @@
 CRGB leds[NUM_LEDS];
 
 //this is a conversion "lookup table" for the encoder;
-#define divideEncoderRotation 3
+#define divideEncoderRotation 4
 const uint8_t grayToBinary = 0b10110100;
-uint8_t enc_last = 0;
-uint8_t enc_sub = 0;
+int8_t enc_last = 0;
+int8_t enc_sub = 0;
 unsigned int encoder0Pos = 0;
 
 void hardware_init() {
@@ -28,6 +29,8 @@ void hardware_init() {
     }
 
   }
+  Timer1.initialize(1500);
+  Timer1.attachInterrupt(doEncoder); // blinkLED to run every 0.15 seconds
 }
 uint32_t mxBint = 0;
 void hardware_loop() {
@@ -37,7 +40,7 @@ void hardware_loop() {
   }
   mxBint++;
   //doEncoderButton();
-  doEncoder();
+  //doEncoder();
 }
 
 
@@ -51,9 +54,9 @@ void doEncoder() {
   //TODO: adapt code to this hardware
   //encread turns around as follows: <- 0,1,3,2 ->
   //upon conversion it will turn as: <- 0,1,2,3 ->
-  byte enc_read = (grayToBinary >> ( ( (PINA >> 6) & 0x3) * 2 ) ) & 0x3;
+  int8_t enc_read = (grayToBinary >> ( ( (PINA >> 6) & 0x3) * 2 ) ) & 0x3;
   if (enc_read != enc_last) {
-    signed char enc_inc = enc_read - enc_last;
+    int8_t enc_inc = enc_read - enc_last;
 
     if (enc_inc > 2) {
       enc_inc = -1;
@@ -61,6 +64,7 @@ void doEncoder() {
     if (enc_inc < -2) {
       enc_inc = +1;
     }
+    
     enc_sub += enc_inc;
     if (abs(enc_sub) >= divideEncoderRotation) {
       encoder0Pos += sign(enc_sub);
@@ -112,16 +116,17 @@ int readMatrixButtons() {
     if (!an) {
       //button is pressed, and not the last time
       if (!(test & pressedButtonsBitmap)) {
-        onButtonPressed(currentButton);
+        
         pressedButtonsBitmap = pressedButtonsBitmap | test;
-
+        onButtonPressed(currentButton);
       }
 
     } else {
       //button is depressed, and was pressed last time
       if (test & pressedButtonsBitmap) {
-        onButtonReleased(currentButton);
+        
         pressedButtonsBitmap = pressedButtonsBitmap & (~test);
+        onButtonReleased(currentButton);
       }
     }
 
@@ -149,13 +154,9 @@ void animationFrame() {
   delay(2);
 
   for (int i = 0; i < NUM_LEDS; i++) {
-    if (!((postPressedButtonsBitmap >> i) & 1)) {
       int mh = hue + i;
       int osci = sin(mh / 255.00 * TWO_PI) * 50 + 100;
       leds[i] = CHSV(mh, osci, osci);
-    } else {
-      leds[i] = CHSV(0, 0, 0);
-    }
   }
   FastLED.show();
   hue++;
