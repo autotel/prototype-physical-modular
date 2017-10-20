@@ -34,12 +34,12 @@ void hardware_init() {
 }
 uint32_t mxBint = 0;
 void hardware_loop() {
-  if (mxBint > 2000){
+  if (mxBint > 2000) {
     readMatrixButtons();
-    mxBint=0;
+    mxBint = 0;
   }
   mxBint++;
-  //doEncoderButton();
+  doEncoderButton();
   //doEncoder();
 }
 
@@ -49,7 +49,25 @@ void hardware_loop() {
 char sign(char x) {
   return (x > 0) - (x < 0);
 }
-void doEncoderButton() {}
+
+uint16_t lastEncoderPressTimer=0;
+uint16_t debounceTime=250;
+void doEncoderButton() {
+  //not working
+  //set MUXBX0 low MUXAX4 to high;
+  PORTK&=~(0x1<<0);
+  PORTH|=0x1<<7;
+  if ((PINH>>7)&1){
+    if(lastEncoderPressTimer>=debounceTime){
+      onEncoderButtonPressed();
+      lastEncoderPressTimer=0;
+    }
+  }else{
+    if(lastEncoderPressTimer<=debounceTime){
+      lastEncoderPressTimer++;
+    }
+  }
+}
 void doEncoder() {
   //TODO: adapt code to this hardware
   //encread turns around as follows: <- 0,1,3,2 ->
@@ -64,7 +82,7 @@ void doEncoder() {
     if (enc_inc < -2) {
       enc_inc = +1;
     }
-    
+
     enc_sub += enc_inc;
     if (abs(enc_sub) >= divideEncoderRotation) {
       encoder0Pos += sign(enc_sub);
@@ -116,7 +134,7 @@ int readMatrixButtons() {
     if (!an) {
       //button is pressed, and not the last time
       if (!(test & pressedButtonsBitmap)) {
-        
+
         pressedButtonsBitmap = pressedButtonsBitmap | test;
         onButtonPressed(currentButton);
       }
@@ -124,7 +142,7 @@ int readMatrixButtons() {
     } else {
       //button is depressed, and was pressed last time
       if (test & pressedButtonsBitmap) {
-        
+
         pressedButtonsBitmap = pressedButtonsBitmap & (~test);
         onButtonReleased(currentButton);
       }
@@ -154,9 +172,9 @@ void animationFrame() {
   delay(2);
 
   for (int i = 0; i < NUM_LEDS; i++) {
-      int mh = hue + i;
-      int osci = sin(mh / 255.00 * TWO_PI) * 50 + 100;
-      leds[i] = CHSV(mh, osci, osci);
+    int mh = hue + i;
+    int osci = sin(mh / 255.00 * TWO_PI) * 50 + 100;
+    leds[i] = CHSV(mh, osci, osci);
   }
   FastLED.show();
   hue++;
