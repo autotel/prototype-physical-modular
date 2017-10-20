@@ -1,4 +1,4 @@
-update=21-06-2017 17:44:45
+update=20-10-2017 19:55:32
 version=1
 last_client=kicad
 [pcbnew]
@@ -60,3 +60,4 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=C:/Users/joaquin/Documents/kicad libraries/Custom libraries/WS2812 with button
+LibName32=lib_sch/cp+-
