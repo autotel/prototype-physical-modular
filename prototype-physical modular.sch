@@ -4975,105 +4975,15 @@ Wire Wire Line
 	14550 9550 15250 9550
 $Comp
 L R R?
-U 1 1 5A01E6C7
-P 3100 7000
-F 0 "R?" V 3180 7000 50  0000 C CNN
-F 1 "1K" V 3100 7000 50  0000 C CNN
-F 2 "SeeedOPL-Resistor:R0603" V 3030 7000 50  0001 C CNN
-F 3 "" H 3100 7000 50  0000 C CNN
-F 4 "301010311" H 3100 7000 60  0001 C CNN "Sku"
-F 5 "RC0805JR-071KL" H 3100 7000 60  0001 C CNN "MPN"
-F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/301010311.pdf" H 3100 7000 60  0001 C CNN "provider link 1"
-F 7 "--" H 3100 7000 60  0001 C CNN "provider link 2"
-	1    3100 7000
-	1    0    0    1   
-$EndComp
-$Comp
-L R R?
-U 1 1 5A020F7A
-P 3300 7100
-F 0 "R?" V 3380 7100 50  0000 C CNN
-F 1 "1K" V 3300 7100 50  0000 C CNN
-F 2 "SeeedOPL-Resistor:R0603" V 3230 7100 50  0001 C CNN
-F 3 "" H 3300 7100 50  0000 C CNN
-F 4 "301010311" H 3300 7100 60  0001 C CNN "Sku"
-F 5 "RC0805JR-071KL" H 3300 7100 60  0001 C CNN "MPN"
-F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/301010311.pdf" H 3300 7100 60  0001 C CNN "provider link 1"
-F 7 "--" H 3300 7100 60  0001 C CNN "provider link 2"
-	1    3300 7100
-	1    0    0    1   
-$EndComp
-$Comp
-L R R?
-U 1 1 5A02162A
-P 3500 7200
-F 0 "R?" V 3580 7200 50  0000 C CNN
-F 1 "1K" V 3500 7200 50  0000 C CNN
-F 2 "SeeedOPL-Resistor:R0603" V 3430 7200 50  0001 C CNN
-F 3 "" H 3500 7200 50  0000 C CNN
-F 4 "301010311" H 3500 7200 60  0001 C CNN "Sku"
-F 5 "RC0805JR-071KL" H 3500 7200 60  0001 C CNN "MPN"
-F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/301010311.pdf" H 3500 7200 60  0001 C CNN "provider link 1"
-F 7 "--" H 3500 7200 60  0001 C CNN "provider link 2"
-	1    3500 7200
-	1    0    0    1   
-$EndComp
-$Comp
-L R R?
-U 1 1 5A021827
-P 3100 6600
-F 0 "R?" V 3180 6600 50  0000 C CNN
-F 1 "1K" V 3100 6600 50  0000 C CNN
-F 2 "SeeedOPL-Resistor:R0603" V 3030 6600 50  0001 C CNN
-F 3 "" H 3100 6600 50  0000 C CNN
-F 4 "301010311" H 3100 6600 60  0001 C CNN "Sku"
-F 5 "RC0805JR-071KL" H 3100 6600 60  0001 C CNN "MPN"
-F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/301010311.pdf" H 3100 6600 60  0001 C CNN "provider link 1"
-F 7 "--" H 3100 6600 60  0001 C CNN "provider link 2"
-	1    3100 6600
-	-1   0    0    -1  
-$EndComp
-$Comp
-L R R?
-U 1 1 5A021A27
-P 3300 6500
-F 0 "R?" V 3380 6500 50  0000 C CNN
-F 1 "1K" V 3300 6500 50  0000 C CNN
-F 2 "SeeedOPL-Resistor:R0603" V 3230 6500 50  0001 C CNN
-F 3 "" H 3300 6500 50  0000 C CNN
-F 4 "301010311" H 3300 6500 60  0001 C CNN "Sku"
-F 5 "RC0805JR-071KL" H 3300 6500 60  0001 C CNN "MPN"
-F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/301010311.pdf" H 3300 6500 60  0001 C CNN "provider link 1"
-F 7 "--" H 3300 6500 60  0001 C CNN "provider link 2"
-	1    3300 6500
-	-1   0    0    -1  
-$EndComp
-$Comp
-L R R?
-U 1 1 5A022410
-P 3500 6400
-F 0 "R?" V 3580 6400 50  0000 C CNN
-F 1 "1K" V 3500 6400 50  0000 C CNN
-F 2 "SeeedOPL-Resistor:R0603" V 3430 6400 50  0001 C CNN
-F 3 "" H 3500 6400 50  0000 C CNN
-F 4 "301010311" H 3500 6400 60  0001 C CNN "Sku"
-F 5 "RC0805JR-071KL" H 3500 6400 60  0001 C CNN "MPN"
-F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/301010311.pdf" H 3500 6400 60  0001 C CNN "provider link 1"
-F 7 "--" H 3500 6400 60  0001 C CNN "provider link 2"
-	1    3500 6400
-	-1   0    0    -1  
-$EndComp
-$Comp
-L R R?
 U 1 1 5A022614
 P 3700 6300
 F 0 "R?" V 3780 6300 50  0000 C CNN
-F 1 "1K" V 3700 6300 50  0000 C CNN
+F 1 "470" V 3700 6300 50  0000 C CNN
 F 2 "SeeedOPL-Resistor:R0603" V 3630 6300 50  0001 C CNN
 F 3 "" H 3700 6300 50  0000 C CNN
-F 4 "301010311" H 3700 6300 60  0001 C CNN "Sku"
-F 5 "RC0805JR-071KL" H 3700 6300 60  0001 C CNN "MPN"
-F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/301010311.pdf" H 3700 6300 60  0001 C CNN "provider link 1"
+F 4 "301010088" H 3700 6300 60  0001 C CNN "Sku"
+F 5 "RC0603JR-07470RL" H 3700 6300 60  0001 C CNN "MPN"
+F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/301010088.pdf" H 3700 6300 60  0001 C CNN "provider link 1"
 F 7 "--" H 3700 6300 60  0001 C CNN "provider link 2"
 	1    3700 6300
 	-1   0    0    -1  
@@ -5161,4 +5071,94 @@ Wire Wire Line
 	3500 7050 6000 7050
 Wire Wire Line
 	3100 6850 6000 6850
+$Comp
+L R R?
+U 1 1 5A043273
+P 3500 6400
+F 0 "R?" V 3580 6400 50  0000 C CNN
+F 1 "470" V 3500 6400 50  0000 C CNN
+F 2 "SeeedOPL-Resistor:R0603" V 3430 6400 50  0001 C CNN
+F 3 "" H 3500 6400 50  0000 C CNN
+F 4 "301010088" H 3500 6400 60  0001 C CNN "Sku"
+F 5 "RC0603JR-07470RL" H 3500 6400 60  0001 C CNN "MPN"
+F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/301010088.pdf" H 3500 6400 60  0001 C CNN "provider link 1"
+F 7 "--" H 3500 6400 60  0001 C CNN "provider link 2"
+	1    3500 6400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5A043474
+P 3300 6500
+F 0 "R?" V 3380 6500 50  0000 C CNN
+F 1 "470" V 3300 6500 50  0000 C CNN
+F 2 "SeeedOPL-Resistor:R0603" V 3230 6500 50  0001 C CNN
+F 3 "" H 3300 6500 50  0000 C CNN
+F 4 "301010088" H 3300 6500 60  0001 C CNN "Sku"
+F 5 "RC0603JR-07470RL" H 3300 6500 60  0001 C CNN "MPN"
+F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/301010088.pdf" H 3300 6500 60  0001 C CNN "provider link 1"
+F 7 "--" H 3300 6500 60  0001 C CNN "provider link 2"
+	1    3300 6500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5A043674
+P 3100 6600
+F 0 "R?" V 3180 6600 50  0000 C CNN
+F 1 "470" V 3100 6600 50  0000 C CNN
+F 2 "SeeedOPL-Resistor:R0603" V 3030 6600 50  0001 C CNN
+F 3 "" H 3100 6600 50  0000 C CNN
+F 4 "301010088" H 3100 6600 60  0001 C CNN "Sku"
+F 5 "RC0603JR-07470RL" H 3100 6600 60  0001 C CNN "MPN"
+F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/301010088.pdf" H 3100 6600 60  0001 C CNN "provider link 1"
+F 7 "--" H 3100 6600 60  0001 C CNN "provider link 2"
+	1    3100 6600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5A0439BC
+P 3100 7000
+F 0 "R?" V 3180 7000 50  0000 C CNN
+F 1 "470" V 3100 7000 50  0000 C CNN
+F 2 "SeeedOPL-Resistor:R0603" V 3030 7000 50  0001 C CNN
+F 3 "" H 3100 7000 50  0000 C CNN
+F 4 "301010088" H 3100 7000 60  0001 C CNN "Sku"
+F 5 "RC0603JR-07470RL" H 3100 7000 60  0001 C CNN "MPN"
+F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/301010088.pdf" H 3100 7000 60  0001 C CNN "provider link 1"
+F 7 "--" H 3100 7000 60  0001 C CNN "provider link 2"
+	1    3100 7000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5A043BC9
+P 3300 7100
+F 0 "R?" V 3380 7100 50  0000 C CNN
+F 1 "470" V 3300 7100 50  0000 C CNN
+F 2 "SeeedOPL-Resistor:R0603" V 3230 7100 50  0001 C CNN
+F 3 "" H 3300 7100 50  0000 C CNN
+F 4 "301010088" H 3300 7100 60  0001 C CNN "Sku"
+F 5 "RC0603JR-07470RL" H 3300 7100 60  0001 C CNN "MPN"
+F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/301010088.pdf" H 3300 7100 60  0001 C CNN "provider link 1"
+F 7 "--" H 3300 7100 60  0001 C CNN "provider link 2"
+	1    3300 7100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5A043DD5
+P 3500 7200
+F 0 "R?" V 3580 7200 50  0000 C CNN
+F 1 "470" V 3500 7200 50  0000 C CNN
+F 2 "SeeedOPL-Resistor:R0603" V 3430 7200 50  0001 C CNN
+F 3 "" H 3500 7200 50  0000 C CNN
+F 4 "301010088" H 3500 7200 60  0001 C CNN "Sku"
+F 5 "RC0603JR-07470RL" H 3500 7200 60  0001 C CNN "MPN"
+F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/301010088.pdf" H 3500 7200 60  0001 C CNN "provider link 1"
+F 7 "--" H 3500 7200 60  0001 C CNN "provider link 2"
+	1    3500 7200
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC
