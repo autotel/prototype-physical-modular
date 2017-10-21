@@ -861,12 +861,12 @@ $EndComp
 $Comp
 L +5V #PWR038
 U 1 1 5958DA88
-P 1500 -3350
-F 0 "#PWR038" H 1500 -3500 50  0001 C CNN
-F 1 "+5V" H 1500 -3210 50  0000 C CNN
-F 2 "" H 1500 -3350 50  0000 C CNN
-F 3 "" H 1500 -3350 50  0000 C CNN
-	1    1500 -3350
+P 1600 -3350
+F 0 "#PWR038" H 1600 -3500 50  0001 C CNN
+F 1 "+5V" H 1600 -3210 50  0000 C CNN
+F 2 "" H 1600 -3350 50  0000 C CNN
+F 3 "" H 1600 -3350 50  0000 C CNN
+	1    1600 -3350
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -883,12 +883,12 @@ $EndComp
 $Comp
 L +5V #PWR040
 U 1 1 5958DB2A
-P 600 -3350
-F 0 "#PWR040" H 600 -3500 50  0001 C CNN
-F 1 "+5V" H 600 -3210 50  0000 C CNN
-F 2 "" H 600 -3350 50  0000 C CNN
-F 3 "" H 600 -3350 50  0000 C CNN
-	1    600  -3350
+P 700 -3350
+F 0 "#PWR040" H 700 -3500 50  0001 C CNN
+F 1 "+5V" H 700 -3210 50  0000 C CNN
+F 2 "" H 700 -3350 50  0000 C CNN
+F 3 "" H 700 -3350 50  0000 C CNN
+	1    700  -3350
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -917,11 +917,11 @@ F 7 "--" H 550 -3800 60  0001 C CNN "provider link 2"
 	1    550  -3800
 	0    1    1    0   
 $EndComp
-Text Label 1300 -2900 3    60   ~ 0
+Text Label 1300 -2900 0    60   ~ 0
 BUS_TO
-Text Label 400  -2900 3    60   ~ 0
+Text Label 400  -2900 0    60   ~ 0
 BUS_TI
-Text Label 700  -2500 3    60   ~ 0
+Text Label 200  -2500 2    60   ~ 0
 BUS_COM
 Text Notes 1450 -2050 0    60   ~ 0
 REMOVE
@@ -3498,16 +3498,16 @@ NoConn ~ 28900 14050
 $Comp
 L Jumper_NC_Small JP1
 U 1 1 59747738
-P 1000 -2500
-F 0 "JP1" H 1000 -2420 50  0000 C CNN
-F 1 "comm_bus" H 1010 -2560 50  0001 C CNN
-F 2 "SparkFun-Passives:PAD-JUMPER-2-NO_YES_SILK" H 1000 -2500 50  0001 C CNN
-F 3 "" H 1000 -2500 50  0000 C CNN
-F 4 "--" H 1000 -2500 60  0001 C CNN "Sku"
-F 5 "--" H 1000 -2500 60  0001 C CNN "MPN"
-F 6 "--" H 1000 -2500 60  0001 C CNN "provider link 1"
-F 7 "--" H 1000 -2500 60  0001 C CNN "provider link 2"
-	1    1000 -2500
+P 500 -2500
+F 0 "JP1" H 500 -2420 50  0000 C CNN
+F 1 "comm_bus" H 510 -2560 50  0001 C CNN
+F 2 "SparkFun-Passives:PAD-JUMPER-2-NO_YES_SILK" H 500 -2500 50  0001 C CNN
+F 3 "" H 500 -2500 50  0000 C CNN
+F 4 "--" H 500 -2500 60  0001 C CNN "Sku"
+F 5 "--" H 500 -2500 60  0001 C CNN "MPN"
+F 6 "--" H 500 -2500 60  0001 C CNN "provider link 1"
+F 7 "--" H 500 -2500 60  0001 C CNN "provider link 2"
+	1    500  -2500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -3915,9 +3915,9 @@ F 7 "--" H 1450 -3800 60  0001 C CNN "provider link 2"
 	1    1450 -3800
 	0    1    1    0   
 $EndComp
-Text Label 200  -3350 3    60   ~ 0
+Text Label 300  -3350 3    60   ~ 0
 BUSTI_CONN
-Text Label 1100 -3350 3    60   ~ 0
+Text Label 1200 -3350 3    60   ~ 0
 BUSTO_CONN
 Text Label 6000 8450 2    60   ~ 0
 BUSTO_CONN
@@ -3951,12 +3951,10 @@ F 3 "" H 4650 7400 50  0000 C CNN
 $EndComp
 Text Label 4350 7350 2    60   ~ 0
 BUS_COM_B
-Text Label 1600 -2500 0    60   ~ 0
+Text Label 1100 -2500 0    60   ~ 0
 BUS_COM_B
-NoConn ~ 300  -3350
 NoConn ~ 500  -3350
 NoConn ~ 800  -3350
-NoConn ~ 1200 -3350
 NoConn ~ 1400 -3350
 NoConn ~ 1700 -3350
 NoConn ~ 4000 -3350
@@ -4418,7 +4416,7 @@ Text Notes 1800 -2000 0    60   ~ 0
 p4
 Text Notes 1850 -1050 0    60   ~ 0
 P5
-Text Notes 100  -3050 2    60   ~ 0
+Text Notes 50   -3500 2    60   ~ 0
 Flipped bus connections with gnd,\notherwise reset when plugging
 Text Notes 7250 19400 0    60   ~ 0
 this is wrong
@@ -4529,7 +4527,7 @@ Connection ~ 4300 -3000
 Wire Wire Line
 	4300 -2700 3600 -2700
 Wire Wire Line
-	3600 -3350 3600 -2700
+	3600 -2700 3600 -3350
 Wire Wire Line
 	3150 -1950 3150 -1650
 Wire Wire Line
@@ -4537,11 +4535,11 @@ Wire Wire Line
 Wire Wire Line
 	3250 -3350 3250 -1950
 Wire Wire Line
-	1600 -2500 1600 -3350
+	1100 -2500 1100 -3350
 Wire Wire Line
-	700  -2500 700  -3350
+	200  -2500 200  -3350
 Wire Wire Line
-	900  -2500 700  -2500
+	400  -2500 200  -2500
 Wire Wire Line
 	5050 9650 6000 9650
 Wire Wire Line
@@ -4563,7 +4561,7 @@ Wire Wire Line
 Wire Wire Line
 	3100 6750 6000 6750
 Wire Wire Line
-	1100 -2500 1600 -2500
+	600  -2500 1100 -2500
 Wire Wire Line
 	27900 14850 27900 14700
 Wire Wire Line
@@ -4613,7 +4611,7 @@ Wire Bus Line
 Wire Bus Line
 	2250 -1650 2500 -1650
 Wire Bus Line
-	2250 -1650 2250 -1450
+	2250 -1450 2250 -1650
 Wire Bus Line
 	2200 -1550 2250 -1550
 Wire Wire Line
@@ -5171,4 +5169,6 @@ Wire Wire Line
 Wire Wire Line
 	6650 3750 6650 3800
 Connection ~ 6350 3750
+NoConn ~ 1500 -3350
+NoConn ~ 600  -3350
 $EndSCHEMATC
