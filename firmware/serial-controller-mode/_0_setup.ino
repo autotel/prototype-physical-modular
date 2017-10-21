@@ -22,7 +22,7 @@ void setup() {
   //ugly setup encoder port
   DDRA = 0x00; //0x3<<6;
   PORTA = 0xFF;
-
+  Serial1.begin(31250);
   Serial.begin(SOFT_BAUDRATE);
   Serial.write(0x01);
   //Serial1.begin(31250);
@@ -44,12 +44,12 @@ void setup() {
 
 }
 long lastUpdate = 0;
-
+long testTimer = 0;
 //uint32_t ttest = 0;
 void loop() {
 
 
-  if (millis() - lastUpdate > 1000/90) {
+  if (millis() - lastUpdate > 1000 / 90) {
     screenLoop();
     lastUpdate = millis();
     refreshLeds();
@@ -62,8 +62,17 @@ void loop() {
   //}
   //ttest++;
 
+  
+  while (Serial1.available()) {
+    Serial.println(Serial1.read());
+  }
 
-
+  if (millis() - testTimer > 500) {
+    testTimer = millis();
+    Serial1.write(0x90);
+    Serial1.write(45);
+    Serial1.write(120);
+  }
   checkMessages();
 
 }
