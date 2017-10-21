@@ -1238,21 +1238,6 @@ PI_3V3
 Text Label 7350 12050 0    60   ~ 0
 PI_3V3
 $Comp
-L SD_Card CON2
-U 1 1 5950A17B
-P 8350 18700
-F 0 "CON2" H 7700 19250 50  0000 C CNN
-F 1 "SD_Card" H 8950 18150 50  0000 C CNN
-F 2 "SeeedOPL-Connector:MICRO-SD9+4P-SMD-16.1X14.5X1.85MM" H 8250 19350 50  0000 C CNN
-F 3 "" H 8350 18700 50  0000 C CNN
-F 4 "320090000" H 8350 18700 60  0001 C CNN "Sku"
-F 5 "ST-TF-003A" H 8350 18700 60  0001 C CNN "MPN"
-F 6 "http://datasheet.octopart.com/ST-TF-003A-Suntech-datasheet-30458645.pdf" H 8350 18700 60  0001 C CNN "provider link 1"
-F 7 "--" H 8350 18700 60  0001 C CNN "provider link 2"
-	1    8350 18700
-	1    0    0    -1  
-$EndComp
-$Comp
 L CONN_01X10 P17
 U 1 1 5951DFCD
 P 6100 18750
@@ -1273,23 +1258,19 @@ Text Label 6300 18400 0    60   ~ 0
 SD_DAT3
 Text Label 6300 18500 0    60   ~ 0
 SD_CMD
-Text Label 6300 18600 0    60   ~ 0
+Text Label 6300 19100 0    60   ~ 0
 SD_CD
 Text Label 6300 18700 0    60   ~ 0
 SD_CLK
-Text Label 6300 18800 0    60   ~ 0
-SD_VCC
+Text Label 6300 18900 0    60   ~ 0
+SD_DAT0
 Text Label 6300 19000 0    60   ~ 0
-SD_DAT0
-Text Label 6300 19100 0    60   ~ 0
 SD_DAT1
-Text Label 6300 19200 0    60   ~ 0
-SD_WP
-Text Label 7200 18700 2    60   ~ 0
+Text Label 7200 18600 2    60   ~ 0
 SD_VCC
-Text Label 7200 19000 2    60   ~ 0
+Text Label 7200 18900 2    60   ~ 0
 SD_DAT0
-Text Label 7200 19100 2    60   ~ 0
+Text Label 7200 19000 2    60   ~ 0
 SD_DAT1
 Text Label 7200 18300 2    60   ~ 0
 SD_DAT2
@@ -1297,12 +1278,8 @@ Text Label 7200 18400 2    60   ~ 0
 SD_DAT3
 Text Label 7200 18500 2    60   ~ 0
 SD_CMD
-Text Label 7200 18800 2    60   ~ 0
+Text Label 7200 18700 2    60   ~ 0
 SD_CLK
-Text Label 9250 18600 0    60   ~ 0
-SD_WP
-Text Label 9250 18500 0    60   ~ 0
-SD_CD
 Text Label 7150 15700 0    60   ~ 0
 3vSPI_SCK
 Text Label 7150 13900 0    60   ~ 0
@@ -1507,12 +1484,12 @@ SD_GND
 $Comp
 L GND #PWR134
 U 1 1 595CCDD5
-P 6750 18900
-F 0 "#PWR134" H 6750 18650 50  0001 C CNN
-F 1 "GND" H 6750 18750 50  0000 C CNN
-F 2 "" H 6750 18900 50  0000 C CNN
-F 3 "" H 6750 18900 50  0000 C CNN
-	1    6750 18900
+P 6750 18800
+F 0 "#PWR134" H 6750 18550 50  0001 C CNN
+F 1 "GND" H 6750 18650 50  0000 C CNN
+F 2 "" H 6750 18800 50  0000 C CNN
+F 3 "" H 6750 18800 50  0000 C CNN
+	1    6750 18800
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -3353,28 +3330,6 @@ F 7 "--" H 7000 17150 60  0001 C CNN "provider link 2"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR133
-U 1 1 59704464
-P 6750 18600
-F 0 "#PWR133" H 6750 18350 50  0001 C CNN
-F 1 "GND" H 6750 18450 50  0000 C CNN
-F 2 "" H 6750 18600 50  0000 C CNN
-F 3 "" H 6750 18600 50  0000 C CNN
-	1    6750 18600
-	-1   0    0    1   
-$EndComp
-$Comp
-L GND #PWR135
-U 1 1 59708FBE
-P 9250 19000
-F 0 "#PWR135" H 9250 18750 50  0001 C CNN
-F 1 "GND" H 9250 18850 50  0000 C CNN
-F 2 "" H 9250 19000 50  0000 C CNN
-F 3 "" H 9250 19000 50  0000 C CNN
-	1    9250 19000
-	0    -1   -1   0   
-$EndComp
-$Comp
 L WS2812 WSB2
 U 1 1 597281E3
 P 25600 5350
@@ -4304,13 +4259,9 @@ Wire Wire Line
 Wire Wire Line
 	7200 18500 7450 18500
 Wire Wire Line
-	6750 18600 7450 18600
-Wire Wire Line
 	7200 18700 7450 18700
 Wire Wire Line
-	7200 18800 7450 18800
-Wire Wire Line
-	6300 18900 7450 18900
+	6300 18800 7450 18800
 Wire Wire Line
 	7200 19000 7450 19000
 Wire Wire Line
@@ -4452,9 +4403,6 @@ Wire Wire Line
 	5050 6150 6000 6150
 Wire Wire Line
 	6000 6250 5050 6250
-Connection ~ 6750 18900
-Wire Wire Line
-	9250 18800 9250 19100
 Wire Wire Line
 	6000 17700 6150 17700
 Wire Wire Line
@@ -4656,8 +4604,6 @@ Wire Wire Line
 	26500 14850 26500 14700
 Wire Wire Line
 	27900 14850 27900 14700
-Connection ~ 9250 18900
-Connection ~ 9250 19000
 Wire Wire Line
 	1100 -2500 1600 -2500
 Wire Wire Line
@@ -5190,4 +5136,41 @@ Wire Bus Line
 	1800 -1300 1800 -1150
 Text Notes 100  -3050 2    60   ~ 0
 Flipped bus connections with gnd,\notherwise reset when plugging
+Text Notes 7250 19400 0    60   ~ 0
+this is wrong
+Wire Wire Line
+	7200 18600 7450 18600
+Wire Wire Line
+	7200 18900 7450 18900
+$Comp
+L SD_Card_SEEEDOPL CON?
+U 1 1 59F1AA91
+P 8350 18700
+F 0 "CON?" H 7700 19250 50  0000 C CNN
+F 1 "SD_Card_SEEEDOPL" H 8950 18150 50  0000 C CNN
+F 2 "10067847-001" H 8550 19050 50  0000 C CNN
+F 3 "" H 8350 18700 50  0000 C CNN
+F 4 "320090000" H 8350 18700 60  0001 C CNN "Sku"
+F 5 "ST-TF-003A" H 8350 18700 60  0001 C CNN "MPN"
+F 6 "http://datasheet.octopart.com/ST-TF-003A-Suntech-datasheet-30458645.pdf" H 8350 18700 60  0001 C CNN "provider link 1"
+F 7 "--" H 8350 18700 60  0001 C CNN "provider link 2"
+	1    8350 18700
+	1    0    0    -1  
+$EndComp
+Text Label 6300 18600 0    60   ~ 0
+SD_VCC
+Connection ~ 6750 18800
+Text Label 7200 19100 2    60   ~ 0
+SD_CD
+$Comp
+L GND #PWR?
+U 1 1 59F3D93A
+P 9250 18500
+F 0 "#PWR?" H 9250 18250 50  0001 C CNN
+F 1 "GND" H 9250 18350 50  0000 C CNN
+F 2 "" H 9250 18500 50  0000 C CNN
+F 3 "" H 9250 18500 50  0000 C CNN
+	1    9250 18500
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
