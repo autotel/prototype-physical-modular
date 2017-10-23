@@ -1259,7 +1259,7 @@ SD_DAT3
 Text Label 6300 18500 0    60   ~ 0
 SD_CMD
 Text Label 6300 19100 0    60   ~ 0
-SD_CD
+SD_CDetc
 Text Label 6300 18700 0    60   ~ 0
 SD_CLK
 Text Label 6300 18900 0    60   ~ 0
@@ -4438,7 +4438,7 @@ $EndComp
 Text Label 6300 18600 0    60   ~ 0
 SD_VCC
 Text Label 7200 19100 2    60   ~ 0
-SD_CD
+SD_CDetc
 $Comp
 L GND #PWR0141
 U 1 1 59F3D93A
@@ -4451,7 +4451,7 @@ F 3 "" H 9250 18500 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 Text Label 8600 7750 0    60   ~ 0
-SD_CD
+SD_CDetc
 Wire Wire Line
 	4300 -3350 4300 -2700
 Connection ~ 6750 18800
