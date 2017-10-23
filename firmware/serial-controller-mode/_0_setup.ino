@@ -64,7 +64,7 @@ void loop() {
 
   
   while (Serial1.available()) {
-    Serial.println(Serial1.read());
+    Serial.write(Serial1.read());
   }
 
   if (millis() - testTimer > 500) {
