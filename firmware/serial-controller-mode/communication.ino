@@ -58,6 +58,10 @@ void checkMessages() {
           recordingBuffer = true;
           expectedLength = RH_comTester_len;
           break;
+        case RH_sendMidi:
+          recordingBuffer = true;
+          expectedLength = RH_sendMidi_len;
+          break;
       }
     }
 
@@ -112,7 +116,7 @@ void checkMessages() {
 }
 
 //available queue for outgoing messages
-byte sendToBrainData [] = {0, 0, 0, 0, 0, 0, 0};
+byte sendToBrainData [] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
 void sendToBrain(byte header, int len) {
   Serial.write(header);
@@ -187,6 +191,10 @@ void messageReceived(unsigned char datarray [], int len) {
           sendToBrainData[6] = '0';
           sendToBrain(TH_version, 7);
           break;
+        }
+      case RH_sendMidi: {
+        sendMidiOut(datarray[a],datarray[a+1],datarray[a+2]);
+        a += RH_sendMidi_len;
         }
       default:
         a++;
