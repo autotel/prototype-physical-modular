@@ -13,6 +13,10 @@ int8_t enc_last = 0;
 int8_t enc_sub = 0;
 unsigned int encoder0Pos = 0;
 
+uint8_t hflip(uint8_t a){
+  uint8_t minus=3-(a%4);
+  return (a&0xfc)+minus;
+}
 void hardware_init() {
   delay(2000);
   FastLED.addLeds<WS2811, DATA_PIN, RGB>(leds, NUM_LEDS);
@@ -34,7 +38,7 @@ void hardware_init() {
 }
 uint32_t mxBint = 0;
 void hardware_loop() {
-  if (mxBint > 2000) {
+  if (mxBint > 200) {
     readMatrixButtons();
     mxBint = 0;
   }

@@ -49,7 +49,7 @@ long testTimer = 0;
 void loop() {
 
 
-  if (millis() - lastUpdate > 1000 / 90) {
+  if (millis() - lastUpdate > 1000 / 20) {
     screenLoop();
     lastUpdate = millis();
     refreshLeds();

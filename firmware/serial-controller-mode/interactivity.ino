@@ -6,12 +6,12 @@ void onButtonPressed(byte button) {
   pressedMatrixButtonsBitmap |= 1<<(button-8);
 
   if (button < 8) {
-    onSelectorButtonPressed(button);
+    onSelectorButtonPressed(hflip(button));
     //hardware.setButtonColor(button, 127, 130, 200);
   } else if (button < 24) {
-    onMatrixButtonPressed(button - 8);
+    onMatrixButtonPressed(hflip(23-button));
   } else if (button < 28) {
-    onSelectorButtonPressed(button - 24);
+    onSelectorButtonPressed(hflip(27-button));
     //hardware.setButtonColor(button, 127, 130, 200);
   }
 }
@@ -23,9 +23,9 @@ void onButtonReleased(byte button) {
     onSelectorButtonReleased(button);
     //hardware.setButtonColor(button, 127, 130, 200);
   } else if (button < 24) {
-    onMatrixButtonReleased(button - 8);
+    onMatrixButtonReleased(hflip(23-button));
   } else if (button < 28) {
-    onSelectorButtonReleased(button - 24);
+    onSelectorButtonReleased(hflip(27-button));
     //hardware.setButtonColor(button, 127, 130, 200);
   }
 }

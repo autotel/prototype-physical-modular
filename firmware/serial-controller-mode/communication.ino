@@ -126,7 +126,17 @@ void sendToBrain(byte header, int len) {
 //String ns="                ";
 //react and split messages
 void messageReceived(unsigned char datarray [], int len) {
-  activeAnimation = false;
+  if (activeAnimation) {
+    activeAnimation = false;
+    setButtonColor(0, 70, 70, 70);
+    setButtonColor(1, 70, 70, 70);
+    setButtonColor(2, 70, 70, 70);
+    setButtonColor(3, 127, 127, 10);
+    setButtonColor(4, 0, 0, 0);
+    setButtonColor(5, 0, 0, 0);
+    setButtonColor(6, 0, 0, 0);
+    setButtonColor(7, 0, 0, 0);
+  }
   int a = 0;
   unsigned char header = datarray[a];
   uint16_t writeColorChannels [] = {0, 0, 0};
@@ -146,7 +156,7 @@ void messageReceived(unsigned char datarray [], int len) {
                 pxch[n] = defCol[n];
               }
             }
-            setButtonColor(pixel + 8, pxch[0], pxch[1], pxch[2]);
+            setButtonColor(23 - hflip(pixel), pxch[0], pxch[1], pxch[2]);
           }
           a += RH_ledMatrix_len;
           /*lcdPrintB("B"+String(layers[0],HEX)+"C"+(char)layers[0]);*/
