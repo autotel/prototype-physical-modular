@@ -3,29 +3,29 @@ uint32_t pressedButtonsBitmap = 0;
 
 //actions to take once any button is pressed
 void onButtonPressed(byte button) {
-  pressedMatrixButtonsBitmap |= 1<<(button-8);
+
 
   if (button < 8) {
     onSelectorButtonPressed(hflip(button));
     //hardware.setButtonColor(button, 127, 130, 200);
   } else if (button < 24) {
-    onMatrixButtonPressed(hflip(23-button));
+    onMatrixButtonPressed(hflip(23 - button));
   } else if (button < 28) {
-    onSelectorButtonPressed(hflip(27-button));
+    onSelectorButtonPressed(hflip(27 - button));
     //hardware.setButtonColor(button, 127, 130, 200);
   }
 }
 
 void onButtonReleased(byte button) {
   //postPressedButtonsBitmap&=~(1UL<<button);
-  pressedMatrixButtonsBitmap &= ~(1 << (button-8));
+
   if (button < 8) {
-    onSelectorButtonReleased(button);
+    onSelectorButtonReleased(hflip(button));
     //hardware.setButtonColor(button, 127, 130, 200);
   } else if (button < 24) {
-    onMatrixButtonReleased(hflip(23-button));
+    onMatrixButtonReleased(hflip(23 - button));
   } else if (button < 28) {
-    onSelectorButtonReleased(hflip(27-button));
+    onSelectorButtonReleased(hflip(27 - button));
     //hardware.setButtonColor(button, 127, 130, 200);
   }
 }
@@ -39,6 +39,9 @@ void onMatrixButtonHold(byte button, byte buttonPressure) {
 }
 //actions to take while a button is pressed
 void onMatrixButtonPressed(byte button) {
+
+  pressedMatrixButtonsBitmap |= 1 << (button);
+
   sendToBrainData[0] = button;
   sendToBrainData[1] = 1;
   sendToBrainData[2] = (uint8_t)pressedMatrixButtonsBitmap & 0xff;
@@ -52,6 +55,9 @@ void onMatrixButtonPressed(byte button) {
 }
 //actions to take once a button is released
 void onMatrixButtonReleased(byte button) {
+
+  pressedMatrixButtonsBitmap &= ~(1 << (button));
+  
   sendToBrainData[0] = button;
   sendToBrainData[1] = 0;
   sendToBrainData[2] = (byte)pressedMatrixButtonsBitmap;
