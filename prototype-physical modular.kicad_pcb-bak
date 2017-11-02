@@ -37,8 +37,8 @@
   )
 
   (setup
-    (last_trace_width 0.25)
-    (trace_clearance 0.2)
+    (last_trace_width 0.2032)
+    (trace_clearance 0.2032)
     (zone_clearance 0.508)
     (zone_45_only yes)
     (trace_min 0.2)
@@ -264,12 +264,12 @@
   (net 171 "Net-(D32-Pad+)")
   (net 172 "Net-(D33-Pad+)")
   (net 173 "Net-(D34-Pad+)")
-  (net 174 /SD_CD)
-  (net 175 "Net-(P21-Pad4)")
+  (net 174 "Net-(P21-Pad4)")
+  (net 175 /SD_CDetc)
 
   (net_class Default "This is the default net class."
-    (clearance 0.2)
-    (trace_width 0.25)
+    (clearance 0.2032)
+    (trace_width 0.2032)
     (via_dia 0.6)
     (via_drill 0.4)
     (uvia_dia 0.3)
@@ -324,7 +324,7 @@
     (add_net /RESET)
     (add_net /SCL)
     (add_net /SDA)
-    (add_net /SD_CD)
+    (add_net /SD_CDetc)
     (add_net /SD_DAT1)
     (add_net /SD_DAT2)
     (add_net /SERIAL_LED_PIN)
@@ -449,6 +449,76 @@
     (add_net "Net-(WSB5-Pad2)")
     (add_net "Net-(WSB6-Pad2)")
     (add_net "Net-(WSB7-Pad2)")
+  )
+
+  (module SparkFun-Connectors:1X06 (layer B.Cu) (tedit 0) (tstamp 59EB43C6)
+    (at 35.56 24.13 180)
+    (path /59EBC305)
+    (fp_text reference P11 (at -1.3462 1.8288 180) (layer B.SilkS)
+      (effects (font (size 1.2065 1.2065) (thickness 0.127)) (justify left bottom mirror))
+    )
+    (fp_text value CONN_UART (at 4.446 -2.906 180) (layer B.SilkS)
+      (effects (font (size 1.2065 1.2065) (thickness 0.1016)) (justify left bottom mirror))
+    )
+    (fp_line (start 13.97 24.13) (end 13.97 1.27) (layer B.SilkS) (width 0.15))
+    (fp_line (start -1.27 24.13) (end 13.97 24.13) (layer B.SilkS) (width 0.15))
+    (fp_line (start -1.27 1.27) (end -1.27 24.13) (layer B.SilkS) (width 0.15))
+    (fp_line (start 11.43 0.635) (end 12.065 1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 12.065 1.27) (end 13.335 1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 13.335 1.27) (end 13.97 0.635) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 13.97 -0.635) (end 13.335 -1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 13.335 -1.27) (end 12.065 -1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 12.065 -1.27) (end 11.43 -0.635) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 6.985 1.27) (end 8.255 1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 8.255 1.27) (end 8.89 0.635) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 8.89 -0.635) (end 8.255 -1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 8.89 0.635) (end 9.525 1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 9.525 1.27) (end 10.795 1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 10.795 1.27) (end 11.43 0.635) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 11.43 -0.635) (end 10.795 -1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 10.795 -1.27) (end 9.525 -1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 9.525 -1.27) (end 8.89 -0.635) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 3.81 0.635) (end 4.445 1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 4.445 1.27) (end 5.715 1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 5.715 1.27) (end 6.35 0.635) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 6.35 -0.635) (end 5.715 -1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 5.715 -1.27) (end 4.445 -1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 4.445 -1.27) (end 3.81 -0.635) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 6.985 1.27) (end 6.35 0.635) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 6.35 -0.635) (end 6.985 -1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 8.255 -1.27) (end 6.985 -1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start -0.635 1.27) (end 0.635 1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 0.635 1.27) (end 1.27 0.635) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 1.27 -0.635) (end 0.635 -1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 1.27 0.635) (end 1.905 1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 1.905 1.27) (end 3.175 1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 3.175 1.27) (end 3.81 0.635) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 3.81 -0.635) (end 3.175 -1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 3.175 -1.27) (end 1.905 -1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 1.905 -1.27) (end 1.27 -0.635) (layer B.SilkS) (width 0.2032))
+    (fp_line (start -1.27 0.635) (end -1.27 -0.635) (layer B.SilkS) (width 0.2032))
+    (fp_line (start -0.635 1.27) (end -1.27 0.635) (layer B.SilkS) (width 0.2032))
+    (fp_line (start -1.27 -0.635) (end -0.635 -1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 0.635 -1.27) (end -0.635 -1.27) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 13.97 0.635) (end 13.97 -0.635) (layer B.SilkS) (width 0.2032))
+    (fp_poly (pts (xy 12.446 -0.254) (xy 12.954 -0.254) (xy 12.954 0.254) (xy 12.446 0.254)) (layer Dwgs.User) (width 0))
+    (fp_poly (pts (xy 9.906 -0.254) (xy 10.414 -0.254) (xy 10.414 0.254) (xy 9.906 0.254)) (layer Dwgs.User) (width 0))
+    (fp_poly (pts (xy 7.366 -0.254) (xy 7.874 -0.254) (xy 7.874 0.254) (xy 7.366 0.254)) (layer Dwgs.User) (width 0))
+    (fp_poly (pts (xy 4.826 -0.254) (xy 5.334 -0.254) (xy 5.334 0.254) (xy 4.826 0.254)) (layer Dwgs.User) (width 0))
+    (fp_poly (pts (xy 2.286 -0.254) (xy 2.794 -0.254) (xy 2.794 0.254) (xy 2.286 0.254)) (layer Dwgs.User) (width 0))
+    (fp_poly (pts (xy -0.254 -0.254) (xy 0.254 -0.254) (xy 0.254 0.254) (xy -0.254 0.254)) (layer Dwgs.User) (width 0))
+    (pad 1 thru_hole circle (at 0 0 90) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask)
+      (net 2 GND))
+    (pad 2 thru_hole circle (at 2.54 0 90) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask)
+      (net 2 GND))
+    (pad 3 thru_hole circle (at 5.08 0 90) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask)
+      (net 1 +5V))
+    (pad 4 thru_hole circle (at 7.62 0 90) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask)
+      (net 136 /PI5vRX0))
+    (pad 5 thru_hole circle (at 10.16 0 90) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask)
+      (net 137 /PI5vTX0))
+    (pad 6 thru_hole circle (at 12.7 0 90) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask)
+      (net 142 "Net-(C11-Pad-)"))
   )
 
   (module SeeedOPL-IC:TQFP100-0.5-14X14MM (layer B.Cu) (tedit 200000) (tstamp 5950B8EE)
@@ -1051,7 +1121,7 @@
     (pad 46 smd rect (at 3.99796 -7.99846 225) (size 0.34798 1.4986) (layers B.Cu B.Paste B.Mask)
       (net 131 /MIDI_OUT_TX))
     (pad 47 smd rect (at 4.49834 -7.99846 225) (size 0.34798 1.4986) (layers B.Cu B.Paste B.Mask)
-      (net 174 /SD_CD))
+      (net 175 /SD_CDetc))
     (pad 48 smd rect (at 4.99872 -7.99846 225) (size 0.34798 1.4986) (layers B.Cu B.Paste B.Mask)
       (net 43 "Net-(IC1-Pad48)"))
     (pad 49 smd rect (at 5.4991 -7.99846 225) (size 0.34798 1.4986) (layers B.Cu B.Paste B.Mask)
@@ -10839,10 +10909,10 @@
   (module SparkFun-Displays:LCD-16X2 locked (layer F.Cu) (tedit 59532B31) (tstamp 595332AB)
     (at 40 18)
     (path /594FE737)
-    (fp_text reference DS1 (at 0.386 -1.998) (layer F.SilkS)
+    (fp_text reference DS1 (at -12.06 -12.92) (layer F.SilkS)
       (effects (font (thickness 0.15)))
     )
-    (fp_text value LCD16X2 (at 0 0) (layer F.SilkS)
+    (fp_text value LCD16X2 (at -19.68 -12.92) (layer F.SilkS)
       (effects (font (thickness 0.15)))
     )
     (fp_line (start -40 -18) (end 40 -18) (layer F.SilkS) (width 0.2032))
@@ -11842,7 +11912,7 @@
     (pad 1 smd rect (at 0 0.762) (size 0.889 0.889) (layers B.Cu B.Paste B.Mask)
       (net 1 +5V))
     (pad 2 smd rect (at 0 -0.762) (size 0.889 0.889) (layers B.Cu B.Paste B.Mask)
-      (net 175 "Net-(P21-Pad4)"))
+      (net 174 "Net-(P21-Pad4)"))
   )
 
   (module SeeedOPL-Resistor:R0603 (layer B.Cu) (tedit 200000) (tstamp 594A5644)
@@ -12206,7 +12276,7 @@
   )
 
   (module SeeedOPL-IC:TO-252 (layer B.Cu) (tedit 200000) (tstamp 594A56DF)
-    (at 9.144 22.098)
+    (at 8.89 22.098)
     (descr "SMALL OUTLINE TRANSISTOR")
     (tags "SMALL OUTLINE TRANSISTOR")
     (path /594A5C49)
@@ -12405,7 +12475,7 @@
     (pad 8 smd rect (at 0 -5.4483 270) (size 1.59766 0.6985) (layers B.Cu B.Paste B.Mask)
       (net 11 /SD_DAT1))
     (pad 9 smd rect (at 0 -6.54812 270) (size 1.59766 0.6985) (layers B.Cu B.Paste B.Mask)
-      (net 174 /SD_CD))
+      (net 175 /SD_CDetc))
     (pad G1 smd rect (at 0.59944 -7.8486 270) (size 1.59766 1.39954) (layers B.Cu B.Paste B.Mask))
     (pad G2 smd rect (at 10.09904 -7.8486 270) (size 2.19964 1.39954) (layers B.Cu B.Paste B.Mask))
     (pad G3 smd rect (at 10.09904 7.8486 270) (size 2.19964 1.39954) (layers B.Cu B.Paste B.Mask))
@@ -14666,7 +14736,7 @@
   )
 
   (module lib_fp:DO-214AC (layer B.Cu) (tedit 594C7A8D) (tstamp 594C91A0)
-    (at 29.53962 52.5)
+    (at 29.5396 52.5)
     (descr HTTP://WWW.SYCELECTRONICA.COM.AR/SEMICONDUCTORES/1N4007-SMD.PDF)
     (tags HTTP://WWW.SYCELECTRONICA.COM.AR/SEMICONDUCTORES/1N4007-SMD.PDF)
     (path /59690C1E)
@@ -14699,7 +14769,7 @@
   )
 
   (module lib_fp:DO-214AC (layer B.Cu) (tedit 594C7A8D) (tstamp 594C91A5)
-    (at 70.46038 52.5)
+    (at 70.4604 52.5)
     (descr HTTP://WWW.SYCELECTRONICA.COM.AR/SEMICONDUCTORES/1N4007-SMD.PDF)
     (tags HTTP://WWW.SYCELECTRONICA.COM.AR/SEMICONDUCTORES/1N4007-SMD.PDF)
     (path /59690C28)
@@ -14732,7 +14802,7 @@
   )
 
   (module lib_fp:DO-214AC (layer B.Cu) (tedit 594C7A8D) (tstamp 594C91AA)
-    (at 79.53962 52.5 180)
+    (at 79.5396 52.5 180)
     (descr HTTP://WWW.SYCELECTRONICA.COM.AR/SEMICONDUCTORES/1N4007-SMD.PDF)
     (tags HTTP://WWW.SYCELECTRONICA.COM.AR/SEMICONDUCTORES/1N4007-SMD.PDF)
     (path /59690C32)
@@ -15292,48 +15362,14 @@
       (net 19 /MUXBX6))
   )
 
-  (module lib_fp:AVX-A (layer F.Cu) (tedit 594C7F1A) (tstamp 594CB3B9)
-    (at 77.47 10.16 270)
-    (path /594AB44C)
-    (attr smd)
-    (fp_text reference C2 (at -0.762 -1.27 270) (layer F.SilkS)
-      (effects (font (size 0.889 0.889) (thickness 0.1016)))
-    )
-    (fp_text value 47u (at 0 1.8415 270) (layer F.SilkS)
-      (effects (font (size 0.635 0.635) (thickness 0.0762)))
-    )
-    (fp_line (start 1.6 -0.2) (end 0.8 -0.2) (layer Dwgs.User) (width 0.15))
-    (fp_text user "AVX-A " (at -0.7 -0.5 270) (layer Dwgs.User)
-      (effects (font (size 0.3 0.3) (thickness 0.0075)))
-    )
-    (fp_line (start -1.6 0.8) (end 1.6 0.8) (layer Dwgs.User) (width 0.15))
-    (fp_line (start 1.6 -0.8) (end 1.6 0.8) (layer Dwgs.User) (width 0.15))
-    (fp_line (start -1.6 -0.8) (end 1.6 -0.8) (layer Dwgs.User) (width 0.15))
-    (fp_line (start -1.6 0.8) (end -1.6 -0.8) (layer Dwgs.User) (width 0.15))
-    (fp_line (start -2.159 0.889) (end 2.159 0.889) (layer F.SilkS) (width 0.06604))
-    (fp_line (start 2.159 0.889) (end 2.159 -0.889) (layer F.SilkS) (width 0.06604))
-    (fp_line (start -2.159 -0.889) (end 2.159 -0.889) (layer F.SilkS) (width 0.06604))
-    (fp_line (start -2.159 0.889) (end -2.159 -0.889) (layer F.SilkS) (width 0.06604))
-    (fp_line (start -2.0955 -0.8255) (end 2.0955 -0.8255) (layer F.SilkS) (width 0.127))
-    (fp_line (start 2.0955 -0.8255) (end 2.0955 0.8255) (layer F.SilkS) (width 0.127))
-    (fp_line (start 2.0955 0.8255) (end -2.0955 0.8255) (layer F.SilkS) (width 0.127))
-    (fp_line (start -2.0955 0.8255) (end -2.0955 -0.8255) (layer F.SilkS) (width 0.127))
-    (fp_line (start -0.4445 0) (end 0.0635 0) (layer F.SilkS) (width 0.127))
-    (fp_line (start -0.1905 0.254) (end -0.1905 -0.254) (layer F.SilkS) (width 0.127))
-    (pad + smd rect (at -1.27 0 270) (size 1.27 1.27) (layers F.Cu F.Paste F.Mask)
-      (net 4 "Net-(C1-Pad1)"))
-    (pad - smd rect (at 1.27 0 90) (size 1.27 1.27) (layers F.Cu F.Paste F.Mask)
-      (net 2 GND))
-  )
-
   (module lib_fp:SW4-SMD-5.2X5.2X1.5MM (layer B.Cu) (tedit 59506F68) (tstamp 59507454)
-    (at 31 27 180)
+    (at 41.91 16.51 180)
     (path /595E0CFF)
     (attr smd)
     (fp_text reference SW1 (at 0 3.4 180) (layer B.SilkS)
       (effects (font (size 0.889 0.889) (thickness 0.1016)) (justify mirror))
     )
-    (fp_text value SW_PUSH (at 0 -0.7 180) (layer B.SilkS)
+    (fp_text value SW_PUSH (at 0 -0.94 180) (layer B.SilkS)
       (effects (font (size 0.635 0.635) (thickness 0.0762)) (justify mirror))
     )
     (fp_line (start -2.49936 -2.59842) (end 2.59842 -2.59842) (layer B.SilkS) (width 0.06604))
@@ -16557,7 +16593,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD (layer B.Cu) (tedit 59EA4BB8) (tstamp 5954514C)
-    (at 95.48 125.73 180)
+    (at 95.48 135.89 180)
     (descr "surface-mounted straight pin header, 2x04, 2.54mm pitch, double rows")
     (tags "Surface mounted pin header SMD 2x04 2.54mm double row")
     (path /595B09A4)
@@ -16912,7 +16948,7 @@
   )
 
   (module lib_fp:trimpot (layer B.Cu) (tedit 5953287B) (tstamp 59533302)
-    (at 21.844 20.53292)
+    (at 19.54 32.99892)
     (path /5951067A)
     (attr virtual)
     (fp_text reference RV1 (at -0.05 -1.35) (layer B.SilkS)
@@ -16937,8 +16973,8 @@
       (net 20 "Net-(DS1-Pad3)"))
   )
 
-  (module SeeedOPL-Capacitor:ELECTRO-SMD-C-6MM (layer B.Cu) (tedit 200000) (tstamp 59EA33CF)
-    (at 31 18)
+  (module SeeedOPL-Capacitor:ELECTRO-SMD-C-6MM (layer B.Cu) (tedit 59FA8BAB) (tstamp 59EA33CF)
+    (at 30.5 31)
     (descr "ALUMINIUM ELECTROLYTIC CAPACITOR PACKAGE B")
     (tags "ALUMINIUM ELECTROLYTIC CAPACITOR PACKAGE B")
     (path /5A0A6775)
@@ -16946,7 +16982,7 @@
     (fp_text reference C11 (at 0.3175 4.0005) (layer B.SilkS)
       (effects (font (size 0.889 0.889) (thickness 0.1016)) (justify mirror))
     )
-    (fp_text value "Aluminum 47uF-25V" (at -0.635 -4.0005) (layer B.SilkS)
+    (fp_text value "Aluminum 47uF-25V" (at -0.635 -4.0005) (layer B.SilkS) hide
       (effects (font (size 0.635 0.635) (thickness 0.0762)) (justify mirror))
     )
     (fp_line (start -3.175 -3.175) (end 3.175 -3.175) (layer B.SilkS) (width 0.06604))
@@ -17282,7 +17318,7 @@
     (pad 3 smd rect (at 9.79932 -3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask)
       (net 131 /MIDI_OUT_TX))
     (pad 4 smd rect (at 10.1981 3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask)
-      (net 175 "Net-(P21-Pad4)"))
+      (net 174 "Net-(P21-Pad4)"))
     (pad 5 smd rect (at 2.89814 3.37312 180) (size 2.2479 1.4986) (layers B.Cu B.Paste B.Mask))
     (pad 6 smd rect (at 5.19938 3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask))
     (pad 7 smd rect (at 7.8994 3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask))
@@ -17355,16 +17391,16 @@
     (pad 1 smd rect (at 3.8989 -3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask)
       (net 2 GND))
     (pad 2 smd rect (at 7.0993 -3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask)
-      (net 128 /BUSTI_CONN))
+      (net 71 /BUS_COM))
     (pad 3 smd rect (at 9.79932 -3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask)
       (net 133 /BUS_TI))
     (pad 4 smd rect (at 10.1981 3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask)
-      (net 71 /BUS_COM))
-    (pad 5 smd rect (at 2.89814 3.37312 180) (size 2.2479 1.4986) (layers B.Cu B.Paste B.Mask))
-    (pad 6 smd rect (at 5.19938 3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask))
-    (pad 7 smd rect (at 7.8994 3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask))
-    (pad 8 smd rect (at 11.99896 -3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask)
       (net 1 +5V))
+    (pad 5 smd rect (at 2.89814 3.37312 180) (size 2.2479 1.4986) (layers B.Cu B.Paste B.Mask))
+    (pad 6 smd rect (at 5.19938 3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask)
+      (net 128 /BUSTI_CONN))
+    (pad 7 smd rect (at 7.8994 3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask))
+    (pad 8 smd rect (at 11.99896 -3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask))
   )
 
   (module SeeedOPL-Connector:AUDIO8P-SMD-3.5-14.5X6.1X4.0MM (layer B.Cu) (tedit 59EA2D1D) (tstamp 59EA35B7)
@@ -17433,16 +17469,16 @@
     (pad 1 smd rect (at 3.8989 -3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask)
       (net 2 GND))
     (pad 2 smd rect (at 7.0993 -3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask)
-      (net 127 /BUSTO_CONN))
+      (net 129 /BUS_COM_B))
     (pad 3 smd rect (at 9.79932 -3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask)
       (net 132 /BUS_TO))
     (pad 4 smd rect (at 10.1981 3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask)
-      (net 129 /BUS_COM_B))
-    (pad 5 smd rect (at 2.89814 3.37312 180) (size 2.2479 1.4986) (layers B.Cu B.Paste B.Mask))
-    (pad 6 smd rect (at 5.19938 3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask))
-    (pad 7 smd rect (at 7.8994 3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask))
-    (pad 8 smd rect (at 11.99896 -3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask)
       (net 1 +5V))
+    (pad 5 smd rect (at 2.89814 3.37312 180) (size 2.2479 1.4986) (layers B.Cu B.Paste B.Mask))
+    (pad 6 smd rect (at 5.19938 3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask)
+      (net 127 /BUSTO_CONN))
+    (pad 7 smd rect (at 7.8994 3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask))
+    (pad 8 smd rect (at 11.99896 -3.37312 180) (size 2.2479 1.59766) (layers B.Cu B.Paste B.Mask))
   )
 
   (module SeeedOPL-Resistor:R0603 (layer B.Cu) (tedit 200000) (tstamp 59EA35C1)
@@ -17506,7 +17542,7 @@
   )
 
   (module SeeedOPL-Resistor:R0603 (layer B.Cu) (tedit 200000) (tstamp 59EA35DF)
-    (at 15.5 91.5 270)
+    (at 16.238 91 270)
     (path /5A043674)
     (attr smd)
     (fp_text reference R28 (at -0.707107 3.535534 540) (layer B.SilkS)
@@ -17526,7 +17562,7 @@
   )
 
   (module SeeedOPL-Resistor:R0603 (layer B.Cu) (tedit 200000) (tstamp 59EA35E9)
-    (at 19.05 120 270)
+    (at 16.238 119 270)
     (path /5A0439BC)
     (attr smd)
     (fp_text reference R29 (at 0.707107 -3.535534 540) (layer B.SilkS)
@@ -17546,7 +17582,7 @@
   )
 
   (module SeeedOPL-Resistor:R0603 (layer B.Cu) (tedit 200000) (tstamp 59EA35F3)
-    (at 7.762 150.5 270)
+    (at 16.238 149 270)
     (path /5A043BC9)
     (attr smd)
     (fp_text reference R30 (at 0.707107 -3.535534 540) (layer B.SilkS)
@@ -17566,7 +17602,7 @@
   )
 
   (module SeeedOPL-Resistor:R0603 (layer B.Cu) (tedit 200000) (tstamp 59EA35FD)
-    (at 12 153 270)
+    (at 16.238 152.4 270)
     (path /5A043DD5)
     (attr smd)
     (fp_text reference R31 (at 0.67966 -3.56298 540) (layer B.SilkS)
@@ -17583,73 +17619,6 @@
       (net 19 /MUXBX6))
     (pad 2 smd rect (at 0 -0.762) (size 0.889 0.889) (layers B.Cu B.Paste B.Mask)
       (net 2 GND))
-  )
-
-  (module SparkFun-Connectors:1X06 (layer F.Cu) (tedit 0) (tstamp 59EB43C6)
-    (at 8 7)
-    (path /59EBC305)
-    (fp_text reference P11 (at -1.3462 -1.8288) (layer F.SilkS)
-      (effects (font (size 1.2065 1.2065) (thickness 0.127)) (justify left bottom))
-    )
-    (fp_text value CONN_UART (at 4.446 2.906) (layer F.SilkS)
-      (effects (font (size 1.2065 1.2065) (thickness 0.1016)) (justify left bottom))
-    )
-    (fp_line (start 11.43 -0.635) (end 12.065 -1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 12.065 -1.27) (end 13.335 -1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 13.335 -1.27) (end 13.97 -0.635) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 13.97 0.635) (end 13.335 1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 13.335 1.27) (end 12.065 1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 12.065 1.27) (end 11.43 0.635) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 6.985 -1.27) (end 8.255 -1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 8.255 -1.27) (end 8.89 -0.635) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 8.89 0.635) (end 8.255 1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 8.89 -0.635) (end 9.525 -1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 9.525 -1.27) (end 10.795 -1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 10.795 -1.27) (end 11.43 -0.635) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 11.43 0.635) (end 10.795 1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 10.795 1.27) (end 9.525 1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 9.525 1.27) (end 8.89 0.635) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 3.81 -0.635) (end 4.445 -1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 4.445 -1.27) (end 5.715 -1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 5.715 -1.27) (end 6.35 -0.635) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 6.35 0.635) (end 5.715 1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 5.715 1.27) (end 4.445 1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 4.445 1.27) (end 3.81 0.635) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 6.985 -1.27) (end 6.35 -0.635) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 6.35 0.635) (end 6.985 1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 8.255 1.27) (end 6.985 1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start -0.635 -1.27) (end 0.635 -1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 0.635 -1.27) (end 1.27 -0.635) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 1.27 0.635) (end 0.635 1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 1.27 -0.635) (end 1.905 -1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 1.905 -1.27) (end 3.175 -1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 3.175 -1.27) (end 3.81 -0.635) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 3.81 0.635) (end 3.175 1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 3.175 1.27) (end 1.905 1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 1.905 1.27) (end 1.27 0.635) (layer F.SilkS) (width 0.2032))
-    (fp_line (start -1.27 -0.635) (end -1.27 0.635) (layer F.SilkS) (width 0.2032))
-    (fp_line (start -0.635 -1.27) (end -1.27 -0.635) (layer F.SilkS) (width 0.2032))
-    (fp_line (start -1.27 0.635) (end -0.635 1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 0.635 1.27) (end -0.635 1.27) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 13.97 -0.635) (end 13.97 0.635) (layer F.SilkS) (width 0.2032))
-    (fp_poly (pts (xy 12.446 0.254) (xy 12.954 0.254) (xy 12.954 -0.254) (xy 12.446 -0.254)) (layer Dwgs.User) (width 0))
-    (fp_poly (pts (xy 9.906 0.254) (xy 10.414 0.254) (xy 10.414 -0.254) (xy 9.906 -0.254)) (layer Dwgs.User) (width 0))
-    (fp_poly (pts (xy 7.366 0.254) (xy 7.874 0.254) (xy 7.874 -0.254) (xy 7.366 -0.254)) (layer Dwgs.User) (width 0))
-    (fp_poly (pts (xy 4.826 0.254) (xy 5.334 0.254) (xy 5.334 -0.254) (xy 4.826 -0.254)) (layer Dwgs.User) (width 0))
-    (fp_poly (pts (xy 2.286 0.254) (xy 2.794 0.254) (xy 2.794 -0.254) (xy 2.286 -0.254)) (layer Dwgs.User) (width 0))
-    (fp_poly (pts (xy -0.254 0.254) (xy 0.254 0.254) (xy 0.254 -0.254) (xy -0.254 -0.254)) (layer Dwgs.User) (width 0))
-    (pad 1 thru_hole circle (at 0 0 90) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask)
-      (net 2 GND))
-    (pad 2 thru_hole circle (at 2.54 0 90) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask)
-      (net 2 GND))
-    (pad 3 thru_hole circle (at 5.08 0 90) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask)
-      (net 1 +5V))
-    (pad 4 thru_hole circle (at 7.62 0 90) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask)
-      (net 136 /PI5vRX0))
-    (pad 5 thru_hole circle (at 10.16 0 90) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask)
-      (net 137 /PI5vTX0))
-    (pad 6 thru_hole circle (at 12.7 0 90) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask)
-      (net 142 "Net-(C11-Pad-)"))
   )
 
   (module SparkFun-Passives:PAD-JUMPER-2-NO_YES_SILK (layer B.Cu) (tedit 0) (tstamp 59EBAB94)
@@ -17784,8 +17753,8 @@
       (net 49 "Net-(IC1-Pad65)"))
   )
 
-  (module Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm_SMD_Pin1Left (layer F.Cu) (tedit 59650532) (tstamp 59EB79C6)
-    (at 50 196.935001)
+  (module Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm_SMD_Pin1Left (layer F.Cu) (tedit 59650532) (tstamp 59FA9238)
+    (at 88.79 174.075001)
     (descr "surface-mounted straight pin header, 1x06, 2.54mm pitch, single row, style 1 (pin 1 left)")
     (tags "Surface mounted pin header SMD 1x06 2.54mm single row style1 pin1 left")
     (path /5948B312)
@@ -17856,8 +17825,8 @@
     )
   )
 
-  (module Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD (layer F.Cu) (tedit 59650532) (tstamp 59EB7A01)
-    (at 50 196.935001)
+  (module Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD (layer F.Cu) (tedit 59650532) (tstamp 59FA9273)
+    (at 146.975 175.23)
     (descr "surface-mounted straight pin header, 2x04, 2.54mm pitch, double rows")
     (tags "Surface mounted pin header SMD 2x04 2.54mm double row")
     (path /595B5840)
@@ -17940,8 +17909,8 @@
     )
   )
 
-  (module Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD (layer F.Cu) (tedit 59650532) (tstamp 59EB7A3C)
-    (at 50 196.935001)
+  (module Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD (layer F.Cu) (tedit 59650532) (tstamp 59FA92AE)
+    (at 69.395 174.075001)
     (descr "surface-mounted straight pin header, 2x04, 2.54mm pitch, double rows")
     (tags "Surface mounted pin header SMD 2x04 2.54mm double row")
     (path /595A5F4D)
@@ -18024,8 +17993,8 @@
     )
   )
 
-  (module Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD (layer F.Cu) (tedit 59650532) (tstamp 59EB7A77)
-    (at 50 196.935001)
+  (module Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD (layer F.Cu) (tedit 59650532) (tstamp 59FA92E9)
+    (at 57.475 184.73)
     (descr "surface-mounted straight pin header, 2x04, 2.54mm pitch, double rows")
     (tags "Surface mounted pin header SMD 2x04 2.54mm double row")
     (path /595AA003)
@@ -18094,7 +18063,7 @@
     (pad 4 smd rect (at 2.525 -1.27) (size 3.15 1) (layers F.Cu F.Paste F.Mask)
       (net 131 /MIDI_OUT_TX))
     (pad 5 smd rect (at -2.525 1.27) (size 3.15 1) (layers F.Cu F.Paste F.Mask)
-      (net 174 /SD_CD))
+      (net 175 /SD_CDetc))
     (pad 6 smd rect (at 2.525 1.27) (size 3.15 1) (layers F.Cu F.Paste F.Mask)
       (net 43 "Net-(IC1-Pad48)"))
     (pad 7 smd rect (at -2.525 3.81) (size 3.15 1) (layers F.Cu F.Paste F.Mask)
@@ -18108,8 +18077,8 @@
     )
   )
 
-  (module Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD (layer F.Cu) (tedit 59650532) (tstamp 59EB7AB2)
-    (at 50 196.935001)
+  (module Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD (layer F.Cu) (tedit 59650532) (tstamp 59FA9324)
+    (at 108.185 174.075001)
     (descr "surface-mounted straight pin header, 2x04, 2.54mm pitch, double rows")
     (tags "Surface mounted pin header SMD 2x04 2.54mm double row")
     (path /595AF7CA)
@@ -18192,8 +18161,8 @@
     )
   )
 
-  (module Pin_Headers:Pin_Header_Straight_1x10_Pitch2.54mm_SMD_Pin1Left (layer F.Cu) (tedit 59650532) (tstamp 59EB7AF7)
-    (at 49.145 207.01)
+  (module Pin_Headers:Pin_Header_Straight_1x10_Pitch2.54mm_SMD_Pin1Left (layer F.Cu) (tedit 59650532) (tstamp 59FA9369)
+    (at 127.58 174.075001)
     (descr "surface-mounted straight pin header, 1x10, 2.54mm pitch, single row, style 1 (pin 1 left)")
     (tags "Surface mounted pin header SMD 1x10 2.54mm single row style1 pin1 left")
     (path /5951DFCD)
@@ -18271,7 +18240,7 @@
     (pad 9 smd rect (at -1.655 8.89) (size 2.51 1) (layers F.Cu F.Paste F.Mask)
       (net 77 /3VSD_CS))
     (pad 2 smd rect (at 1.655 -8.89) (size 2.51 1) (layers F.Cu F.Paste F.Mask)
-      (net 174 /SD_CD))
+      (net 175 /SD_CDetc))
     (pad 4 smd rect (at 1.655 -3.81) (size 2.51 1) (layers F.Cu F.Paste F.Mask)
       (net 10 /3vSPI_MISO))
     (pad 6 smd rect (at 1.655 1.27) (size 2.51 1) (layers F.Cu F.Paste F.Mask)
@@ -18285,6 +18254,38 @@
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
+  )
+
+  (module SeeedOPL-Capacitor:ELECTRO-SMD-C-6MM (layer B.Cu) (tedit 59FA8BA6) (tstamp 59FA9708)
+    (at 17.5 15 90)
+    (descr "ALUMINIUM ELECTROLYTIC CAPACITOR PACKAGE B")
+    (tags "ALUMINIUM ELECTROLYTIC CAPACITOR PACKAGE B")
+    (path /59FAF03B)
+    (attr smd)
+    (fp_text reference C2 (at 0.3175 4.0005 90) (layer B.SilkS)
+      (effects (font (size 0.889 0.889) (thickness 0.1016)) (justify mirror))
+    )
+    (fp_text value "Aluminum 47uF-25V" (at -4.5 -3 90) (layer B.SilkS) hide
+      (effects (font (size 0.635 0.635) (thickness 0.0762)) (justify mirror))
+    )
+    (fp_line (start -3.175 -3.175) (end 3.175 -3.175) (layer B.SilkS) (width 0.06604))
+    (fp_line (start 3.175 -3.175) (end 3.175 3.175) (layer B.SilkS) (width 0.06604))
+    (fp_line (start -3.175 3.175) (end 3.175 3.175) (layer B.SilkS) (width 0.06604))
+    (fp_line (start -3.175 -3.175) (end -3.175 3.175) (layer B.SilkS) (width 0.06604))
+    (fp_line (start -3.175 3.175) (end 2.413 3.175) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 2.413 3.175) (end 3.175 2.413) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 3.175 -2.413) (end 2.413 -3.175) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 2.413 -3.175) (end -3.175 -3.175) (layer B.SilkS) (width 0.2032))
+    (fp_line (start -3.175 3.175) (end -3.175 1.143) (layer B.SilkS) (width 0.2032))
+    (fp_line (start -3.175 -3.175) (end -3.175 -1.143) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 3.175 -2.413) (end 3.175 -1.143) (layer B.SilkS) (width 0.2032))
+    (fp_line (start 3.175 2.413) (end 3.175 1.143) (layer B.SilkS) (width 0.2032))
+    (fp_arc (start 0 0) (end -2.7432 1.1176) (angle -135.6) (layer B.SilkS) (width 0.2032))
+    (fp_arc (start 0 0) (end 2.7432 -1.1176) (angle -135.6) (layer B.SilkS) (width 0.2032))
+    (pad + smd rect (at 2.667 0 90) (size 3.048 1.651) (layers B.Cu B.Paste B.Mask)
+      (net 2 GND))
+    (pad - smd rect (at -2.667 0 90) (size 3.048 1.651) (layers B.Cu B.Paste B.Mask)
+      (net 4 "Net-(C1-Pad1)"))
   )
 
   (gr_text "I2C pullups" (at 50.292 21.59) (layer B.SilkS)
@@ -18317,7 +18318,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 11.2 70.1) (xy 9.45 69.7) (xy 8.6 69.25) (xy 8.2 69.5) (xy 7.6 69.4)
@@ -18343,7 +18344,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 11.2 95.1) (xy 9.45 94.7) (xy 8.6 94.25) (xy 8.2 94.5) (xy 7.6 94.4)
@@ -18369,7 +18370,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 11.2 145.1) (xy 9.45 144.7) (xy 8.6 144.25) (xy 8.2 144.5) (xy 7.6 144.4)
@@ -18395,7 +18396,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 11.2 120.1) (xy 9.45 119.7) (xy 8.6 119.25) (xy 8.2 119.5) (xy 7.6 119.4)
@@ -18421,7 +18422,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 36.15 145.1) (xy 34.4 144.7) (xy 33.55 144.25) (xy 33.15 144.5) (xy 32.55 144.4)
@@ -18447,7 +18448,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 36.15 120.1) (xy 34.4 119.7) (xy 33.55 119.25) (xy 33.15 119.5) (xy 32.55 119.4)
@@ -18473,7 +18474,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 36.15 95.1) (xy 34.4 94.7) (xy 33.55 94.25) (xy 33.15 94.5) (xy 32.55 94.4)
@@ -18499,7 +18500,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 36.15 70.1) (xy 34.4 69.7) (xy 33.55 69.25) (xy 33.15 69.5) (xy 32.55 69.4)
@@ -18525,7 +18526,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 61.2 145.1) (xy 59.45 144.7) (xy 58.6 144.25) (xy 58.2 144.5) (xy 57.6 144.4)
@@ -18551,7 +18552,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 61.2 120.1) (xy 59.45 119.7) (xy 58.6 119.25) (xy 58.2 119.5) (xy 57.6 119.4)
@@ -18577,7 +18578,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 61.2 95.1) (xy 59.45 94.7) (xy 58.6 94.25) (xy 58.2 94.5) (xy 57.6 94.4)
@@ -18603,7 +18604,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 61.2 70.1) (xy 59.45 69.7) (xy 58.6 69.25) (xy 58.2 69.5) (xy 57.6 69.4)
@@ -18629,7 +18630,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 86.2 145.1) (xy 84.45 144.7) (xy 83.6 144.25) (xy 83.2 144.5) (xy 82.6 144.4)
@@ -18655,7 +18656,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 86.2 120.1) (xy 84.45 119.7) (xy 83.6 119.25) (xy 83.2 119.5) (xy 82.6 119.4)
@@ -18681,7 +18682,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 86.2 95.1) (xy 84.45 94.7) (xy 83.6 94.25) (xy 83.2 94.5) (xy 82.6 94.4)
@@ -18707,7 +18708,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 86.2 70.1) (xy 84.45 69.7) (xy 83.6 69.25) (xy 83.2 69.5) (xy 82.6 69.4)
@@ -18733,7 +18734,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 18.054 37.679152) (xy 19.254 37.7) (xy 19.254 40.1) (xy 17.854 40.079152) (xy 17.854 37.679152)
@@ -18744,7 +18745,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 21.854 37.679152) (xy 23.054 37.7) (xy 23.054 40.1) (xy 21.654 40.079152) (xy 21.654 37.679152)
@@ -18755,7 +18756,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 43.054 37.679152) (xy 44.254 37.7) (xy 44.254 40.1) (xy 42.854 40.079152) (xy 42.854 37.679152)
@@ -18766,7 +18767,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 46.854 37.679152) (xy 48.054 37.7) (xy 48.054 40.1) (xy 46.654 40.079152) (xy 46.654 37.679152)
@@ -18777,7 +18778,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 68.054 37.679152) (xy 69.254 37.7) (xy 69.254 40.1) (xy 67.854 40.079152) (xy 67.854 37.679152)
@@ -18788,7 +18789,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 71.854 37.7) (xy 73.054 37.720848) (xy 73.054 40.120848) (xy 71.654 40.1) (xy 71.654 37.7)
@@ -18799,7 +18800,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 93.054 37.7) (xy 94.254 37.720848) (xy 94.254 40.120848) (xy 92.854 40.1) (xy 92.854 37.7)
@@ -18810,7 +18811,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 96.854 37.7) (xy 98.054 37.720848) (xy 98.054 40.120848) (xy 96.654 40.1) (xy 96.654 37.7)
@@ -18821,7 +18822,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 17.975 156.375) (xy 19.175 156.395848) (xy 19.175 158.795848) (xy 17.775 158.775) (xy 17.775 156.375)
@@ -18832,7 +18833,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 21.775 156.375) (xy 22.975 156.395848) (xy 22.975 158.795848) (xy 21.575 158.775) (xy 21.575 156.375)
@@ -18843,7 +18844,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 42.975 156.302094) (xy 44.175 156.322942) (xy 44.175 158.722942) (xy 42.775 158.702094) (xy 42.775 156.302094)
@@ -18854,7 +18855,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 46.775 156.307837) (xy 47.975 156.328685) (xy 47.975 158.728685) (xy 46.575 158.707837) (xy 46.575 156.307837)
@@ -18865,7 +18866,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 71.775 156.307837) (xy 72.975 156.328685) (xy 72.975 158.728685) (xy 71.575 158.707837) (xy 71.575 156.307837)
@@ -18876,7 +18877,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 67.975 156.307837) (xy 69.175 156.328685) (xy 69.175 158.728685) (xy 67.775 158.707837) (xy 67.775 156.307837)
@@ -18887,7 +18888,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 92.975 156.307837) (xy 94.175 156.328685) (xy 94.175 158.728685) (xy 92.775 158.707837) (xy 92.775 156.307837)
@@ -18898,7 +18899,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 96.775 156.307837) (xy 97.975 156.328685) (xy 97.975 158.728685) (xy 96.575 158.707837) (xy 96.575 156.307837)
@@ -18909,7 +18910,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 59.7 154.2) (xy 68.9 154.2) (xy 68.9 156.3) (xy 59.7 156.3)
@@ -18920,7 +18921,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 68.054 45.899152) (xy 69.254 45.92) (xy 69.254 48.32) (xy 67.854 48.299152) (xy 67.854 45.899152)
@@ -18931,7 +18932,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 71.854 45.92) (xy 73.054 45.940848) (xy 73.054 48.340848) (xy 71.654 48.32) (xy 71.654 45.92)
@@ -18942,7 +18943,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 93.054 45.92) (xy 94.254 45.940848) (xy 94.254 48.340848) (xy 92.854 48.32) (xy 92.854 45.92)
@@ -18953,7 +18954,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 96.854 45.92) (xy 98.054 45.940848) (xy 98.054 48.340848) (xy 96.654 48.32) (xy 96.654 45.92)
@@ -18964,7 +18965,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 46.854 45.899152) (xy 48.054 45.92) (xy 48.054 48.32) (xy 46.654 48.299152) (xy 46.654 45.899152)
@@ -18975,7 +18976,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 43.054 45.899152) (xy 44.254 45.92) (xy 44.254 48.32) (xy 42.854 48.299152) (xy 42.854 45.899152)
@@ -18986,7 +18987,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 21.854 45.899152) (xy 23.054 45.92) (xy 23.054 48.32) (xy 21.654 48.299152) (xy 21.654 45.899152)
@@ -18997,7 +18998,7 @@
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour allowed))
-    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 18.054 45.899152) (xy 19.254 45.92) (xy 19.254 48.32) (xy 17.854 48.299152) (xy 17.854 45.899152)
@@ -19012,13 +19013,6 @@
       (pts
         (xy -0.762 19.304) (xy 15.494 19.304) (xy 15.494 32.258) (xy 6.604 32.258) (xy 6.661 28.448)
         (xy -0.648 28.448)
-      )
-    )
-    (filled_polygon
-      (pts
-        (xy 15.367 32.131) (xy 6.732914 32.131) (xy 6.787986 28.4499) (xy 6.77872 28.400346) (xy 6.750905 28.3583)
-        (xy 6.708924 28.330389) (xy 6.661 28.321) (xy 0.825092 28.321) (xy 0.71 28.205908) (xy 0.71 19.431)
-        (xy 15.367 19.431)
       )
     )
   )
