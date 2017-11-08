@@ -1,5 +1,9 @@
+//TODO: separate .cpp and .h 
 #include "FastLED.h"
+#include "_name_signals.h"
 
+#ifndef HARDWAREH
+#define HARDWAREH
 //useful about callback functions https://stackoverflow.com/questions/14427917/call-function-in-main-program-from-a-library-in-arduino
 //hardware controlling functions for physical modular rev 1 board
 class Hardware {
@@ -9,7 +13,7 @@ class Hardware {
 #define NUM_BUTTONS 28
 #define DATA_PIN 43
     CRGB leds[NUM_LEDS];
-    void init() {
+    void setup() {
 
       delay(2000);
       FastLED.addLeds<WS2811, DATA_PIN, RGB>(leds, NUM_LEDS);
@@ -130,3 +134,5 @@ class Hardware {
       }
     }
 };
+
+#endif
