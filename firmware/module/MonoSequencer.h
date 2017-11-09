@@ -9,6 +9,8 @@ class MonoSequencer {
   private:
     int patMem [16][3];
     int playHead = 0;
+    uint8_t microStepCount = 0;
+    uint8_t microSteps=12;
     Midi *midi;
     Hardware *hardware;
   public:
@@ -60,12 +62,14 @@ class MonoSequencer {
       }
       hardware->setButtonColor(playHead + 8, 100, 100, 100);
     }
-
-    void midiIn(uint8_t a, uint8_t b, uint8_t c) {
-      switch (a) {
-        case 250: playHead = 0; break;
+    void microStep() {
+      microStepCount++;
+      if (microStepCount >= microSteps) {
+        microStepCount = 0;
+        step();
       }
     }
+
     void step() {
       if (patMem[playHead][0] != 0) {
         midi->out(patMem[playHead][0], patMem[playHead][1], patMem[playHead][2]);
@@ -73,6 +77,18 @@ class MonoSequencer {
       playHead++;
       playHead %= 16;
     }
+    void restart() {
+      playHead = 0;
+      microStepCount = 0;
+    }
 
+    void midiIn(uint8_t a, uint8_t b, uint8_t c) {
+      switch (a) {
+        case 250: restart();    break;
+        //case 248: microStep();  break;
+
+      }
+    }
 };
+
 #endif;
