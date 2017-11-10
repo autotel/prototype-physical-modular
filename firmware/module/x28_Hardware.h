@@ -1,25 +1,30 @@
-//TODO: separate .cpp and .h 
+//TODO: separate .cpp and .h
 #include "FastLED.h"
 #include "_name_signals.h"
-
+#define REFRESHRATE 20
 #ifndef HARDWAREH
 #define HARDWAREH
 //useful about callback functions https://stackoverflow.com/questions/14427917/call-function-in-main-program-from-a-library-in-arduino
 //hardware controlling functions for physical modular rev 1 board
 class Hardware {
   public:
-    Hardware() {};
+    Hardware(* tlcd) {
+      lcd = tlcd;
+    };
 #define NUM_LEDS 28
 #define NUM_BUTTONS 28
 #define DATA_PIN 43
     CRGB leds[NUM_LEDS];
-    void setup() {
 
-      delay(2000);
+
+    char lcdStr[33];
+    void setup() {
+      delay(1000);
+
       FastLED.addLeds<WS2811, DATA_PIN, RGB>(leds, NUM_LEDS);
-      LEDS.setBrightness(84);
+      LEDS.setBrightness(110);
       for (uint16_t a = 0; a < NUM_LEDS; a++) {
-        if (a < 1) {
+        if (a == 3) {
           leds[a] = CRGB::Orange;
         } else if (a < 8) {
           leds[a] = CRGB::Indigo;
@@ -29,10 +34,20 @@ class Hardware {
           leds[a] = CRGB::Indigo;
         }
       }
+
+      lcd->begin(16, 2);
+      lcd->print("Autotel X28");
+      for (uint8_t a = 0; a < 33; a++) {
+        lcdStr[a] = 0;
+      }
     }
     void loop() {
       readMatrixButtons();
-      refreshLeds();
+      if (millis() - lastLedsUpdate > 1000 / REFRESHRATE) {
+        refreshLeds();
+        lastLedsUpdate = millis();
+      }
+
     }
     int readMatrixButtons() {
       uint16_t i, j, currentButton;
@@ -75,7 +90,7 @@ class Hardware {
           if (!(test & pressedButtonsBitmap)) {
 
             pressedButtonsBitmap = pressedButtonsBitmap | test;
-            CB_buttonPressed(currentButton,pressedButtonsBitmap);
+            CB_buttonPressed(currentButton, pressedButtonsBitmap);
           }
 
         } else {
@@ -110,8 +125,43 @@ class Hardware {
         leds[button] = CRGB::Black;
       }
     }
+    void setButtonColorHSV(uint16_t button, uint8_t a, uint8_t b, uint8_t c ) {
+      if ( c > 0) {
+        //c |= 80;
+        leds[button] = CHSV(a, b, c);//CHSV
+      } else {
+        leds[button] = CRGB::Black;
+      }
+    }
+    void setLcdA(char *str, uint8_t len) {
+      len = min(len, 16);
+      uint8_t h = 0;
+      for (h = 0; h < len; h++) {
+        lcdStr[h] = *(str + h);
+      }
+      lcdStr[h] = 0;
+      lcdChange |= 1 << 0;
+    }
+    void setLcdB(char *str, uint8_t len) {
+      len = min(len, 16);
+      uint8_t h = 0;
+      for (h = 0; h < len; h++) {
+        lcdStr[h + 16] = *(str + h);
+      }
+      lcdStr[h + 16] = 0;
+      lcdChange |= 1 << 1;
+    }
+    void lcdUpdate() {
+      if (lcdChange) {
+        lcd->setCursor(0, 0);
+        lcd->print(lcdStr);
+        lcdChange = 0;
+      }
+    }
   private:
-
+    LiquidCrystal *lcd;
+    long lastLedsUpdate = 0;
+    uint8_t lcdChange = 0;
     void (*CB_buttonPressed)(byte, uint32_t) = 0;
     void (*CB_buttonReleased)(byte) = 0;
     uint32_t pressedButtonsBitmap = 0;

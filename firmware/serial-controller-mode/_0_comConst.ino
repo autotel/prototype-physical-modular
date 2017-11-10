@@ -21,6 +21,9 @@
 #define RH_comTester 0x7
 #define RH_comTester_len 0x1
 #define RH_version 0x40
+#define RH_test_lcdDirect 0x41
+#define RH_test_lcdDirect_len 1
+
 
 //transmit headers
 #define TH_null 0x0

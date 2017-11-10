@@ -362,7 +362,7 @@ L C_Small C1
 U 1 1 594AB708
 P 2500 -8650
 F 0 "C1" H 2510 -8580 50  0000 L CNN
-F 1 "100n" H 2510 -8730 50  0000 L CNN
+F 1 "100nf" H 2510 -8730 50  0000 L CNN
 F 2 "SeeedOPL-Capacitor:C0402" H 2500 -8650 50  0001 C CNN
 F 3 "" H 2500 -8650 50  0000 C CNN
 F 4 "302010024" H 2500 -8650 60  0001 C CNN "Sku"
@@ -608,10 +608,10 @@ P 7100 21650
 F 0 "RV1" H 7100 21570 50  0000 C CNN
 F 1 "10k" H 7100 21650 50  0000 C CNN
 F 2 "lib_fp:trimpot" H 7100 21650 50  0001 C CNN
-F 3 "" H 7100 21650 50  0000 C CNN
-F 4 "--" H 7100 21650 60  0001 C CNN "Sku"
-F 5 "--" H 7100 21650 60  0001 C CNN "MPN"
-F 6 "--" H 7100 21650 60  0001 C CNN "provider link 1"
+F 3 "http://www.bourns.com/docs/Product-Datasheets/3362.pdf" H 7100 21650 50  0001 C CNN
+F 4 "3362P-103LF-ND" H 7100 21650 60  0001 C CNN "Sku"
+F 5 "3362P-1-103LF" H 7100 21650 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/product-detail/en/bourns-inc/3362P-1-103LF/3362P-103LF-ND/1088412" H 7100 21650 60  0001 C CNN "provider link 1"
 F 7 "--" H 7100 21650 60  0001 C CNN "provider link 2"
 	1    7100 21650
 	1    0    0    -1  
@@ -711,10 +711,10 @@ P 1700 -8850
 F 0 "CON1" H 1700 -8600 50  0000 C CNN
 F 1 "BARREL_JACK" H 1700 -9050 50  0000 C CNN
 F 2 "SparkFun-Connectors:POWER_JACK_PTH_LOCK" H 1700 -8850 50  0001 C CNN
-F 3 "" H 1700 -8850 50  0000 C CNN
-F 4 "--" H 1700 -8850 60  0001 C CNN "Sku"
-F 5 "--" H 1700 -8850 60  0001 C CNN "MPN"
-F 6 "--" H 1700 -8850 60  0001 C CNN "provider link 1"
+F 3 "https://statics3.seeedstudio.com/images/opl/datasheet/3410020P1.pdf" H 1700 -8850 50  0000 C CNN
+F 4 "320120003" H 1700 -8850 60  0001 C CNN "Sku"
+F 5 "PW-3P-2.1" H 1700 -8850 60  0001 C CNN "MPN"
+F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/3410020P1.pdf" H 1700 -8850 60  0001 C CNN "provider link 1"
 F 7 "--" H 1700 -8850 60  0001 C CNN "provider link 2"
 	1    1700 -8850
 	1    0    0    -1  

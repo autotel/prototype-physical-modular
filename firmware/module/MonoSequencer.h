@@ -71,11 +71,11 @@ class MonoSequencer {
     }
 
     void step() {
+      playHead++;
+      playHead %= 16;
       if (patMem[playHead][0] != 0) {
         midi->out(patMem[playHead][0], patMem[playHead][1], patMem[playHead][2]);
       }
-      playHead++;
-      playHead %= 16;
     }
     void restart() {
       playHead = 0;

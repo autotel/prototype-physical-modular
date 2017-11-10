@@ -58,6 +58,10 @@ void checkMessages() {
           recordingBuffer = true;
           expectedLength = RH_comTester_len;
           break;
+        case RH_test_lcdDirect:
+          recordingBuffer = true;
+          expectedLength = RH_test_lcdDirect_len;
+          break;
       }
     }
 
@@ -197,6 +201,12 @@ void messageReceived(unsigned char datarray [], int len) {
           sendToBrainData[6] = '0';
           sendToBrain(TH_version, 7);
           break;
+        }
+      case RH_test_lcdDirect: {
+          uint8_t pmask = 0xff >> 2;
+          DDRL = pmask;
+          PORTL = datarray[a] & pmask;
+          a++;
         }
       default:
         a++;
