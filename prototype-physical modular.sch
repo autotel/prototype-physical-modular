@@ -144,21 +144,6 @@ SPI_MISO
 Text Label 1850 -6450 3    60   ~ 0
 RESET
 $Comp
-L C C7
-U 1 1 5948B30F
-P 5450 4200
-F 0 "C7" H 5475 4300 50  0000 L CNN
-F 1 "22pF" H 5475 4100 50  0000 L CNN
-F 2 "SeeedOPL-Capacitor:C0402" H 5488 4050 30  0001 C CNN
-F 3 "" H 5450 4200 60  0000 C CNN
-F 4 "302010018" H 5450 4200 60  0001 C CNN "Sku"
-F 5 "CC0402JRNPO9BN220" H 5450 4200 60  0001 C CNN "MPN"
-F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/302010018.pdf" H 5450 4200 60  0001 C CNN "provider link 1"
-F 7 "--" H 5450 4200 60  0001 C CNN "provider link 2"
-	1    5450 4200
-	1    0    0    -1  
-$EndComp
-$Comp
 L R R7
 U 1 1 5948B310
 P 5450 3750
@@ -5511,6 +5496,43 @@ F 1 "hole" H 12100 10975 60  0000 C CNN
 F 2 "lib_fp:hole_no-copper" H 12100 10900 60  0001 C CNN
 F 3 "" H 12100 10900 60  0001 C CNN
 	1    12100 10900
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D?
+U 1 1 5A0A613F
+P 5250 3750
+F 0 "D?" H 5250 3850 50  0000 C CNN
+F 1 "D" H 5250 3650 50  0000 C CNN
+F 2 "lib_fp:DO-214AC" H 5250 3750 50  0001 C CNN
+F 3 "" H 5250 3750 50  0000 C CNN
+F 4 "304010013" H 5250 3750 60  0001 C CNN "Sku"
+F 5 "1N4007" H 5250 3750 60  0001 C CNN "MPN"
+F 6 "www.seeedstudio.com/wiki/images/2/24/0300040P1.PDF" H 5250 3750 60  0001 C CNN "provider link 1"
+F 7 "--" H 5250 3750 60  0001 C CNN "provider link 2"
+	1    5250 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5250 3900 5250 4000
+Wire Wire Line
+	5250 3600 5250 3550
+Wire Wire Line
+	5250 3550 5450 3550
+Connection ~ 5450 3550
+$Comp
+L C C7
+U 1 1 5948B30F
+P 5450 4200
+F 0 "C7" H 5475 4300 50  0000 L CNN
+F 1 "22pF" H 5475 4100 50  0000 L CNN
+F 2 "SeeedOPL-Capacitor:C0402" H 5488 4050 30  0001 C CNN
+F 3 "" H 5450 4200 60  0000 C CNN
+F 4 "302010018" H 5450 4200 60  0001 C CNN "Sku"
+F 5 "CC0402JRNPO9BN220" H 5450 4200 60  0001 C CNN "MPN"
+F 6 "https://statics3.seeedstudio.com/images/opl/datasheet/302010018.pdf" H 5450 4200 60  0001 C CNN "provider link 1"
+F 7 "--" H 5450 4200 60  0001 C CNN "provider link 2"
+	1    5450 4200
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

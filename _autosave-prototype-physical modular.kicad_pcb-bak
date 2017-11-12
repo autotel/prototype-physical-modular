@@ -3,7 +3,7 @@
   (general
     (links 435)
     (no_connects 435)
-    (area -0.075001 -0.075001 100.075001 164.075001)
+    (area -9.6458 -6.516501 101.854 176.710501)
     (thickness 1.6)
     (drawings 75)
     (tracks 0)
@@ -24,7 +24,7 @@
     (37 F.SilkS user)
     (38 B.Mask user)
     (39 F.Mask user)
-    (40 Dwgs.User user hide)
+    (40 Dwgs.User user)
     (41 Cmts.User user)
     (42 Eco1.User user)
     (43 Eco2.User user)

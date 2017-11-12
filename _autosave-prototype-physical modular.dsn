@@ -1,4 +1,4 @@
-(pcb "C:\Users\joaquin\repositories\music devices\prototype-physical modular\prototype-physical modular.dsn"
+(pcb "C:\Users\joaquin\repositories\music devices\prototype-physical modular\_autosave-prototype-physical modular.dsn"
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)

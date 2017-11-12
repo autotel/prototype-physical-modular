@@ -24,7 +24,7 @@
     (37 F.SilkS user)
     (38 B.Mask user)
     (39 F.Mask user)
-    (40 Dwgs.User user hide)
+    (40 Dwgs.User user)
     (41 Cmts.User user)
     (42 Eco1.User user)
     (43 Eco2.User user)
@@ -37,7 +37,7 @@
   )
 
   (setup
-    (last_trace_width 0.1524)
+    (last_trace_width 0.2)
     (trace_clearance 0.127)
     (zone_clearance 0.508)
     (zone_45_only yes)
@@ -269,7 +269,7 @@
 
   (net_class Default "This is the default net class."
     (clearance 0.127)
-    (trace_width 0.1524)
+    (trace_width 0.2)
     (via_dia 0.6)
     (via_drill 0.4)
     (uvia_dia 0.3)
@@ -450,7 +450,7 @@
 
   (net_class power ""
     (clearance 0.127)
-    (trace_width 0.2032)
+    (trace_width 0.3)
     (via_dia 0.6)
     (via_drill 0.4)
     (uvia_dia 0.3)
