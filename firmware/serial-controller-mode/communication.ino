@@ -62,6 +62,10 @@ void checkMessages() {
           recordingBuffer = true;
           expectedLength = RH_test_lcdDirect_len;
           break;
+        case RH_version:
+          recordingBuffer = true;
+          expectedLength = RH_version_len;
+          break;
       }
     }
 
@@ -192,14 +196,15 @@ void messageReceived(unsigned char datarray [], int len) {
           break;
         }
       case RH_version: {
-          lcdPrintA("rcv hello");
+          lcdPrintA("connecting");
           sendToBrainData[0] = 6; //len
           sendToBrainData[1] = 'x';
-          sendToBrainData[3] = '2';
-          sendToBrainData[4] = '8';
+          sendToBrainData[3] = '1';
+          sendToBrainData[4] = '6';
           sendToBrainData[5] = 'v';
           sendToBrainData[6] = '0';
           sendToBrain(TH_version, 7);
+          a++;
           break;
         }
       case RH_test_lcdDirect: {

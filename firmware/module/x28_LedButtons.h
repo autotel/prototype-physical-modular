@@ -6,10 +6,9 @@
 #define HARDWAREH
 //useful about callback functions https://stackoverflow.com/questions/14427917/call-function-in-main-program-from-a-library-in-arduino
 //hardware controlling functions for physical modular rev 1 board
-class Hardware {
+class LedButtons {
   public:
-    Hardware(* tlcd) {
-      lcd = tlcd;
+    LedButtons() {
     };
 #define NUM_LEDS 28
 #define NUM_BUTTONS 28
@@ -35,8 +34,6 @@ class Hardware {
         }
       }
 
-      lcd->begin(16, 2);
-      lcd->print("Autotel X28");
       for (uint8_t a = 0; a < 33; a++) {
         lcdStr[a] = 0;
       }
@@ -133,33 +130,7 @@ class Hardware {
         leds[button] = CRGB::Black;
       }
     }
-    void setLcdA(char *str, uint8_t len) {
-      len = min(len, 16);
-      uint8_t h = 0;
-      for (h = 0; h < len; h++) {
-        lcdStr[h] = *(str + h);
-      }
-      lcdStr[h] = 0;
-      lcdChange |= 1 << 0;
-    }
-    void setLcdB(char *str, uint8_t len) {
-      len = min(len, 16);
-      uint8_t h = 0;
-      for (h = 0; h < len; h++) {
-        lcdStr[h + 16] = *(str + h);
-      }
-      lcdStr[h + 16] = 0;
-      lcdChange |= 1 << 1;
-    }
-    void lcdUpdate() {
-      if (lcdChange) {
-        lcd->setCursor(0, 0);
-        lcd->print(lcdStr);
-        lcdChange = 0;
-      }
-    }
   private:
-    LiquidCrystal *lcd;
     long lastLedsUpdate = 0;
     uint8_t lcdChange = 0;
     void (*CB_buttonPressed)(byte, uint32_t) = 0;

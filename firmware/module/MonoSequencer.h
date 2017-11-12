@@ -1,6 +1,6 @@
 #include "Midi.h"
 #include "_name_signals.h"
-#include "x28_Hardware.h"
+#include "x28_LedButtons.h"
 #ifndef MONOSEQUENCERH
 #define MONOSEQUENCERH
 //TODO: separate .cpp and .h, capitalize filename
@@ -12,7 +12,7 @@ class MonoSequencer {
     uint8_t microStepCount = 0;
     uint8_t microSteps=12;
     Midi *midi;
-    Hardware *hardware;
+    LedButtons *ledButtons;
   public:
     MonoSequencer() {
       for (uint16_t b = 0; b < 16; b++) {
@@ -22,8 +22,8 @@ class MonoSequencer {
       }
 
     }
-    void setup(Hardware *t_hardware, Midi *t_midi) {
-      hardware = t_hardware;
+    void setup(LedButtons *t_ledButtons, Midi *t_midi) {
+      ledButtons = t_ledButtons;
       midi = t_midi;
     }
 
@@ -51,16 +51,16 @@ class MonoSequencer {
     void loop() {
       for (uint16_t b = 0; b < 16; b++) {
         if (patMem[b][0] == 0) {
-          hardware->setButtonColor(b + 8, 0, 0, 0);
+          ledButtons->setButtonColor(b + 8, 0, 0, 0);
         } else {
           if (patMem[b][2] >= MIDI_noteOn) {
-            hardware->setButtonColor(b + 8, patMem[b][2], 0, 0);
+            ledButtons->setButtonColor(b + 8, patMem[b][2], 0, 0);
           } else {
-            hardware->setButtonColor(b + 8, patMem[b][2] / 2, 6, 6);
+            ledButtons->setButtonColor(b + 8, patMem[b][2] / 2, 6, 6);
           }
         }
       }
-      hardware->setButtonColor(playHead + 8, 100, 100, 100);
+      ledButtons->setButtonColor(playHead + 8, 100, 100, 100);
     }
     void microStep() {
       microStepCount++;
