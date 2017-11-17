@@ -4971,7 +4971,7 @@ Connection ~ 3150 -1950
 Wire Wire Line
 	1300 -3350 1300 -2900
 Wire Wire Line
-	6050 2800 5850 2800
+	5650 2800 6050 2800
 Wire Wire Line
 	6050 2700 5850 2700
 Wire Wire Line
@@ -5515,4 +5515,27 @@ F 7 "--" H 5850 2950 60  0001 C CNN "provider link 2"
 	1    5850 2950
 	1    0    0    -1  
 $EndComp
+$Comp
+L CONN_01X02 PCap
+U 1 1 5A0FE10A
+P 5450 2950
+F 0 "PCap" H 5450 3100 50  0000 C CNN
+F 1 "CONN_01X02" V 5550 2950 50  0000 C CNN
+F 2 "SparkFun-Connectors:1X02" H 5450 2950 50  0000 C CNN
+F 3 "" H 5450 2950 50  0000 C CNN
+F 4 "--" H 5450 2950 60  0001 C CNN "Sku"
+F 5 "--" H 5450 2950 60  0001 C CNN "MPN"
+F 6 "--" H 5450 2950 60  0001 C CNN "provider link 1"
+F 7 "--" H 5450 2950 60  0001 C CNN "provider link 2"
+	1    5450 2950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5650 2800 5650 2900
+Connection ~ 5850 2800
+Wire Wire Line
+	5650 3000 5650 3150
+Wire Wire Line
+	5650 3150 5850 3150
+Connection ~ 5850 3150
 $EndSCHEMATC
