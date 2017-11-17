@@ -1,69 +1,77 @@
-"Title",,,,,,,,
-"Revision",,,,,,,,
-"Date",,,,,,,,
-"Generated","10-11-2017 11:17:47",,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-"Ref","Qty","Value","Footprint","Fieldname","MPN","Sku","provider link 1","provider link 2"
-"C7 C8 C9 ",3,"22pF","SeeedOPL-Capacitor:C0402"," ","CC0402JRNPO9BN220",302010018,"https://statics3.seeedstudio.com/images/opl/datasheet/302010018.pdf","--"
-"C1 C4 C5 C6 C10 ",4,"100nF","SeeedOPL-Capacitor:C0402"," ","CC0402KRX7R8BB104",302010024,"https://statics3.seeedstudio.com/images/opl/datasheet/302010024.pdf","--"
-"C3 ",1,"1u","SeeedOPL-Capacitor:C0402"," ","CC0402KRX5R5BB105",302010003,"https://statics3.seeedstudio.com/images/opl/datasheet/302010003.pdf","--"
-"C11 C2 ",2,"Aluminum 47uF-25V","SeeedOPL-Capacitor:ELECTRO-SMD-C-6MM"," ","CS1E470M-CRE54",302030059,"https://statics3.seeedstudio.com/images/opl/datasheet/302030059.pdf","--"
-"CON1 ",1,"BARREL_JACK","SparkFun-Connectors:POWER_JACK_PTH_LOCK"," ","PW-3P-2.1",320120003,"https://statics3.seeedstudio.com/images/opl/datasheet/3410020P1.pdf","--"
-"CON2 ",1,"SD_Card_SEEEDOPL","SeeedOPL-Connector:MICRO-SD9+4P-SMD-16.1X14.5X1.85MM"," ","ST-TF-003A",320090000,"http://datasheet.octopart.com/ST-TF-003A-Suntech-datasheet-30458645.pdf","--"
-"C_LEDS1 ",1,"1uF-10V","SeeedOPL-Capacitor:C0402_electrolitic"," ","CC0402KRX5R6BB105",302010040,"https://statics3.seeedstudio.com/images/opl/datasheet/302010040.pdf","--"
-"D2 ",1,"LED","SeeedOPL-LED:LED-0805"," ","17-215UYC/S530-A3/TR8",304090039,"https://statics3.seeedstudio.com/images/opl/datasheet/304090039.pdf","--"
-"D3 D4 D5 D6 D7 D8 D9 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 D32 D1 D33 D34 ",33,"D","lib_fp:DO-214AC"," ","1N4007",304010013,"www.seeedstudio.com/wiki/images/2/24/0300040P1.PDF","--"
-"DS1 ",1,"LCD16X2","SparkFun-Displays:LCD-16X2"," "," "," "," "," "
-"H1 H3 H5 H7 H9 H11 H2 H4 H6 H8 H10 H12 H25 H27 H29 H26 H28 H30 ",18,"hole","lib_fp:hole_no-copper"," "," "," "," "," "
-"H13 H15 H17 H14 H16 H18 H19 H21 H23 H20 H22 H24 ",12,"hole","lib_fp:hole_with-copper"," "," "," "," "," "
-"IC1 ",1,"ATMEGA2560-A","SparkFun-DigitalIC:TQFP100","Value","ATMEGA2560-16AU",310010006,"https://statics3.seeedstudio.com/images/opl/datasheet/310010006.pdf","--"
-"JP2 ",1,"tie pi 5v","SparkFun-Passives:PAD-JUMPER-2-NO_YES_SILK"," ","--","--","--","--"
-"JP1 ",1,"comm_bus","SparkFun-Passives:PAD-JUMPER-2-NO_YES_SILK"," ","--","--","--","--"
-"JP3 JP4 JP5 ",3,"JkI2C0","SparkFun-Passives:PAD-JUMPER-2-NO_YES_SILK"," ","--","--","--","--"
-"P3 ",1,"SPI","Pin_Headers:Pin_Header_Straight_2x03_Pitch2.54mm_SMD"," "," "," "," "," "
-"P2 ",1,"FTDI","Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm_SMD_Pin1Left"," ","--","--","--","--"
-"P1 ",1,"POWER","Pin_Headers:Pin_Header_Straight_2x01_Pitch2.54mm_SMD"," "," "," "," "," "
-"P17 ",1,"SD_PINS","Pin_Headers:Pin_Header_Straight_1x10_Pitch2.54mm_SMD_Pin1Left"," ","--","--","--","--"
-"P7 ",1,"PA","Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD"," ","--","--","--","--"
-"P9 ",1,"PB","Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD"," ","--","--","--","--"
-"P10 ",1,"PC","Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD"," ","--","--","--","--"
-"P13 ",1,"PD","Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD"," ","--","--","--","--"
-"P14 ",1,"PE","Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD"," ","--","--","--","--"
-"P16 ",1,"PF","Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD"," ","--","--","--","--"
-"P15 ",1,"PH","Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD"," ","--","--","--","--"
-"P12 ",1,"PJ","Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD"," ","--","--","--","--"
-"P8 ",1,"PL","Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD"," ","--","--","--","--"
-"P19 ",1,"PIGPIO","lib_fp:Pin_Header_Straight_2x05_Pitch2.54mm_SMD-raspi"," ","--","--","--","--"
-"P18 ",1,"3VI2C","Pin_Headers:Pin_Header_Straight_2x01_Pitch2.54mm_SMD"," ","--","--","--","--"
-"P22 ",1,"BUSTI","SeeedOPL-Connector:AUDIO8P-SMD-3.5-14.5X6.1X4.0MM"," ","PJ-3536-L6S",320040003,"https://statics3.seeedstudio.com/images/opl/datasheet/320040003.pdf","--"
-"P23 ",1,"BUSTO","SeeedOPL-Connector:AUDIO8P-SMD-3.5-14.5X6.1X4.0MM"," ","PJ-3536-L6S",320040003,"https://statics3.seeedstudio.com/images/opl/datasheet/320040003.pdf","--"
-"P20 ",1,"MIDI_IN","SeeedOPL-Connector:AUDIO8P-SMD-3.5-14.5X6.1X4.0MM"," ","PJ-3536-L6S",320040003,"https://statics3.seeedstudio.com/images/opl/datasheet/320040003.pdf","--"
-"P21 ",1,"MIDI_OUT","SeeedOPL-Connector:AUDIO8P-SMD-3.5-14.5X6.1X4.0MM"," ","PJ-3536-L6S",320040003,"https://statics3.seeedstudio.com/images/opl/datasheet/320040003.pdf","--"
-"P11 ",1,"CONN_UART","SparkFun-Connectors:1X06"," ","--","--","--","--"
-"PJ2COM1 PJ1COM1 ",2,"Jumper_NO_Small","SparkFun-Passives:PAD-JUMPER-2-NO_YES_SILK"," "," "," "," "," "
-"Q2 Q3 Q4 Q5 Q6 Q1 ",6,"BSS138","SeeedOPL-Transistor:SOT-23"," ","BSS138W-7-F",305030000,"https://statics3.seeedstudio.com/images/opl/datasheet/305030000.pdf","--"
-"R8 ",1,"1M","SeeedOPL-Resistor:R0603"," ","RC0603FR-071ML",301010151,"https://statics3.seeedstudio.com/images/opl/datasheet/301010151.pdf","--"
-"R1 ",1,"1k","SeeedOPL-Resistor:R0402"," ","RC0402JR-071KL",301010006,"https://statics3.seeedstudio.com/images/opl/datasheet/301010006.pdf","--"
-"R7 R11 R12 R14 R13 R15 R16 R18 R17 R19 R20 R22 R21 R9 R10 ",15,"10k","SeeedOPL-Resistor:R0603"," ","RC0603JR-0710KL",301010293,"https://statics3.seeedstudio.com/images/opl/datasheet/301010293.pdf","--"
-"R5 R6 ",2,"4.7K","SeeedOPL-Resistor:R0603"," ","RC0603JR-074K7L",301010290,"https://statics3.seeedstudio.com/images/opl/datasheet/0010030P1.pdf","--"
-"R2 R3 R23 R4 R24 ",5,220,"SeeedOPL-Resistor:R0603"," ","RC0603JR-07220RL",301010163,"https://statics3.seeedstudio.com/images/opl/datasheet/301010163.pdf","--"
-"R25 R26 R27 R28 R29 R30 R31 ",7,470,"SeeedOPL-Resistor:R0603"," ","RC0603JR-07470RL",301010088,"https://statics3.seeedstudio.com/images/opl/datasheet/301010088.pdf","--"
-"RV1 ",1,"10k","lib_fp:trimpot"," ","3362P-1-103LF","--","https://www.digikey.com/product-detail/en/bourns-inc/3362P-1-103LF/3362P-103LF-ND/1088412","--"
-"SW2 ",1,"ROTARY_ENCODER_SWITCH","SparkFun-Electromechanical:ENCODER_LED_2"," ","--",311130001,"https://statics3.seeedstudio.com/images/opl/datasheet/311130001.pdf","--"
-"SW1 ",1,"SW_PUSH","lib_fp:SW4-SMD-5.2X5.2X1.5MM"," ","SKQGADE010",311020017,"https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf","--"
-"SW3 SW4 SW5 SW6 SW7 SW8 SW9 SW10 SW11 SW12 SW13 SW14 ",12,"SW_PUSH","lib_fp:SW4-SMD-6.0X6.0X5.0MM"," ","DTSM-62K-S-V-T/R(SN431)",311020004,"https://statics3.seeedstudio.com/images/opl/datasheet/3100010P1.pdf","--"
-"SW_left1 SW_right1 ",2,"SW_PUSH","SeeedOPL-Switch:SW2-5.0-6.0X3.0X4.3MM"," ","TS-1101F",311020025,"https://statics3.seeedstudio.com/images/opl/datasheet/311020025.pdf","--"
-"U1 ",1,"NCP1117ST50T3G","SeeedOPL-IC:TO-252"," ","CJ;CJU1117-5.0",310030026,"https://statics3.seeedstudio.com/images/opl/datasheet/1310190P1.pdf","--"
-"U2 ",1,"6N138","SparkFun-DiscreteSemi:8-SMD"," ","6N138S-TA1","--","http://optoelectronics.liteon.com/upload/download/DS70-2009-0001/S_110_6N138-L %206N139-L.pdf","https://www.digikey.com/product-detail/en/lite-on-inc/6N138S-TA1/160-1798-6-ND/1969195"
-"WSB12 WSB21 WSB22 WSB23 WSB24 WSB17 WSB18 WSB19 WSB20 WSB13 WSB14 WSB15 WSB16 WSB9 WSB10 WSB11 ",16,"WS2812_BUTTON","lib_fp:ws2812_buttonPad"," "," "," "," "," "
-"WSB1 WSB2 WSB3 WSB4 WSB5 WSB6 WSB7 WSB8 WSB25 WSB26 WSB27 WSB28 ",12,"WS2812","ws2812_button:WS2812B"," ","WS2812B",304990003,"https://statics3.seeedstudio.com/images/opl/datasheet/304990003.pdf","--"
-"Y1 ",1,"16MHz","SeeedOPL-Crystal Oscillator:HC49US"," ","HC-49US 16.000MHz",306010014,"https://statics3.seeedstudio.com/images/opl/datasheet/306010014.pdf","--"
-"3v3regu1 ",1,"TLV70233DBV","TO_SOT_Packages_SMD:SOT-23-5"," ","LP3985-33DBVR","--","https://statics3.seeedstudio.com/images/opl/datasheet/310030033.pdf","https://www.digikey.com/product-detail/en/texas-instruments/LP2985-33DBVR/296-18476-1-ND/809911"
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-"BOM made with KICAD_BOM_WIZARD (https://github.com/HashDefineElectronics/KiCad_BOM_Wizard.git)",,,,,,,,
-"Generated 10-11-2017 11:17:47",,,,,,,,
+Title,
+Revision,
+Date,
+Generated,14-11-2017 18:29:11
+Company,
+Comment 1,
+Comment 2,
+Comment 3,
+Comment 4,
+Total Parts,193
+Total Unique Parts,56
+
+
+
+Ref,Qty,Value,Footprint,Fieldname,MPN,Sku,provider link 1,provider link 2,
+C4 C5 C6 C10 C11 ,5,100nF,SeeedOPL-Capacitor:C0402, ,CC0402KRX7R8BB104,302010024,https://statics3.seeedstudio.com/images/opl/datasheet/302010024.pdf,--
+C1 ,1,100nf,SeeedOPL-Capacitor:C0402, ,CC0402KRX7R8BB104,302010024,--,--
+C3 ,1,1u,SeeedOPL-Capacitor:C0402, ,CC0402KRX5R5BB105,302010003,https://statics3.seeedstudio.com/images/opl/datasheet/302010003.pdf,--
+C8 C9 C7 ,3,22pF,SeeedOPL-Capacitor:C0402, ,CC0402JRNPO9BN220,302010018,https://statics3.seeedstudio.com/images/opl/datasheet/302010018.pdf,--
+C2 ,1,Aluminum 47uF-25V,SeeedOPL-Capacitor:ELECTRO-SMD-C-6MM, ,CS1E470M-CRE54,302030059,https://statics3.seeedstudio.com/images/opl/datasheet/302030059.pdf,--
+CON1 ,1,BARREL_JACK,SparkFun-Connectors:POWER_JACK_PTH_LOCK, ,PW-3P-2.1,320120003,https://statics3.seeedstudio.com/images/opl/datasheet/3410020P1.pdf,--
+CON2 ,1,SD_Card_SEEEDOPL,SeeedOPL-Connector:MICRO-SD9+4P-SMD-16.1X14.5X1.85MM, ,ST-TF-003A,320090000,http://datasheet.octopart.com/ST-TF-003A-Suntech-datasheet-30458645.pdf,--
+C_LEDS1 ,1,1uF-10V,SeeedOPL-Capacitor:C0402_electrolitic, ,CC0402KRX5R6BB105,302010040,https://statics3.seeedstudio.com/images/opl/datasheet/302010040.pdf,--
+D2 ,1,LED,SeeedOPL-LED:LED-0805, ,17-215UYC/S530-A3/TR8,304090039,https://statics3.seeedstudio.com/images/opl/datasheet/304090039.pdf,--
+D3 D4 D5 D6 D7 D8 D9 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31 D32 D1 D33 D34 ,33,D,lib_fp:DO-214AC, ,1N4007,304010013,www.seeedstudio.com/wiki/images/2/24/0300040P1.PDF,--
+DS1 ,1,LCD16X2,SparkFun-Displays:LCD-16X2, , , , , 
+H1 H3 H5 H7 H9 H11 H2 H4 H6 H8 H10 H12 H25 H27 H29 H26 H28 H30 ,18,hole,lib_fp:hole_no-copper, , , , , 
+H13 H15 H17 H14 H16 H18 H19 H21 H23 H20 H22 H24 ,12,hole,lib_fp:hole_with-copper, , , , , 
+IC1 ,1,ATMEGA2560-A,SparkFun-DigitalIC:TQFP100,Value,ATMEGA2560-16AU,310010006,https://statics3.seeedstudio.com/images/opl/datasheet/310010006.pdf,--
+JP2 ,1,tie pi 5v,SparkFun-Passives:PAD-JUMPER-2-NO_YES_SILK, ,--,--,--,--
+JP1 ,1,comm_bus,SparkFun-Passives:PAD-JUMPER-2-NO_YES_SILK, ,--,--,--,--
+JP3 JP4 JP5 ,3,JkI2C0,SparkFun-Passives:PAD-JUMPER-2-NO_YES_SILK, ,--,--,--,--
+P3 ,1,SPI,Pin_Headers:Pin_Header_Straight_2x03_Pitch2.54mm_SMD, , , , , 
+P2 ,1,FTDI,Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm_SMD_Pin1Left, ,--,--,--,--
+P1 ,1,POWER,Pin_Headers:Pin_Header_Straight_2x01_Pitch2.54mm_SMD, , , , , 
+P22 ,1,BUSTI,SeeedOPL-Connector:AUDIO8P-SMD-3.5-14.5X6.1X4.0MM, ,PJ-3536-L6S,320040003,https://statics3.seeedstudio.com/images/opl/datasheet/320040003.pdf,--
+P17 ,1,SD_PINS,Pin_Headers:Pin_Header_Straight_1x10_Pitch2.54mm_SMD_Pin1Left, ,--,--,--,--
+P7 ,1,PA,Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD, ,--,--,--,--
+P9 ,1,PB,Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD, ,--,--,--,--
+P10 ,1,PC,Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD, ,--,--,--,--
+P13 ,1,PD,Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD, ,--,--,--,--
+P14 ,1,PE,Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD, ,--,--,--,--
+P16 ,1,PF,Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD, ,--,--,--,--
+P15 ,1,PH,Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD, ,--,--,--,--
+P12 ,1,PJ,Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD, ,--,--,--,--
+P8 ,1,PL,Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm_SMD, ,--,--,--,--
+P19 ,1,PIGPIO,lib_fp:Pin_Header_Straight_2x05_Pitch2.54mm_SMD-raspi, ,--,--,--,--
+P18 ,1,3VI2C,Pin_Headers:Pin_Header_Straight_2x01_Pitch2.54mm_SMD, ,--,--,--,--
+P23 ,1,BUSTO,SeeedOPL-Connector:AUDIO8P-SMD-3.5-14.5X6.1X4.0MM, ,PJ-3536-L6S,320040003,https://statics3.seeedstudio.com/images/opl/datasheet/320040003.pdf,--
+P20 ,1,MIDI_IN,SeeedOPL-Connector:AUDIO8P-SMD-3.5-14.5X6.1X4.0MM, ,PJ-3536-L6S,320040003,https://statics3.seeedstudio.com/images/opl/datasheet/320040003.pdf,--
+P21 ,1,MIDI_OUT,SeeedOPL-Connector:AUDIO8P-SMD-3.5-14.5X6.1X4.0MM, ,PJ-3536-L6S,320040003,https://statics3.seeedstudio.com/images/opl/datasheet/320040003.pdf,--
+P11 ,1,CONN_UART,SparkFun-Connectors:1X06, ,--,--,--,--
+PJ2COM1 PJ1COM1 ,2,Jumper_NO_Small,SparkFun-Passives:PAD-JUMPER-2-NO_YES_SILK, , , , , 
+Q2 Q3 Q4 Q5 Q6 Q1 ,6,BSS138,SeeedOPL-Transistor:SOT-23, ,BSS138W-7-F,305030000,https://statics3.seeedstudio.com/images/opl/datasheet/305030000.pdf,--
+R8 ,1,1M,SeeedOPL-Resistor:R0603, ,RC0603FR-071ML,301010151,https://statics3.seeedstudio.com/images/opl/datasheet/301010151.pdf,--
+R1 ,1,1k,SeeedOPL-Resistor:R0402, ,RC0402JR-071KL,301010006,https://statics3.seeedstudio.com/images/opl/datasheet/301010006.pdf,--
+R7 R11 R12 R14 R13 R15 R16 R18 R17 R19 R20 R22 R21 R9 R10 ,15,10k,SeeedOPL-Resistor:R0603, ,RC0603JR-0710KL,301010293,https://statics3.seeedstudio.com/images/opl/datasheet/301010293.pdf,--
+R5 R6 ,2,4.7K,SeeedOPL-Resistor:R0603, ,RC0603JR-074K7L,301010290,https://statics3.seeedstudio.com/images/opl/datasheet/0010030P1.pdf,--
+R2 R3 R23 R4 R24 ,5,220,SeeedOPL-Resistor:R0603, ,RC0603JR-07220RL,301010163,https://statics3.seeedstudio.com/images/opl/datasheet/301010163.pdf,--
+R25 R26 R27 R28 R29 R30 R31 ,7,470,SeeedOPL-Resistor:R0603, ,RC0603JR-07470RL,301010088,https://statics3.seeedstudio.com/images/opl/datasheet/301010088.pdf,--
+RV1 ,1,10k,lib_fp:trimpot, ,3362P-1-103LF,3362P-103LF-ND,https://www.digikey.com/product-detail/en/bourns-inc/3362P-1-103LF/3362P-103LF-ND/1088412,--
+SW2 ,1,ROTARY_ENCODER_SWITCH,SparkFun-Electromechanical:ENCODER_LED_2, ,--,311130001,https://statics3.seeedstudio.com/images/opl/datasheet/311130001.pdf,--
+SW1 ,1,SW_PUSH,lib_fp:SW4-SMD-5.2X5.2X1.5MM, ,SKQGADE010,311020017,https://statics3.seeedstudio.com/images/opl/datasheet/311020017.pdf,--
+SW3 SW4 SW5 SW6 SW7 SW8 SW9 SW10 SW11 SW12 SW13 SW14 ,12,SW_PUSH,lib_fp:SW4-SMD-6.0X6.0X5.0MM, ,DTSM-62K-S-V-T/R(SN431),311020004,https://statics3.seeedstudio.com/images/opl/datasheet/3100010P1.pdf,--
+SW_left1 SW_right1 ,2,SW_PUSH,SeeedOPL-Switch:SW2-5.0-6.0X3.0X4.3MM, ,TS-1101F,311020025,https://statics3.seeedstudio.com/images/opl/datasheet/311020025.pdf,--
+U1 ,1,NCP1117ST50T3G,SeeedOPL-IC:TO-252, ,CJ;CJU1117-5.0,310030026,https://statics3.seeedstudio.com/images/opl/datasheet/1310190P1.pdf,--
+U2 ,1,6N138,SparkFun-DiscreteSemi:8-SMD, ,6N138S-TA1,--,http://optoelectronics.liteon.com/upload/download/DS70-2009-0001/S_110_6N138-L %206N139-L.pdf,https://www.digikey.com/product-detail/en/lite-on-inc/6N138S-TA1/160-1798-6-ND/1969195
+WSB12 WSB21 WSB22 WSB23 WSB24 WSB17 WSB18 WSB19 WSB20 WSB13 WSB14 WSB15 WSB16 WSB9 WSB10 WSB11 ,16,WS2812_BUTTON,lib_fp:ws2812_buttonPad, , , , , 
+WSB1 WSB2 WSB3 WSB4 WSB5 WSB6 WSB7 WSB8 WSB25 WSB26 WSB27 WSB28 ,12,WS2812,ws2812_button:WS2812B, ,WS2812B,304990003,https://statics3.seeedstudio.com/images/opl/datasheet/304990003.pdf,--
+Y1 ,1,16MHz,SeeedOPL-Crystal Oscillator:HC49US, ,HC-49US 16.000MHz,306010014,https://statics3.seeedstudio.com/images/opl/datasheet/306010014.pdf,--
+3v3regu1 ,1,TLV70233DBV,TO_SOT_Packages_SMD:SOT-23-5, ,LP3985-33DBVR,--,https://statics3.seeedstudio.com/images/opl/datasheet/310030033.pdf,https://www.digikey.com/product-detail/en/texas-instruments/LP2985-33DBVR/296-18476-1-ND/809911
+
+
+
+
+BOM made with KICAD_BOM_WIZARD (https://github.com/HashDefineElectronics/KiCad_BOM_Wizard.git)
+Generated 14-11-2017 18:29:11
