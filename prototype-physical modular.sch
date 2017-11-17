@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:prototype-physical modular-rescue
 LIBS:prototype-physical modular
 LIBS:power
 LIBS:device
@@ -807,10 +808,10 @@ F 7 "--" H 4100 -2450 60  0001 C CNN "provider link 2"
 	-1   0    0    1   
 $EndComp
 $Comp
-L +5V #PWR20
+L +5V #PWR21
 U 1 1 5958B979
 P 4100 -2300
-F 0 "#PWR20" H 4100 -2450 50  0001 C CNN
+F 0 "#PWR21" H 4100 -2450 50  0001 C CNN
 F 1 "+5V" H 4100 -2160 50  0000 C CNN
 F 2 "" H 4100 -2300 50  0000 C CNN
 F 3 "" H 4100 -2300 50  0000 C CNN
@@ -818,10 +819,10 @@ F 3 "" H 4100 -2300 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR21
+L GND #PWR20
 U 1 1 5958BFE9
 P 4600 -3000
-F 0 "#PWR21" H 4600 -3250 50  0001 C CNN
+F 0 "#PWR20" H 4600 -3250 50  0001 C CNN
 F 1 "GND" H 4600 -3150 50  0000 C CNN
 F 2 "" H 4600 -3000 50  0000 C CNN
 F 3 "" H 4600 -3000 50  0000 C CNN
@@ -4810,27 +4811,27 @@ F 7 "--" H 5450 2950 60  0001 C CNN "provider link 2"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CONN_02X02 P?
+L CONN_02X02-RESCUE-prototype-physical_modular P4
 U 1 1 5A1145BC
 P 3950 -2700
-F 0 "P?" H 3950 -2700 50  0000 C CNN
+F 0 "P4" H 3950 -2700 50  0000 C CNN
 F 1 "CONN_02X02" H 3950 -2850 50  0001 C CNN
-F 2 "" H 3950 -3900 50  0000 C CNN
+F 2 "lib_fp:xjump" H 3950 -3900 50  0001 C CNN
 F 3 "" H 3950 -3900 50  0000 C CNN
 	1    3950 -2700
 	0    1    1    0   
 $EndComp
 Text Notes 4000 -2650 0    60   ~ 0
-KORG
+rvg
 Text Notes 4000 -2650 3    60   ~ 0
-STANDARD
+vrg
 $Comp
-L CONN_02X02 P?
+L CONN_02X02-RESCUE-prototype-physical_modular P5
 U 1 1 5A13464F
 P 3100 -2500
-F 0 "P?" H 3100 -2500 50  0000 C CNN
+F 0 "P5" H 3100 -2500 50  0000 C CNN
 F 1 "CONN_02X02" H 3100 -2650 50  0001 C CNN
-F 2 "" H 3100 -3700 50  0000 C CNN
+F 2 "lib_fp:xjump" H 3100 -3700 50  0001 C CNN
 F 3 "" H 3100 -3700 50  0000 C CNN
 	1    3100 -2500
 	0    1    1    0   
@@ -5587,7 +5588,7 @@ Wire Wire Line
 Wire Wire Line
 	3250 -2450 3150 -2450
 Text Notes 3150 -2450 3    60   ~ 0
-STANDARD
+vcc-rx-gnd
 Text Notes 3150 -2450 0    60   ~ 0
-KORG
+rx-vcc-gnd
 $EndSCHEMATC
