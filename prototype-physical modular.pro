@@ -1,4 +1,4 @@
-update=11-11-2017 17:04:39
+update=17-11-2017 12:07:34
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,6 +23,8 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=lib_sch
@@ -59,5 +61,3 @@ LibName29=contrib
 LibName30=valves
 LibName31=C:/Users/joaquin/Documents/kicad libraries/Custom libraries/WS2812 with button
 LibName32=lib_sch/cp+-
-[general]
-version=1
